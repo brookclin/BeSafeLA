@@ -1,1 +1,2 @@
-# project-starter
+# INF 554 project
+
