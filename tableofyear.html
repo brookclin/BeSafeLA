@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title> INF554 hhh </title>
+        <script src="http://d3js.org/d3.v4.min.js"></script>
+    </head>
+    <body>
+        <h1> Be Safe LA </h1>
+        <h3> Team hhh </h3>
+        <h2><br> Summary: <br></h2>
+        <p> Number of criminal data from 2010 to 2017 presented in table </p>
+        <div class = 'table'>
+            <h2><br> Table: <br></h2>
+        </div> 
+        <script type="text/javascript">          
+            d3.csv("crimeofyear.csv", function (data) {
+                dataset = data
+                table(dataset)
+            });
+            function table(data)
+            {
+                var table = d3.select('body')
+                            .select('div.table')
+                            .append('table')
+                            .style('border','1px solid black')
+                            .style('border-collapse','collapse')
+                var thead = table.append('thead');
+                var tbody = table.append('tbody');
+                thead.selectAll('th')
+                     .data(['Year', 'Cases'])
+                     .enter()
+                     .append('th')
+                     .text(function(d) {return d})
+                     .style('border','1px solid black')
+                     .style('border-collapse','collapse')
+                     .style('padding','4px');
+                tbody.selectAll('tr')
+                     .data(data)
+                     .enter()
+                     .append('tr')
+                     .selectAll('td')
+                     .data(function(d) {return [d['year'], d['case']]; })
+                     .enter()
+                     .append('td')
+                     .text(function(d) {return d})
+                     .style('border','1px solid black')
+                     .style('border-collapse','collapse')
+                     .style('padding','4px');
+            }
+        </script>
+    </body>
+    </html>
