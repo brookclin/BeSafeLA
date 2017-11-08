@@ -13,6 +13,16 @@
                 font-family: sans-serif;
                 font-size: 11px;
             }
+            .path {
+                fill: none;
+                stroke: lightblue;
+                stroke-width: 1.5;
+            }
+            .dot {
+                fill: #ffab00;
+                stroke: #fff;
+            
+}
 
             </style>
     </head>
@@ -63,16 +73,16 @@
             
                 svg.append("path")
                     .attr("d", line(dataset))
-                    .attr("fill", "none")
-                    .attr("stroke", "steelblue")
-                    .attr("stroke-linejoin", "round")
-                    .attr("stroke-linecap", "round")
-                    .attr("stroke-width", 1.5);
+                    .attr("class", "path")
                 
-                var bisectDate = d3.bisector(function(d) { return d['year']; }).left; 
-                var focus = svg.append("g")
-                    .attr("class", "focus")
-                    .style("display", "none");
+                svg.selectAll(".dot")
+                    .data(dataset)
+                    .enter()
+                    .append("circle") // Uses the enter().append() method
+                    .attr("class", "dot") // Assign a class for styling
+                    .attr("cx", function(d) { return xscale(d['year'])+35;})
+                    .attr("cy", function(d) { return yscale(d['case']); })
+                    .attr("r", 4);
                 
                 svg.selectAll('text.cnumber')
                     .data(dataset)
