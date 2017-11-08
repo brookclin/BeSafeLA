@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title> Be Safe LA </title>
+        <script src="http://d3js.org/d3.v4.min.js"></script>
+        <style type="text/css">
+            .axis path,
+            .axis line {
+                fill: none;
+                stroke: black;
+                shape-rendering: crispEdges;
+            }
+            .axis text {
+                font-family: sans-serif;
+                font-size: 11px;
+            }
+            </style>
+    </head>
+    <body>
+        <h1> Be Safe LA </h1>
+        <h3> Team hhh </h3>
+        <div class = 'area'>
+            <h2><br> Areachart: <br></h2>
+            <p><br>Number of criminal data from 2010 to 2017 presented in area chart.</br></p>
+        </div>
+        <script type="text/javascript">   
+           d3.json("crimedatayear.json", function(error, data) {
+                dataset = data
+                area(dataset)
+
+            });
+
+            
+
+        </script>
+    </body>
+    </html>
