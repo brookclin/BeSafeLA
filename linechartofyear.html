@@ -27,7 +27,30 @@
                 dataset = data
                 line(dataset)             
             });
-            
+            function line(data)
+            {
+                var mind = d3.min(data, function(d){return d['case'];});
+                var maxd = d3.max(data, function(d){return d['case'];});
+                var w = 900, h = 550, padding = 100;
+                
+                var xscale = d3.scaleBand() 
+                              .domain(data.map(function (d) {
+                               return d['year'];
+                            }))
+                              .range([padding,w-padding])
+
+                var yscale = d3.scaleLinear()
+                               .domain([mind-40000,maxd])
+                               .range([h - padding,padding]);
+
+                var svg = d3.select('body')
+                    .select('div.sca')
+                    .append('svg')
+                    .attr('width', w)
+                    .attr('height', h);
+
+                
+
         </script>
     </body>
     </html>
