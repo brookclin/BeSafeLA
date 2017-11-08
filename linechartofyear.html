@@ -19,14 +19,16 @@
         <h1> Be Safe LA </h1>
         <h3> Team hhh </h3>
         <div class = 'line'>
-            <h2><br> linechart: <br></h2>
+            <h2><br> Linechart: <br></h2>
             <p><br>Number of criminal data from 2010 to 2017 presented in line chart.</br></p>
         </div>
         <script type="text/javascript">   
            d3.json("crimedatayear.json", function(error, data) {
                 dataset = data
-                line(dataset)             
+                line(dataset) 
+
             });
+
             function line(data)
             {
                 var mind = d3.min(data, function(d){return d['case'];});
@@ -52,7 +54,7 @@
 
                 var line = d3.line()
                     .x(function(d) { return xscale(d['year'])+35;})
-                    .y(function(d) { return yscale(d['case']);})
+                    .y(function(d) { return yscale(d['case']);});
                 
             
                 svg.append("path")
