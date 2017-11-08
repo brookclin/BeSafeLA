@@ -13,6 +13,10 @@
                 font-family: sans-serif;
                 font-size: 11px;
             }
+            .dot {
+                fill: #ffab00;
+                stroke: #fff;
+            }
             </style>
     </head>
     <body>
@@ -62,6 +66,16 @@
                     .datum(data)
                     .attr("fill", "#dbf5f9")
                     .attr("d", area);
+                    
+
+                svg.selectAll(".dot")
+                    .data(dataset)
+                    .enter()
+                    .append("circle") // Uses the enter().append() method
+                    .attr("class", "dot") // Assign a class for styling
+                    .attr("cx", function(d) { return xscale(d['year'])+43;})
+                    .attr("cy", function(d) { return yscale(d['case']); })
+                    .attr("r", 4);
                 
                 svg.selectAll('text.cnumber')
                     .data(dataset)
