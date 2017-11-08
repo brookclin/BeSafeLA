@@ -11,3 +11,9 @@ http://www-scf.usc.edu/~haoyujia/barofyear.html
 
 http://www-scf.usc.edu/~haoyujia/scatterofyear.html
 
+http://www-scf.usc.edu/~haoyujia/linechartofyear.html
+
+http://www-scf.usc.edu/~haoyujia/areaofyear.html
+
+
+
