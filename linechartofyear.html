@@ -13,15 +13,18 @@
                 font-family: sans-serif;
                 font-size: 11px;
             }
+
             </style>
     </head>
     <body>
+
         <h1> Be Safe LA </h1>
         <h3> Team hhh </h3>
         <div class = 'line'>
             <h2><br> Linechart: <br></h2>
             <p><br>Number of criminal data from 2010 to 2017 presented in line chart.</br></p>
         </div>
+        
         <script type="text/javascript">   
            d3.json("crimedatayear.json", function(error, data) {
                 dataset = data
@@ -36,10 +39,10 @@
                 var w = 900, h = 550, padding = 100;
                 
                 var xscale = d3.scaleBand() 
-                              .domain(data.map(function (d) {
-                               return d['year'];
+                                .domain(data.map(function (d) {
+                                return d['year'];
                             }))
-                              .range([padding,w-padding])
+                                .range([padding,w-padding])
 
                 var yscale = d3.scaleLinear()
                                .domain([mind-40000,maxd])
@@ -54,7 +57,8 @@
 
                 var line = d3.line()
                     .x(function(d) { return xscale(d['year'])+35;})
-                    .y(function(d) { return yscale(d['case']);});
+                    .y(function(d) { return yscale(d['case']);})
+                    .curve(d3.curveMonotoneX); 
                 
             
                 svg.append("path")
@@ -64,6 +68,11 @@
                     .attr("stroke-linejoin", "round")
                     .attr("stroke-linecap", "round")
                     .attr("stroke-width", 1.5);
+                
+                var bisectDate = d3.bisector(function(d) { return d['year']; }).left; 
+                var focus = svg.append("g")
+                    .attr("class", "focus")
+                    .style("display", "none");
                 
                 svg.selectAll('text.cnumber')
                     .data(dataset)
