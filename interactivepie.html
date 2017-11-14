@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 960px;
+  height: 500px;
+  position: relative;
+}
+
+svg {
+	width: 100%;
+	height: 100%;
+}
+
+path.slice{
+	stroke-width:2px;
+}
+
+polyline{
+	opacity: .3;
+	stroke: black;
+	stroke-width: 2px;
+	fill: none;
+}
+
+.labelValue
+{
+	font-size: 60%;
+	opacity: .5;
+	
+}
+
+.toolTip {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: absolute;
+    display: none;
+    width: auto;
+    height: auto;
+    background: none repeat scroll 0 0 white;
+    border: 0 none;
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: -3px 3px 15px #888888;
+    color: black;
+    font: 12px sans-serif;
+    padding: 5px;
+    text-align: center;
+}
+text {
+  font: 12px sans-serif;
+}
+</style>
+<body>
+<h3> The number of criminal cases based on year and area</h3>
+<form>
+<label><input type="radio" name="dataset" id="dataset" value="year" checked> year</label>
+<label><input type="radio" name="dataset" id="dataset" value="area"> area</label>
+<!-- <label><input type="radio" name="dataset" id="dataset" value="option2"> Option 2</label> -->
+</form>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+
+d3.select("input[value=\"total\"]").property("checked", true);
+
+var svg = d3.select("body")
+	.append("svg")
+	.append("g")
+
+svg.append("g")
+	.attr("class", "slices");
+svg.append("g")
+	.attr("class", "labelName");
+svg.append("g")
+	.attr("class", "labelValue");
+svg.append("g")
+	.attr("class", "lines");
+
+var width = 960,
+    height = 450,
+	radius = Math.min(width, height) / 2;
+
+var pie = d3.layout.pie()
+	.sort(null)
+	.value(function(d) {
+		return d.value;
+	});
+
+var arc = d3.svg.arc()
+	.outerRadius(radius * 0.8)
+	.innerRadius(radius * 0.4);
+
+var outerArc = d3.svg.arc()
+	.innerRadius(radius * 0.9)
+	.outerRadius(radius * 0.9);
+
+var legendRectSize = (radius * 0.05);
+var legendSpacing = radius * 0.02;
+
+
+var div = d3.select("body").append("div").attr("class", "toolTip");
+
+svg.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+var colorRange = d3.scale.category20();
+var color = d3.scale.ordinal()
+	.range(colorRange.range());
+
+
+datasetTotal = [
+            {label:'2010',value: 208585},
+            {label:'2011',value: 200191},
+            {label:'2012',value: 200812},
+            {label:'2013',value: 191792},
+            {label:'2014',value: 194499},
+            {label:'2015',value: 213975},
+            {label:'2016',value: 223185},
+            {label:'2017',value: 169858}
+            ];
+
+datasetOption1 = [
+        {value:  71707, label: "Harbor"}, 
+        {value:  58305, label: "Hollenbeck"}, 
+        {value:  67789, label: "Rampart"}, 
+        {value:  68621, label: "West Valley"}, 
+        {value:  87365, label: "N Hollywood"}, 
+        {value:  64358, label: "Wilshire"}, 
+        {value:  74191, label: "Topanga"}, 
+        {value:  103422,label: "Southwest"}, 
+        {value:  76404, label: "Van Nuys"}, 
+        {value:  74833, label: "Devonshire"}, 
+        {value:  84511, label: "Southeast"}, 
+        {value:  111850,label: "77th Street"}, 
+        {value:  67087, label: "West LA"}, 
+        {value:  84790, label: "Pacific"}, 
+        {value:  75283, label: "Newton"}, 
+        {value:  68056, label:"Central"}, 
+        {value:  77422, label:"Northeast"}, 
+        {value:  61617, label:"Foothill"}, 
+        {value:  73161, label: "Hollywood"}, 
+        {value:  71054, label: "Olympic"}, 
+        {value:  81071, label:"Mission"}];
+
+
+
+</script>
+</body>
