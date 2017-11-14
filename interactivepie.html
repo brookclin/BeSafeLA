@@ -143,6 +143,29 @@ datasetOption1 = [
         {value:  71054, label: "Olympic"}, 
         {value:  81071, label:"Mission"}];
 
+change(datasetTotal);
+
+
+d3.selectAll("input")
+	.on("change", selectDataset);
+	
+function selectDataset()
+{
+	var value = this.value;
+	if (value == "year")
+	{
+		change(datasetTotal);
+	}
+	else if (value == "area")
+	{
+		change(datasetOption1);
+	}
+	// else if (value == "option2")
+	// {
+	// 	change(datasetOption2);
+	// }
+}
+
 
 
 </script>
