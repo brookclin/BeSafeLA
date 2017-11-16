@@ -1,0 +1,4061 @@
+{
+    "name": "crime",
+    "children": [
+        {
+            "name": "2015",
+            "children": [
+                {
+                    "name": "",
+                    "size": 47
+                },
+                {
+                    "name": "THEFT OF IDENTITY",
+                    "size": 14531
+                },
+                {
+                    "name": "REPLICA FIREARMS(SALE,DISPLAY,MANUFACTURE OR DISTRIBUTE)0132",
+                    "size": 6
+                },
+                {
+                    "name": "DISCHARGE FIREARMS/SHOTS FIRED",
+                    "size": 383
+                },
+                {
+                    "name": "DISTURBING THE PEACE",
+                    "size": 388
+                },
+                {
+                    "name": "BATTERY POLICE (SIMPLE)",
+                    "size": 454
+                },
+                {
+                    "name": "CHILD STEALING",
+                    "size": 116
+                },
+                {
+                    "name": "DEFRAUDING INNKEEPER/THEFT OF SERVICES, $400 & UNDER",
+                    "size": 250
+                },
+                {
+                    "name": "CHILD NEGLECT (SEE 300 W.I.C.)",
+                    "size": 383
+                },
+                {
+                    "name": "PANDERING",
+                    "size": 34
+                },
+                {
+                    "name": "BURGLARY, ATTEMPTED",
+                    "size": 1318
+                },
+                {
+                    "name": "GRAND THEFT / INSURANCE FRAUD",
+                    "size": 4
+                },
+                {
+                    "name": "BIGAMY",
+                    "size": 1
+                },
+                {
+                    "name": "EXTORTION",
+                    "size": 317
+                },
+                {
+                    "name": "TELEPHONE PROPERTY - DAMAGE",
+                    "size": 5
+                },
+                {
+                    "name": "BOAT - STOLEN",
+                    "size": 21
+                },
+                {
+                    "name": "GRAND THEFT / AUTO REPAIR",
+                    "size": 1
+                },
+                {
+                    "name": "THEFT, COIN MACHINE - PETTY ($950 & UNDER)",
+                    "size": 45
+                },
+                {
+                    "name": "BATTERY WITH SEXUAL CONTACT",
+                    "size": 1052
+                },
+                {
+                    "name": "CRUELTY TO ANIMALS",
+                    "size": 98
+                },
+                {
+                    "name": "PICKPOCKET, ATTEMPT",
+                    "size": 3
+                },
+                {
+                    "name": "DRUNK ROLL",
+                    "size": 9
+                },
+                {
+                    "name": "ASSAULT WITH DEADLY WEAPON, AGGRAVATED ASSAULT",
+                    "size": 10200
+                },
+                {
+                    "name": "CRIMINAL THREATS - NO WEAPON DISPLAYED",
+                    "size": 5312
+                },
+                {
+                    "name": "CRM AGNST CHLD (13 OR UNDER) (14-15 & SUSP 10 YRS OLDER)0060",
+                    "size": 617
+                },
+                {
+                    "name": "VEHICLE - STOLEN",
+                    "size": 16046
+                },
+                {
+                    "name": "DOCUMENT FORGERY / STOLEN FELONY",
+                    "size": 2406
+                },
+                {
+                    "name": "CHILD ABUSE (PHYSICAL) - SIMPLE ASSAULT",
+                    "size": 799
+                },
+                {
+                    "name": "CRIMINAL HOMICIDE",
+                    "size": 282
+                },
+                {
+                    "name": "LETTERS, LEWD",
+                    "size": 1847
+                },
+                {
+                    "name": "BUNCO, PETTY THEFT",
+                    "size": 542
+                },
+                {
+                    "name": "VIOLATION OF COURT ORDER",
+                    "size": 1590
+                },
+                {
+                    "name": "BURGLARY",
+                    "size": 14822
+                },
+                {
+                    "name": "THEFT, COIN MACHINE - ATTEMPT",
+                    "size": 2
+                },
+                {
+                    "name": "ORAL COPULATION",
+                    "size": 181
+                },
+                {
+                    "name": "VIOLATION OF RESTRAINING ORDER",
+                    "size": 1749
+                },
+                {
+                    "name": "THEFT PLAIN - ATTEMPT",
+                    "size": 151
+                },
+                {
+                    "name": "SHOTS FIRED AT MOVING VEHICLE, TRAIN OR AIRCRAFT",
+                    "size": 38
+                },
+                {
+                    "name": "BRIBERY",
+                    "size": 3
+                },
+                {
+                    "name": "DOCUMENT WORTHLESS ($200.01 & OVER)",
+                    "size": 55
+                },
+                {
+                    "name": "INDECENT EXPOSURE",
+                    "size": 372
+                },
+                {
+                    "name": "COUNTERFEIT",
+                    "size": 75
+                },
+                {
+                    "name": "SEX, UNLAWFUL",
+                    "size": 415
+                },
+                {
+                    "name": "CREDIT CARDS, FRAUD USE ($950 & UNDER",
+                    "size": 43
+                },
+                {
+                    "name": "BUNCO, GRAND THEFT",
+                    "size": 848
+                },
+                {
+                    "name": "THEFT, PERSON",
+                    "size": 1318
+                },
+                {
+                    "name": "THEFT FROM PERSON - ATTEMPT",
+                    "size": 22
+                },
+                {
+                    "name": "TILL TAP - GRAND THEFT ($950.01 & OVER)",
+                    "size": 4
+                },
+                {
+                    "name": "FALSE IMPRISONMENT",
+                    "size": 90
+                },
+                {
+                    "name": "CONSPIRACY",
+                    "size": 8
+                },
+                {
+                    "name": "KIDNAPPING - GRAND ATTEMPT",
+                    "size": 69
+                },
+                {
+                    "name": "MANSLAUGHTER, NEGLIGENT",
+                    "size": 1
+                },
+                {
+                    "name": "RAPE, FORCIBLE",
+                    "size": 1128
+                },
+                {
+                    "name": "RESISTING ARREST",
+                    "size": 320
+                },
+                {
+                    "name": "PICKPOCKET",
+                    "size": 122
+                },
+                {
+                    "name": "THROWING OBJECT AT MOVING VEHICLE",
+                    "size": 156
+                },
+                {
+                    "name": "BURGLARY FROM VEHICLE",
+                    "size": 14462
+                },
+                {
+                    "name": "THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD0036",
+                    "size": 6727
+                },
+                {
+                    "name": "BUNCO, ATTEMPT",
+                    "size": 81
+                },
+                {
+                    "name": "LYNCHING",
+                    "size": 5
+                },
+                {
+                    "name": "KIDNAPPING",
+                    "size": 200
+                },
+                {
+                    "name": "OTHER MISCELLANEOUS CRIME",
+                    "size": 1811
+                },
+                {
+                    "name": "BRANDISH WEAPON",
+                    "size": 1402
+                },
+                {
+                    "name": "SHOPLIFTING-GRAND THEFT ($950.01 & OVER)",
+                    "size": 451
+                },
+                {
+                    "name": "TRESPASSING",
+                    "size": 2206
+                },
+                {
+                    "name": "ROBBERY",
+                    "size": 7874
+                },
+                {
+                    "name": "EMBEZZLEMENT, GRAND THEFT ($950.01 & OVER)",
+                    "size": 786
+                },
+                {
+                    "name": "CREDIT CARDS, FRAUD USE ($950.01 & OVER)",
+                    "size": 75
+                },
+                {
+                    "name": "FALSE POLICE REPORT",
+                    "size": 48
+                },
+                {
+                    "name": "SEXUAL PENTRATION WITH A FOREIGN OBJECT",
+                    "size": 296
+                },
+                {
+                    "name": "INTIMATE PARTNER - SIMPLE ASSAULT",
+                    "size": 12708
+                },
+                {
+                    "name": "BIKE - ATTEMPTED STOLEN",
+                    "size": 7
+                },
+                {
+                    "name": "CONTEMPT OF COURT",
+                    "size": 1003
+                },
+                {
+                    "name": "DRUGS, TO A MINOR",
+                    "size": 11
+                },
+                {
+                    "name": "INCITING A RIOT",
+                    "size": 2
+                },
+                {
+                    "name": "VEHICLE - ATTEMPT STOLEN",
+                    "size": 348
+                },
+                {
+                    "name": "BEASTIALITY, CRIME AGAINST NATURE SEXUAL ASSLT WITH ANIM0065",
+                    "size": 3
+                },
+                {
+                    "name": "CHILD ABANDONMENT",
+                    "size": 15
+                },
+                {
+                    "name": "PURSE SNATCHING",
+                    "size": 140
+                },
+                {
+                    "name": "THREATENING PHONE CALLS/LETTERS",
+                    "size": 265
+                },
+                {
+                    "name": "LYNCHING - ATTEMPTED",
+                    "size": 3
+                },
+                {
+                    "name": "BIKE - STOLEN",
+                    "size": 1731
+                },
+                {
+                    "name": "VANDALISM - MISDEAMEANOR ($399 OR UNDER)",
+                    "size": 8476
+                },
+                {
+                    "name": "BATTERY ON A FIREFIGHTER",
+                    "size": 52
+                },
+                {
+                    "name": "VANDALISM - FELONY ($400 & OVER, ALL CHURCH VANDALISMS) 0114",
+                    "size": 11574
+                },
+                {
+                    "name": "LEWD CONDUCT",
+                    "size": 135
+                },
+                {
+                    "name": "EMBEZZLEMENT, PETTY THEFT ($950 & UNDER)",
+                    "size": 73
+                },
+                {
+                    "name": "THEFT FROM MOTOR VEHICLE - ATTEMPT",
+                    "size": 189
+                },
+                {
+                    "name": "INCEST (SEXUAL ACTS BETWEEN BLOOD RELATIVES)",
+                    "size": 3
+                },
+                {
+                    "name": "FAILURE TO YIELD",
+                    "size": 37
+                },
+                {
+                    "name": "STALKING",
+                    "size": 198
+                },
+                {
+                    "name": "BURGLARY FROM VEHICLE, ATTEMPTED",
+                    "size": 288
+                },
+                {
+                    "name": "RAPE, ATTEMPTED",
+                    "size": 131
+                },
+                {
+                    "name": "SHOTS FIRED AT INHABITED DWELLING",
+                    "size": 237
+                },
+                {
+                    "name": "VIOLATION OF TEMPORARY RESTRAINING ORDER",
+                    "size": 195
+                },
+                {
+                    "name": "DOCUMENT WORTHLESS ($200 & UNDER)",
+                    "size": 9
+                },
+                {
+                    "name": "ATTEMPTED ROBBERY",
+                    "size": 1127
+                },
+                {
+                    "name": "PROWLER",
+                    "size": 102
+                },
+                {
+                    "name": "SODOMY/SEXUAL CONTACT B/W PENIS OF ONE PERS TO ANUS OTH 0007=02",
+                    "size": 154
+                },
+                {
+                    "name": "PIMPING",
+                    "size": 71
+                },
+                {
+                    "name": "ILLEGAL DUMPING",
+                    "size": 70
+                },
+                {
+                    "name": "PEEPING TOM",
+                    "size": 135
+                },
+                {
+                    "name": "THEFT, COIN MACHINE - GRAND ($950.01 & OVER)",
+                    "size": 7
+                },
+                {
+                    "name": "TILL TAP - PETTY ($950 & UNDER)",
+                    "size": 16
+                },
+                {
+                    "name": "DRIVING WITHOUT OWNER CONSENT (DWOC)",
+                    "size": 62
+                },
+                {
+                    "name": "THEFT PLAIN - PETTY ($950 & UNDER)",
+                    "size": 15733
+                },
+                {
+                    "name": "OTHER ASSAULT",
+                    "size": 414
+                },
+                {
+                    "name": "THEFT FROM MOTOR VEHICLE - GRAND ($400 AND OVER)",
+                    "size": 3559
+                },
+                {
+                    "name": "DISHONEST EMPLOYEE - PETTY THEFT",
+                    "size": 23
+                },
+                {
+                    "name": "CONTRIBUTING",
+                    "size": 10
+                },
+                {
+                    "name": "BOMB SCARE",
+                    "size": 117
+                },
+                {
+                    "name": "SHOPLIFTING - ATTEMPT",
+                    "size": 29
+                },
+                {
+                    "name": "INTIMATE PARTNER - AGGRAVATED ASSAULT",
+                    "size": 2221
+                },
+                {
+                    "name": "RECKLESS DRIVING",
+                    "size": 34
+                },
+                {
+                    "name": "DISRUPT SCHOOL",
+                    "size": 3
+                },
+                {
+                    "name": "UNAUTHORIZED COMPUTER ACCESS",
+                    "size": 145
+                },
+                {
+                    "name": "ARSON",
+                    "size": 359
+                },
+                {
+                    "name": "SHOPLIFTING - PETTY THEFT ($950 & UNDER)",
+                    "size": 5969
+                },
+                {
+                    "name": "ASSAULT WITH DEADLY WEAPON ON POLICE OFFICER",
+                    "size": 183
+                },
+                {
+                    "name": "THEFT FROM MOTOR VEHICLE - PETTY ($950 & UNDER)",
+                    "size": 9811
+                },
+                {
+                    "name": "PURSE SNATCHING - ATTEMPT",
+                    "size": 7
+                },
+                {
+                    "name": "FAILURE TO DISPERSE",
+                    "size": 2
+                },
+                {
+                    "name": "CHILD ANNOYING (17YRS & UNDER)",
+                    "size": 485
+                },
+                {
+                    "name": "DEFRAUDING INNKEEPER/THEFT OF SERVICES, OVER $400",
+                    "size": 18
+                },
+                {
+                    "name": "PETTY THEFT - AUTO REPAIR",
+                    "size": 4
+                },
+                {
+                    "name": "WEAPONS POSSESSION/BOMBING",
+                    "size": 18
+                },
+                {
+                    "name": "CHILD ABUSE (PHYSICAL) - AGGRAVATED ASSAULT",
+                    "size": 109
+                },
+                {
+                    "name": "DISHONEST EMPLOYEE - GRAND THEFT",
+                    "size": 36
+                },
+                {
+                    "name": "DISHONEST EMPLOYEE ATTEMPTED THEFT",
+                    "size": 4
+                },
+                {
+                    "name": "BATTERY - SIMPLE ASSAULT",
+                    "size": 17582
+                }
+            ]
+        },
+        {
+            "name": "2014",
+            "children": [
+                {
+                    "name": "",
+                    "size": 10
+                },
+                {
+                    "name": "THEFT OF IDENTITY",
+                    "size": 12485
+                },
+                {
+                    "name": "REPLICA FIREARMS(SALE,DISPLAY,MANUFACTURE OR DISTRIBUTE)0132",
+                    "size": 1
+                },
+                {
+                    "name": "DISCHARGE FIREARMS/SHOTS FIRED",
+                    "size": 368
+                },
+                {
+                    "name": "DISTURBING THE PEACE",
+                    "size": 310
+                },
+                {
+                    "name": "BATTERY POLICE (SIMPLE)",
+                    "size": 457
+                },
+                {
+                    "name": "CHILD STEALING",
+                    "size": 119
+                },
+                {
+                    "name": "DEFRAUDING INNKEEPER/THEFT OF SERVICES, $400 & UNDER",
+                    "size": 223
+                },
+                {
+                    "name": "CHILD NEGLECT (SEE 300 W.I.C.)",
+                    "size": 529
+                },
+                {
+                    "name": "PANDERING",
+                    "size": 18
+                },
+                {
+                    "name": "BURGLARY, ATTEMPTED",
+                    "size": 1166
+                },
+                {
+                    "name": "LYNCHING - ATTEMPTED",
+                    "size": 3
+                },
+                {
+                    "name": "BIGAMY",
+                    "size": 3
+                },
+                {
+                    "name": "EXTORTION",
+                    "size": 146
+                },
+                {
+                    "name": "TELEPHONE PROPERTY - DAMAGE",
+                    "size": 3
+                },
+                {
+                    "name": "BOAT - STOLEN",
+                    "size": 33
+                },
+                {
+                    "name": "GRAND THEFT / AUTO REPAIR",
+                    "size": 3
+                },
+                {
+                    "name": "THEFT, COIN MACHINE - PETTY ($950 & UNDER)",
+                    "size": 7
+                },
+                {
+                    "name": "BATTERY WITH SEXUAL CONTACT",
+                    "size": 1085
+                },
+                {
+                    "name": "CRUELTY TO ANIMALS",
+                    "size": 142
+                },
+                {
+                    "name": "ASSAULT WITH DEADLY WEAPON, AGGRAVATED ASSAULT",
+                    "size": 8319
+                },
+                {
+                    "name": "CRIMINAL THREATS - NO WEAPON DISPLAYED",
+                    "size": 5816
+                },
+                {
+                    "name": "CRM AGNST CHLD (13 OR UNDER) (14-15 & SUSP 10 YRS OLDER)0060",
+                    "size": 690
+                },
+                {
+                    "name": "VEHICLE - STOLEN",
+                    "size": 13693
+                },
+                {
+                    "name": "DOCUMENT FORGERY / STOLEN FELONY",
+                    "size": 2337
+                },
+                {
+                    "name": "COUNTERFEIT",
+                    "size": 82
+                },
+                {
+                    "name": "CRIMINAL HOMICIDE",
+                    "size": 260
+                },
+                {
+                    "name": "LETTERS, LEWD",
+                    "size": 1940
+                },
+                {
+                    "name": "VANDALISM - FELONY ($400 & OVER, ALL CHURCH VANDALISMS) 0114",
+                    "size": 9691
+                },
+                {
+                    "name": "VIOLATION OF COURT ORDER",
+                    "size": 2190
+                },
+                {
+                    "name": "BURGLARY",
+                    "size": 13950
+                },
+                {
+                    "name": "THEFT, COIN MACHINE - ATTEMPT",
+                    "size": 1
+                },
+                {
+                    "name": "ORAL COPULATION",
+                    "size": 184
+                },
+                {
+                    "name": "VIOLATION OF RESTRAINING ORDER",
+                    "size": 1962
+                },
+                {
+                    "name": "THEFT PLAIN - ATTEMPT",
+                    "size": 222
+                },
+                {
+                    "name": "SHOTS FIRED AT MOVING VEHICLE, TRAIN OR AIRCRAFT",
+                    "size": 9
+                },
+                {
+                    "name": "BRIBERY",
+                    "size": 1
+                },
+                {
+                    "name": "DOCUMENT WORTHLESS ($200.01 & OVER)",
+                    "size": 62
+                },
+                {
+                    "name": "INDECENT EXPOSURE",
+                    "size": 286
+                },
+                {
+                    "name": "CHILD ABUSE (PHYSICAL) - SIMPLE ASSAULT",
+                    "size": 807
+                },
+                {
+                    "name": "SEX, UNLAWFUL",
+                    "size": 476
+                },
+                {
+                    "name": "CREDIT CARDS, FRAUD USE ($950 & UNDER",
+                    "size": 18
+                },
+                {
+                    "name": "BUNCO, GRAND THEFT",
+                    "size": 851
+                },
+                {
+                    "name": "THEFT, PERSON",
+                    "size": 1214
+                },
+                {
+                    "name": "THEFT FROM PERSON - ATTEMPT",
+                    "size": 21
+                },
+                {
+                    "name": "TILL TAP - GRAND THEFT ($950.01 & OVER)",
+                    "size": 1
+                },
+                {
+                    "name": "FALSE IMPRISONMENT",
+                    "size": 97
+                },
+                {
+                    "name": "CONSPIRACY",
+                    "size": 5
+                },
+                {
+                    "name": "KIDNAPPING - GRAND ATTEMPT",
+                    "size": 74
+                },
+                {
+                    "name": "RAPE, FORCIBLE",
+                    "size": 979
+                },
+                {
+                    "name": "RESISTING ARREST",
+                    "size": 368
+                },
+                {
+                    "name": "PICKPOCKET",
+                    "size": 47
+                },
+                {
+                    "name": "THROWING OBJECT AT MOVING VEHICLE",
+                    "size": 113
+                },
+                {
+                    "name": "BURGLARY FROM VEHICLE",
+                    "size": 13074
+                },
+                {
+                    "name": "THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD0036",
+                    "size": 6445
+                },
+                {
+                    "name": "BUNCO, ATTEMPT",
+                    "size": 40
+                },
+                {
+                    "name": "LYNCHING",
+                    "size": 5
+                },
+                {
+                    "name": "KIDNAPPING",
+                    "size": 195
+                },
+                {
+                    "name": "OTHER MISCELLANEOUS CRIME",
+                    "size": 1999
+                },
+                {
+                    "name": "BRANDISH WEAPON",
+                    "size": 746
+                },
+                {
+                    "name": "SHOPLIFTING-GRAND THEFT ($950.01 & OVER)",
+                    "size": 278
+                },
+                {
+                    "name": "TRESPASSING",
+                    "size": 1616
+                },
+                {
+                    "name": "ROBBERY",
+                    "size": 6934
+                },
+                {
+                    "name": "EMBEZZLEMENT, GRAND THEFT ($950.01 & OVER)",
+                    "size": 859
+                },
+                {
+                    "name": "CREDIT CARDS, FRAUD USE ($950.01 & OVER)",
+                    "size": 81
+                },
+                {
+                    "name": "FALSE POLICE REPORT",
+                    "size": 50
+                },
+                {
+                    "name": "SEXUAL PENTRATION WITH A FOREIGN OBJECT",
+                    "size": 219
+                },
+                {
+                    "name": "SODOMY/SEXUAL CONTACT B/W PENIS OF ONE PERS TO ANUS OTH 0007=02",
+                    "size": 134
+                },
+                {
+                    "name": "BIKE - ATTEMPTED STOLEN",
+                    "size": 1
+                },
+                {
+                    "name": "CONTEMPT OF COURT",
+                    "size": 22
+                },
+                {
+                    "name": "DRUGS, TO A MINOR",
+                    "size": 5
+                },
+                {
+                    "name": "VEHICLE - ATTEMPT STOLEN",
+                    "size": 257
+                },
+                {
+                    "name": "BEASTIALITY, CRIME AGAINST NATURE SEXUAL ASSLT WITH ANIM0065",
+                    "size": 4
+                },
+                {
+                    "name": "CHILD ABANDONMENT",
+                    "size": 8
+                },
+                {
+                    "name": "PURSE SNATCHING",
+                    "size": 104
+                },
+                {
+                    "name": "BATTERY - SIMPLE ASSAULT",
+                    "size": 18404
+                },
+                {
+                    "name": "GRAND THEFT / INSURANCE FRAUD",
+                    "size": 2
+                },
+                {
+                    "name": "BIKE - STOLEN",
+                    "size": 1149
+                },
+                {
+                    "name": "VANDALISM - MISDEAMEANOR ($399 OR UNDER)",
+                    "size": 9103
+                },
+                {
+                    "name": "BATTERY ON A FIREFIGHTER",
+                    "size": 38
+                },
+                {
+                    "name": "BUNCO, PETTY THEFT",
+                    "size": 565
+                },
+                {
+                    "name": "LEWD CONDUCT",
+                    "size": 103
+                },
+                {
+                    "name": "EMBEZZLEMENT, PETTY THEFT ($950 & UNDER)",
+                    "size": 77
+                },
+                {
+                    "name": "THEFT FROM MOTOR VEHICLE - ATTEMPT",
+                    "size": 103
+                },
+                {
+                    "name": "INCEST (SEXUAL ACTS BETWEEN BLOOD RELATIVES)",
+                    "size": 1
+                },
+                {
+                    "name": "FAILURE TO YIELD",
+                    "size": 13
+                },
+                {
+                    "name": "STALKING",
+                    "size": 195
+                },
+                {
+                    "name": "BURGLARY FROM VEHICLE, ATTEMPTED",
+                    "size": 255
+                },
+                {
+                    "name": "RAPE, ATTEMPTED",
+                    "size": 109
+                },
+                {
+                    "name": "SHOTS FIRED AT INHABITED DWELLING",
+                    "size": 247
+                },
+                {
+                    "name": "VIOLATION OF TEMPORARY RESTRAINING ORDER",
+                    "size": 118
+                },
+                {
+                    "name": "DOCUMENT WORTHLESS ($200 & UNDER)",
+                    "size": 3
+                },
+                {
+                    "name": "ATTEMPTED ROBBERY",
+                    "size": 1005
+                },
+                {
+                    "name": "PROWLER",
+                    "size": 90
+                },
+                {
+                    "name": "INTIMATE PARTNER - SIMPLE ASSAULT",
+                    "size": 11643
+                },
+                {
+                    "name": "PIMPING",
+                    "size": 64
+                },
+                {
+                    "name": "ILLEGAL DUMPING",
+                    "size": 53
+                },
+                {
+                    "name": "PEEPING TOM",
+                    "size": 131
+                },
+                {
+                    "name": "THEFT, COIN MACHINE - GRAND ($950.01 & OVER)",
+                    "size": 2
+                },
+                {
+                    "name": "TILL TAP - PETTY ($950 & UNDER)",
+                    "size": 5
+                },
+                {
+                    "name": "DRIVING WITHOUT OWNER CONSENT (DWOC)",
+                    "size": 27
+                },
+                {
+                    "name": "THEFT PLAIN - PETTY ($950 & UNDER)",
+                    "size": 15739
+                },
+                {
+                    "name": "OTHER ASSAULT",
+                    "size": 141
+                },
+                {
+                    "name": "THEFT FROM MOTOR VEHICLE - GRAND ($400 AND OVER)",
+                    "size": 2996
+                },
+                {
+                    "name": "DISHONEST EMPLOYEE - PETTY THEFT",
+                    "size": 11
+                },
+                {
+                    "name": "CONTRIBUTING",
+                    "size": 13
+                },
+                {
+                    "name": "BOMB SCARE",
+                    "size": 91
+                },
+                {
+                    "name": "SHOPLIFTING - ATTEMPT",
+                    "size": 13
+                },
+                {
+                    "name": "INTIMATE PARTNER - AGGRAVATED ASSAULT",
+                    "size": 1031
+                },
+                {
+                    "name": "RECKLESS DRIVING",
+                    "size": 13
+                },
+                {
+                    "name": "DISRUPT SCHOOL",
+                    "size": 2
+                },
+                {
+                    "name": "UNAUTHORIZED COMPUTER ACCESS",
+                    "size": 107
+                },
+                {
+                    "name": "ARSON",
+                    "size": 300
+                },
+                {
+                    "name": "SHOPLIFTING - PETTY THEFT ($950 & UNDER)",
+                    "size": 4592
+                },
+                {
+                    "name": "ASSAULT WITH DEADLY WEAPON ON POLICE OFFICER",
+                    "size": 150
+                },
+                {
+                    "name": "THEFT FROM MOTOR VEHICLE - PETTY ($950 & UNDER)",
+                    "size": 7848
+                },
+                {
+                    "name": "PURSE SNATCHING - ATTEMPT",
+                    "size": 1
+                },
+                {
+                    "name": "FAILURE TO DISPERSE",
+                    "size": 6
+                },
+                {
+                    "name": "CHILD ANNOYING (17YRS & UNDER)",
+                    "size": 539
+                },
+                {
+                    "name": "DEFRAUDING INNKEEPER/THEFT OF SERVICES, OVER $400",
+                    "size": 28
+                },
+                {
+                    "name": "PETTY THEFT - AUTO REPAIR",
+                    "size": 2
+                },
+                {
+                    "name": "WEAPONS POSSESSION/BOMBING",
+                    "size": 16
+                },
+                {
+                    "name": "CHILD ABUSE (PHYSICAL) - AGGRAVATED ASSAULT",
+                    "size": 149
+                },
+                {
+                    "name": "DISHONEST EMPLOYEE - GRAND THEFT",
+                    "size": 15
+                },
+                {
+                    "name": "DISHONEST EMPLOYEE ATTEMPTED THEFT",
+                    "size": 2
+                },
+                {
+                    "name": "THREATENING PHONE CALLS/LETTERS",
+                    "size": 236
+                }
+            ]
+        },
+        {
+            "name": "2017",
+            "children": [
+                {
+                    "name": "",
+                    "size": 163
+                },
+                {
+                    "name": "THEFT OF IDENTITY",
+                    "size": 8092
+                },
+                {
+                    "name": "REPLICA FIREARMS(SALE,DISPLAY,MANUFACTURE OR DISTRIBUTE)0132",
+                    "size": 3
+                },
+                {
+                    "name": "DISCHARGE FIREARMS/SHOTS FIRED",
+                    "size": 285
+                },
+                {
+                    "name": "DISTURBING THE PEACE",
+                    "size": 285
+                },
+                {
+                    "name": "BATTERY POLICE (SIMPLE)",
+                    "size": 428
+                },
+                {
+                    "name": "CHILD STEALING",
+                    "size": 63
+                },
+                {
+                    "name": "DEFRAUDING INNKEEPER/THEFT OF SERVICES, $400 & UNDER",
+                    "size": 152
+                },
+                {
+                    "name": "CHILD NEGLECT (SEE 300 W.I.C.)",
+                    "size": 236
+                },
+                {
+                    "name": "MANSLAUGHTER, NEGLIGENT",
+                    "size": 1
+                },
+                {
+                    "name": "BURGLARY, ATTEMPTED",
+                    "size": 1076
+                },
+                {
+                    "name": "GRAND THEFT / INSURANCE FRAUD",
+                    "size": 4
+                },
+                {
+                    "name": "EXTORTION",
+                    "size": 290
+                },
+                {
+                    "name": "TELEPHONE PROPERTY - DAMAGE",
+                    "size": 4
+                },
+                {
+                    "name": "BOAT - STOLEN",
+                    "size": 24
+                },
+                {
+                    "name": "GRAND THEFT / AUTO REPAIR",
+                    "size": 1
+                },
+                {
+                    "name": "THEFT, COIN MACHINE - PETTY ($950 & UNDER)",
+                    "size": 27
+                },
+                {
+                    "name": "BATTERY WITH SEXUAL CONTACT",
+                    "size": 879
+                },
+                {
+                    "name": "CRUELTY TO ANIMALS",
+                    "size": 55
+                },
+                {
+                    "name": "PICKPOCKET, ATTEMPT",
+                    "size": 3
+                },
+                {
+                    "name": "DRUNK ROLL",
+                    "size": 7
+                },
+                {
+                    "name": "ASSAULT WITH DEADLY WEAPON, AGGRAVATED ASSAULT",
+                    "size": 8345
+                },
+                {
+                    "name": "CRIMINAL THREATS - NO WEAPON DISPLAYED",
+                    "size": 3885
+                },
+                {
+                    "name": "CRM AGNST CHLD (13 OR UNDER) (14-15 & SUSP 10 YRS OLDER)0060",
+                    "size": 338
+                },
+                {
+                    "name": "VEHICLE - STOLEN",
+                    "size": 14130
+                },
+                {
+                    "name": "DOCUMENT FORGERY / STOLEN FELONY",
+                    "size": 1517
+                },
+                {
+                    "name": "COUNTERFEIT",
+                    "size": 37
+                },
+                {
+                    "name": "CRIMINAL HOMICIDE",
+                    "size": 204
+                },
+                {
+                    "name": "LETTERS, LEWD",
+                    "size": 1261
+                },
+                {
+                    "name": "BUNCO, PETTY THEFT",
+                    "size": 665
+                },
+                {
+                    "name": "VIOLATION OF COURT ORDER",
+                    "size": 1357
+                },
+                {
+                    "name": "BURGLARY",
+                    "size": 11245
+                },
+                {
+                    "name": "THEFT, COIN MACHINE - ATTEMPT",
+                    "size": 3
+                },
+                {
+                    "name": "ORAL COPULATION",
+                    "size": 144
+                },
+                {
+                    "name": "VIOLATION OF RESTRAINING ORDER",
+                    "size": 1825
+                },
+                {
+                    "name": "THEFT PLAIN - ATTEMPT",
+                    "size": 141
+                },
+                {
+                    "name": "SHOTS FIRED AT MOVING VEHICLE, TRAIN OR AIRCRAFT",
+                    "size": 33
+                },
+                {
+                    "name": "BRIBERY",
+                    "size": 2
+                },
+                {
+                    "name": "DOCUMENT WORTHLESS ($200.01 & OVER)",
+                    "size": 32
+                },
+                {
+                    "name": "INDECENT EXPOSURE",
+                    "size": 316
+                },
+                {
+                    "name": "CHILD ABUSE (PHYSICAL) - SIMPLE ASSAULT",
+                    "size": 645
+                },
+                {
+                    "name": "SEX, UNLAWFUL",
+                    "size": 237
+                },
+                {
+                    "name": "CREDIT CARDS, FRAUD USE ($950 & UNDER",
+                    "size": 32
+                },
+                {
+                    "name": "BUNCO, GRAND THEFT",
+                    "size": 902
+                },
+                {
+                    "name": "THEFT, PERSON",
+                    "size": 1355
+                },
+                {
+                    "name": "THEFT FROM PERSON - ATTEMPT",
+                    "size": 30
+                },
+                {
+                    "name": "TILL TAP - GRAND THEFT ($950.01 & OVER)",
+                    "size": 1
+                },
+                {
+                    "name": "FALSE IMPRISONMENT",
+                    "size": 84
+                },
+                {
+                    "name": "CONSPIRACY",
+                    "size": 10
+                },
+                {
+                    "name": "KIDNAPPING - GRAND ATTEMPT",
+                    "size": 42
+                },
+                {
+                    "name": "RAPE, FORCIBLE",
+                    "size": 805
+                },
+                {
+                    "name": "RESISTING ARREST",
+                    "size": 267
+                },
+                {
+                    "name": "PICKPOCKET",
+                    "size": 141
+                },
+                {
+                    "name": "THROWING OBJECT AT MOVING VEHICLE",
+                    "size": 174
+                },
+                {
+                    "name": "BURGLARY FROM VEHICLE",
+                    "size": 13542
+                },
+                {
+                    "name": "THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD0036",
+                    "size": 4737
+                },
+                {
+                    "name": "BUNCO, ATTEMPT",
+                    "size": 90
+                },
+                {
+                    "name": "LYNCHING",
+                    "size": 4
+                },
+                {
+                    "name": "KIDNAPPING",
+                    "size": 163
+                },
+                {
+                    "name": "OTHER MISCELLANEOUS CRIME",
+                    "size": 1355
+                },
+                {
+                    "name": "BRANDISH WEAPON",
+                    "size": 1905
+                },
+                {
+                    "name": "SHOPLIFTING-GRAND THEFT ($950.01 & OVER)",
+                    "size": 412
+                },
+                {
+                    "name": "TRESPASSING",
+                    "size": 2110
+                },
+                {
+                    "name": "ROBBERY",
+                    "size": 7231
+                },
+                {
+                    "name": "EMBEZZLEMENT, GRAND THEFT ($950.01 & OVER)",
+                    "size": 457
+                },
+                {
+                    "name": "CREDIT CARDS, FRAUD USE ($950.01 & OVER)",
+                    "size": 42
+                },
+                {
+                    "name": "CHILD ANNOYING (17YRS & UNDER)",
+                    "size": 265
+                },
+                {
+                    "name": "SEXUAL PENTRATION WITH A FOREIGN OBJECT",
+                    "size": 249
+                },
+                {
+                    "name": "INTIMATE PARTNER - SIMPLE ASSAULT",
+                    "size": 9548
+                },
+                {
+                    "name": "BIKE - ATTEMPTED STOLEN",
+                    "size": 7
+                },
+                {
+                    "name": "CONTEMPT OF COURT",
+                    "size": 588
+                },
+                {
+                    "name": "DRUGS, TO A MINOR",
+                    "size": 3
+                },
+                {
+                    "name": "VEHICLE - ATTEMPT STOLEN",
+                    "size": 265
+                },
+                {
+                    "name": "BEASTIALITY, CRIME AGAINST NATURE SEXUAL ASSLT WITH ANIM0065",
+                    "size": 1
+                },
+                {
+                    "name": "CHILD ABANDONMENT",
+                    "size": 3
+                },
+                {
+                    "name": "PURSE SNATCHING",
+                    "size": 108
+                },
+                {
+                    "name": "BATTERY - SIMPLE ASSAULT",
+                    "size": 14321
+                },
+                {
+                    "name": "LYNCHING - ATTEMPTED",
+                    "size": 2
+                },
+                {
+                    "name": "BIKE - STOLEN",
+                    "size": 1731
+                },
+                {
+                    "name": "VANDALISM - MISDEAMEANOR ($399 OR UNDER)",
+                    "size": 6655
+                },
+                {
+                    "name": "BATTERY ON A FIREFIGHTER",
+                    "size": 33
+                },
+                {
+                    "name": "VANDALISM - FELONY ($400 & OVER, ALL CHURCH VANDALISMS) 0114",
+                    "size": 9667
+                },
+                {
+                    "name": "LEWD CONDUCT",
+                    "size": 101
+                },
+                {
+                    "name": "EMBEZZLEMENT, PETTY THEFT ($950 & UNDER)",
+                    "size": 37
+                },
+                {
+                    "name": "THEFT FROM MOTOR VEHICLE - ATTEMPT",
+                    "size": 105
+                },
+                {
+                    "name": "FAILURE TO YIELD",
+                    "size": 74
+                },
+                {
+                    "name": "STALKING",
+                    "size": 123
+                },
+                {
+                    "name": "BURGLARY FROM VEHICLE, ATTEMPTED",
+                    "size": 234
+                },
+                {
+                    "name": "RAPE, ATTEMPTED",
+                    "size": 77
+                },
+                {
+                    "name": "SHOTS FIRED AT INHABITED DWELLING",
+                    "size": 203
+                },
+                {
+                    "name": "VIOLATION OF TEMPORARY RESTRAINING ORDER",
+                    "size": 195
+                },
+                {
+                    "name": "DOCUMENT WORTHLESS ($200 & UNDER)",
+                    "size": 6
+                },
+                {
+                    "name": "ATTEMPTED ROBBERY",
+                    "size": 1008
+                },
+                {
+                    "name": "PROWLER",
+                    "size": 61
+                },
+                {
+                    "name": "SODOMY/SEXUAL CONTACT B/W PENIS OF ONE PERS TO ANUS OTH 0007=02",
+                    "size": 111
+                },
+                {
+                    "name": "PIMPING",
+                    "size": 25
+                },
+                {
+                    "name": "ILLEGAL DUMPING",
+                    "size": 45
+                },
+                {
+                    "name": "PEEPING TOM",
+                    "size": 95
+                },
+                {
+                    "name": "BLOCKING DOOR INDUCTION CENTER",
+                    "size": 1
+                },
+                {
+                    "name": "THEFT, COIN MACHINE - GRAND ($950.01 & OVER)",
+                    "size": 5
+                },
+                {
+                    "name": "TILL TAP - PETTY ($950 & UNDER)",
+                    "size": 13
+                },
+                {
+                    "name": "DRIVING WITHOUT OWNER CONSENT (DWOC)",
+                    "size": 60
+                },
+                {
+                    "name": "THEFT PLAIN - PETTY ($950 & UNDER)",
+                    "size": 10738
+                },
+                {
+                    "name": "OTHER ASSAULT",
+                    "size": 458
+                },
+                {
+                    "name": "THEFT FROM MOTOR VEHICLE - GRAND ($400 AND OVER)",
+                    "size": 2522
+                },
+                {
+                    "name": "DISHONEST EMPLOYEE - PETTY THEFT",
+                    "size": 10
+                },
+                {
+                    "name": "CONTRIBUTING",
+                    "size": 13
+                },
+                {
+                    "name": "BOMB SCARE",
+                    "size": 138
+                },
+                {
+                    "name": "SHOPLIFTING - ATTEMPT",
+                    "size": 28
+                },
+                {
+                    "name": "INTIMATE PARTNER - AGGRAVATED ASSAULT",
+                    "size": 2049
+                },
+                {
+                    "name": "FIREARMS RESTRAINING ORDER (FIREARMS RO)",
+                    "size": 1
+                },
+                {
+                    "name": "RECKLESS DRIVING",
+                    "size": 24
+                },
+                {
+                    "name": "DISRUPT SCHOOL",
+                    "size": 4
+                },
+                {
+                    "name": "UNAUTHORIZED COMPUTER ACCESS",
+                    "size": 140
+                },
+                {
+                    "name": "ARSON",
+                    "size": 301
+                },
+                {
+                    "name": "SHOPLIFTING - PETTY THEFT ($950 & UNDER)",
+                    "size": 4446
+                },
+                {
+                    "name": "ASSAULT WITH DEADLY WEAPON ON POLICE OFFICER",
+                    "size": 140
+                },
+                {
+                    "name": "PANDERING",
+                    "size": 25
+                },
+                {
+                    "name": "THEFT FROM MOTOR VEHICLE - PETTY ($950 & UNDER)",
+                    "size": 8053
+                },
+                {
+                    "name": "PURSE SNATCHING - ATTEMPT",
+                    "size": 4
+                },
+                {
+                    "name": "FALSE POLICE REPORT",
+                    "size": 29
+                },
+                {
+                    "name": "DEFRAUDING INNKEEPER/THEFT OF SERVICES, OVER $400",
+                    "size": 28
+                },
+                {
+                    "name": "PETTY THEFT - AUTO REPAIR",
+                    "size": 1
+                },
+                {
+                    "name": "WEAPONS POSSESSION/BOMBING",
+                    "size": 12
+                },
+                {
+                    "name": "CHILD ABUSE (PHYSICAL) - AGGRAVATED ASSAULT",
+                    "size": 92
+                },
+                {
+                    "name": "DISHONEST EMPLOYEE - GRAND THEFT",
+                    "size": 20
+                },
+                {
+                    "name": "DISHONEST EMPLOYEE ATTEMPTED THEFT",
+                    "size": 1
+                },
+                {
+                    "name": "THREATENING PHONE CALLS/LETTERS",
+                    "size": 225
+                }
+            ]
+        },
+        {
+            "name": "2016",
+            "children": [
+                {
+                    "name": "",
+                    "size": 192
+                },
+                {
+                    "name": "THEFT OF IDENTITY",
+                    "size": 12680
+                },
+                {
+                    "name": "REPLICA FIREARMS(SALE,DISPLAY,MANUFACTURE OR DISTRIBUTE)0132",
+                    "size": 6
+                },
+                {
+                    "name": "DISCHARGE FIREARMS/SHOTS FIRED",
+                    "size": 429
+                },
+                {
+                    "name": "DISTURBING THE PEACE",
+                    "size": 366
+                },
+                {
+                    "name": "BATTERY POLICE (SIMPLE)",
+                    "size": 476
+                },
+                {
+                    "name": "CHILD STEALING",
+                    "size": 122
+                },
+                {
+                    "name": "DEFRAUDING INNKEEPER/THEFT OF SERVICES, $400 & UNDER",
+                    "size": 220
+                },
+                {
+                    "name": "CHILD NEGLECT (SEE 300 W.I.C.)",
+                    "size": 338
+                },
+                {
+                    "name": "PANDERING",
+                    "size": 21
+                },
+                {
+                    "name": "BURGLARY, ATTEMPTED",
+                    "size": 1243
+                },
+                {
+                    "name": "GRAND THEFT / INSURANCE FRAUD",
+                    "size": 5
+                },
+                {
+                    "name": "EXTORTION",
+                    "size": 322
+                },
+                {
+                    "name": "TELEPHONE PROPERTY - DAMAGE",
+                    "size": 3
+                },
+                {
+                    "name": "BOAT - STOLEN",
+                    "size": 24
+                },
+                {
+                    "name": "BATTERY - SIMPLE ASSAULT",
+                    "size": 17917
+                },
+                {
+                    "name": "THEFT, COIN MACHINE - PETTY ($950 & UNDER)",
+                    "size": 39
+                },
+                {
+                    "name": "BATTERY WITH SEXUAL CONTACT",
+                    "size": 1101
+                },
+                {
+                    "name": "CRUELTY TO ANIMALS",
+                    "size": 101
+                },
+                {
+                    "name": "PICKPOCKET, ATTEMPT",
+                    "size": 6
+                },
+                {
+                    "name": "DRUNK ROLL",
+                    "size": 2
+                },
+                {
+                    "name": "ASSAULT WITH DEADLY WEAPON, AGGRAVATED ASSAULT",
+                    "size": 10792
+                },
+                {
+                    "name": "CRIMINAL THREATS - NO WEAPON DISPLAYED",
+                    "size": 5200
+                },
+                {
+                    "name": "TRAIN WRECKING",
+                    "size": 1
+                },
+                {
+                    "name": "CRM AGNST CHLD (13 OR UNDER) (14-15 & SUSP 10 YRS OLDER)0060",
+                    "size": 584
+                },
+                {
+                    "name": "VEHICLE - STOLEN",
+                    "size": 18297
+                },
+                {
+                    "name": "DOCUMENT FORGERY / STOLEN FELONY",
+                    "size": 2598
+                },
+                {
+                    "name": "CHILD ABUSE (PHYSICAL) - SIMPLE ASSAULT",
+                    "size": 932
+                },
+                {
+                    "name": "CRIMINAL HOMICIDE",
+                    "size": 293
+                },
+                {
+                    "name": "LETTERS, LEWD",
+                    "size": 1691
+                },
+                {
+                    "name": "BUNCO, PETTY THEFT",
+                    "size": 664
+                },
+                {
+                    "name": "VIOLATION OF COURT ORDER",
+                    "size": 1808
+                },
+                {
+                    "name": "BURGLARY",
+                    "size": 14481
+                },
+                {
+                    "name": "THEFT, COIN MACHINE - ATTEMPT",
+                    "size": 5
+                },
+                {
+                    "name": "ORAL COPULATION",
+                    "size": 226
+                },
+                {
+                    "name": "SHOPLIFTING - ATTEMPT",
+                    "size": 37
+                },
+                {
+                    "name": "THEFT PLAIN - ATTEMPT",
+                    "size": 154
+                },
+                {
+                    "name": "SHOTS FIRED AT MOVING VEHICLE, TRAIN OR AIRCRAFT",
+                    "size": 40
+                },
+                {
+                    "name": "DOCUMENT WORTHLESS ($200.01 & OVER)",
+                    "size": 60
+                },
+                {
+                    "name": "INDECENT EXPOSURE",
+                    "size": 383
+                },
+                {
+                    "name": "COUNTERFEIT",
+                    "size": 78
+                },
+                {
+                    "name": "SEX, UNLAWFUL",
+                    "size": 366
+                },
+                {
+                    "name": "CREDIT CARDS, FRAUD USE ($950 & UNDER",
+                    "size": 51
+                },
+                {
+                    "name": "BUNCO, GRAND THEFT",
+                    "size": 1213
+                },
+                {
+                    "name": "THEFT, PERSON",
+                    "size": 1548
+                },
+                {
+                    "name": "THEFT FROM PERSON - ATTEMPT",
+                    "size": 29
+                },
+                {
+                    "name": "TILL TAP - GRAND THEFT ($950.01 & OVER)",
+                    "size": 2
+                },
+                {
+                    "name": "FALSE IMPRISONMENT",
+                    "size": 85
+                },
+                {
+                    "name": "CONSPIRACY",
+                    "size": 4
+                },
+                {
+                    "name": "KIDNAPPING - GRAND ATTEMPT",
+                    "size": 66
+                },
+                {
+                    "name": "MANSLAUGHTER, NEGLIGENT",
+                    "size": 1
+                },
+                {
+                    "name": "RAPE, FORCIBLE",
+                    "size": 1139
+                },
+                {
+                    "name": "RESISTING ARREST",
+                    "size": 343
+                },
+                {
+                    "name": "PICKPOCKET",
+                    "size": 142
+                },
+                {
+                    "name": "THROWING OBJECT AT MOVING VEHICLE",
+                    "size": 172
+                },
+                {
+                    "name": "BURGLARY FROM VEHICLE",
+                    "size": 16750
+                },
+                {
+                    "name": "THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD0036",
+                    "size": 6482
+                },
+                {
+                    "name": "BUNCO, ATTEMPT",
+                    "size": 124
+                },
+                {
+                    "name": "LYNCHING",
+                    "size": 4
+                },
+                {
+                    "name": "KIDNAPPING",
+                    "size": 180
+                },
+                {
+                    "name": "OTHER MISCELLANEOUS CRIME",
+                    "size": 1655
+                },
+                {
+                    "name": "BRANDISH WEAPON",
+                    "size": 2052
+                },
+                {
+                    "name": "SHOPLIFTING-GRAND THEFT ($950.01 & OVER)",
+                    "size": 540
+                },
+                {
+                    "name": "TRESPASSING",
+                    "size": 2518
+                },
+                {
+                    "name": "ROBBERY",
+                    "size": 9068
+                },
+                {
+                    "name": "EMBEZZLEMENT, GRAND THEFT ($950.01 & OVER)",
+                    "size": 806
+                },
+                {
+                    "name": "CREDIT CARDS, FRAUD USE ($950.01 & OVER)",
+                    "size": 142
+                },
+                {
+                    "name": "CHILD ANNOYING (17YRS & UNDER)",
+                    "size": 426
+                },
+                {
+                    "name": "SEXUAL PENTRATION WITH A FOREIGN OBJECT",
+                    "size": 334
+                },
+                {
+                    "name": "INTIMATE PARTNER - SIMPLE ASSAULT",
+                    "size": 12378
+                },
+                {
+                    "name": "BIKE - ATTEMPTED STOLEN",
+                    "size": 11
+                },
+                {
+                    "name": "CONTEMPT OF COURT",
+                    "size": 806
+                },
+                {
+                    "name": "DRUGS, TO A MINOR",
+                    "size": 13
+                },
+                {
+                    "name": "VEHICLE - ATTEMPT STOLEN",
+                    "size": 432
+                },
+                {
+                    "name": "BEASTIALITY, CRIME AGAINST NATURE SEXUAL ASSLT WITH ANIM0065",
+                    "size": 1
+                },
+                {
+                    "name": "CHILD ABANDONMENT",
+                    "size": 10
+                },
+                {
+                    "name": "PURSE SNATCHING",
+                    "size": 119
+                },
+                {
+                    "name": "THREATENING PHONE CALLS/LETTERS",
+                    "size": 321
+                },
+                {
+                    "name": "LYNCHING - ATTEMPTED",
+                    "size": 4
+                },
+                {
+                    "name": "BIKE - STOLEN",
+                    "size": 2330
+                },
+                {
+                    "name": "VANDALISM - MISDEAMEANOR ($399 OR UNDER)",
+                    "size": 8802
+                },
+                {
+                    "name": "BATTERY ON A FIREFIGHTER",
+                    "size": 38
+                },
+                {
+                    "name": "VANDALISM - FELONY ($400 & OVER, ALL CHURCH VANDALISMS) 0114",
+                    "size": 12753
+                },
+                {
+                    "name": "LEWD CONDUCT",
+                    "size": 149
+                },
+                {
+                    "name": "EMBEZZLEMENT, PETTY THEFT ($950 & UNDER)",
+                    "size": 75
+                },
+                {
+                    "name": "THEFT FROM MOTOR VEHICLE - ATTEMPT",
+                    "size": 178
+                },
+                {
+                    "name": "INCEST (SEXUAL ACTS BETWEEN BLOOD RELATIVES)",
+                    "size": 4
+                },
+                {
+                    "name": "FAILURE TO YIELD",
+                    "size": 89
+                },
+                {
+                    "name": "STALKING",
+                    "size": 162
+                },
+                {
+                    "name": "BURGLARY FROM VEHICLE, ATTEMPTED",
+                    "size": 290
+                },
+                {
+                    "name": "RAPE, ATTEMPTED",
+                    "size": 119
+                },
+                {
+                    "name": "SHOTS FIRED AT INHABITED DWELLING",
+                    "size": 302
+                },
+                {
+                    "name": "VIOLATION OF TEMPORARY RESTRAINING ORDER",
+                    "size": 249
+                },
+                {
+                    "name": "DOCUMENT WORTHLESS ($200 & UNDER)",
+                    "size": 15
+                },
+                {
+                    "name": "ATTEMPTED ROBBERY",
+                    "size": 1230
+                },
+                {
+                    "name": "PROWLER",
+                    "size": 64
+                },
+                {
+                    "name": "SODOMY/SEXUAL CONTACT B/W PENIS OF ONE PERS TO ANUS OTH 0007=02",
+                    "size": 163
+                },
+                {
+                    "name": "PIMPING",
+                    "size": 50
+                },
+                {
+                    "name": "ILLEGAL DUMPING",
+                    "size": 38
+                },
+                {
+                    "name": "PEEPING TOM",
+                    "size": 121
+                },
+                {
+                    "name": "BLOCKING DOOR INDUCTION CENTER",
+                    "size": 2
+                },
+                {
+                    "name": "THEFT, COIN MACHINE - GRAND ($950.01 & OVER)",
+                    "size": 7
+                },
+                {
+                    "name": "TILL TAP - PETTY ($950 & UNDER)",
+                    "size": 8
+                },
+                {
+                    "name": "DRIVING WITHOUT OWNER CONSENT (DWOC)",
+                    "size": 64
+                },
+                {
+                    "name": "THEFT PLAIN - PETTY ($950 & UNDER)",
+                    "size": 14767
+                },
+                {
+                    "name": "OTHER ASSAULT",
+                    "size": 426
+                },
+                {
+                    "name": "THEFT FROM MOTOR VEHICLE - GRAND ($400 AND OVER)",
+                    "size": 3503
+                },
+                {
+                    "name": "DISHONEST EMPLOYEE - PETTY THEFT",
+                    "size": 21
+                },
+                {
+                    "name": "CONTRIBUTING",
+                    "size": 17
+                },
+                {
+                    "name": "BOMB SCARE",
+                    "size": 76
+                },
+                {
+                    "name": "VIOLATION OF RESTRAINING ORDER",
+                    "size": 2083
+                },
+                {
+                    "name": "INTIMATE PARTNER - AGGRAVATED ASSAULT",
+                    "size": 2459
+                },
+                {
+                    "name": "RECKLESS DRIVING",
+                    "size": 37
+                },
+                {
+                    "name": "DISRUPT SCHOOL",
+                    "size": 4
+                },
+                {
+                    "name": "UNAUTHORIZED COMPUTER ACCESS",
+                    "size": 180
+                },
+                {
+                    "name": "ARSON",
+                    "size": 411
+                },
+                {
+                    "name": "SHOPLIFTING - PETTY THEFT ($950 & UNDER)",
+                    "size": 6557
+                },
+                {
+                    "name": "ASSAULT WITH DEADLY WEAPON ON POLICE OFFICER",
+                    "size": 187
+                },
+                {
+                    "name": "THEFT FROM MOTOR VEHICLE - PETTY ($950 & UNDER)",
+                    "size": 10639
+                },
+                {
+                    "name": "PURSE SNATCHING - ATTEMPT",
+                    "size": 6
+                },
+                {
+                    "name": "FALSE POLICE REPORT",
+                    "size": 32
+                },
+                {
+                    "name": "DEFRAUDING INNKEEPER/THEFT OF SERVICES, OVER $400",
+                    "size": 27
+                },
+                {
+                    "name": "PETTY THEFT - AUTO REPAIR",
+                    "size": 1
+                },
+                {
+                    "name": "WEAPONS POSSESSION/BOMBING",
+                    "size": 16
+                },
+                {
+                    "name": "CHILD ABUSE (PHYSICAL) - AGGRAVATED ASSAULT",
+                    "size": 134
+                },
+                {
+                    "name": "DISHONEST EMPLOYEE - GRAND THEFT",
+                    "size": 26
+                }
+            ]
+        },
+        {
+            "name": "2011",
+            "children": [
+                {
+                    "name": "THEFT OF IDENTITY",
+                    "size": 13335
+                },
+                {
+                    "name": "REPLICA FIREARMS(SALE,DISPLAY,MANUFACTURE OR DISTRIBUTE)0132",
+                    "size": 1
+                },
+                {
+                    "name": "DISCHARGE FIREARMS/SHOTS FIRED",
+                    "size": 315
+                },
+                {
+                    "name": "DISTURBING THE PEACE",
+                    "size": 347
+                },
+                {
+                    "name": "BATTERY POLICE (SIMPLE)",
+                    "size": 451
+                },
+                {
+                    "name": "CHILD STEALING",
+                    "size": 141
+                },
+                {
+                    "name": "DEFRAUDING INNKEEPER/THEFT OF SERVICES, $400 & UNDER",
+                    "size": 217
+                },
+                {
+                    "name": "CHILD NEGLECT (SEE 300 W.I.C.)",
+                    "size": 842
+                },
+                {
+                    "name": "DOCUMENT WORTHLESS ($200.01 & OVER)",
+                    "size": 9
+                },
+                {
+                    "name": "BURGLARY, ATTEMPTED",
+                    "size": 1353
+                },
+                {
+                    "name": "GRAND THEFT / INSURANCE FRAUD",
+                    "size": 7
+                },
+                {
+                    "name": "BIGAMY",
+                    "size": 1
+                },
+                {
+                    "name": "EXTORTION",
+                    "size": 140
+                },
+                {
+                    "name": "TELEPHONE PROPERTY - DAMAGE",
+                    "size": 9
+                },
+                {
+                    "name": "BOAT - STOLEN",
+                    "size": 36
+                },
+                {
+                    "name": "GRAND THEFT / AUTO REPAIR",
+                    "size": 3
+                },
+                {
+                    "name": "THEFT, COIN MACHINE - PETTY ($950 & UNDER)",
+                    "size": 16
+                },
+                {
+                    "name": "BATTERY WITH SEXUAL CONTACT",
+                    "size": 1016
+                },
+                {
+                    "name": "CRUELTY TO ANIMALS",
+                    "size": 247
+                },
+                {
+                    "name": "ASSAULT WITH DEADLY WEAPON, AGGRAVATED ASSAULT",
+                    "size": 7920
+                },
+                {
+                    "name": "CRIMINAL THREATS - NO WEAPON DISPLAYED",
+                    "size": 6349
+                },
+                {
+                    "name": "CRM AGNST CHLD (13 OR UNDER) (14-15 & SUSP 10 YRS OLDER)0060",
+                    "size": 1124
+                },
+                {
+                    "name": "BRIBERY",
+                    "size": 5
+                },
+                {
+                    "name": "DOCUMENT FORGERY / STOLEN FELONY",
+                    "size": 2441
+                },
+                {
+                    "name": "COUNTERFEIT",
+                    "size": 95
+                },
+                {
+                    "name": "CRIMINAL HOMICIDE",
+                    "size": 298
+                },
+                {
+                    "name": "LETTERS, LEWD",
+                    "size": 2593
+                },
+                {
+                    "name": "VANDALISM - FELONY ($400 & OVER, ALL CHURCH VANDALISMS) 0114",
+                    "size": 8751
+                },
+                {
+                    "name": "VIOLATION OF COURT ORDER",
+                    "size": 2493
+                },
+                {
+                    "name": "BURGLARY",
+                    "size": 15910
+                },
+                {
+                    "name": "THEFT, COIN MACHINE - ATTEMPT",
+                    "size": 1
+                },
+                {
+                    "name": "ORAL COPULATION",
+                    "size": 115
+                },
+                {
+                    "name": "VIOLATION OF RESTRAINING ORDER",
+                    "size": 1382
+                },
+                {
+                    "name": "THEFT PLAIN - ATTEMPT",
+                    "size": 164
+                },
+                {
+                    "name": "SHOTS FIRED AT MOVING VEHICLE, TRAIN OR AIRCRAFT",
+                    "size": 15
+                },
+                {
+                    "name": "VEHICLE - STOLEN",
+                    "size": 15164
+                },
+                {
+                    "name": "PANDERING",
+                    "size": 27
+                },
+                {
+                    "name": "INDECENT EXPOSURE",
+                    "size": 311
+                },
+                {
+                    "name": "CHILD ABUSE (PHYSICAL) - SIMPLE ASSAULT",
+                    "size": 842
+                },
+                {
+                    "name": "SEX, UNLAWFUL",
+                    "size": 534
+                },
+                {
+                    "name": "CREDIT CARDS, FRAUD USE ($950 & UNDER",
+                    "size": 11
+                },
+                {
+                    "name": "BUNCO, GRAND THEFT",
+                    "size": 337
+                },
+                {
+                    "name": "THEFT, PERSON",
+                    "size": 1246
+                },
+                {
+                    "name": "THEFT FROM PERSON - ATTEMPT",
+                    "size": 30
+                },
+                {
+                    "name": "TILL TAP - GRAND THEFT ($950.01 & OVER)",
+                    "size": 1
+                },
+                {
+                    "name": "FALSE IMPRISONMENT",
+                    "size": 104
+                },
+                {
+                    "name": "CONSPIRACY",
+                    "size": 5
+                },
+                {
+                    "name": "KIDNAPPING - GRAND ATTEMPT",
+                    "size": 81
+                },
+                {
+                    "name": "RAPE, FORCIBLE",
+                    "size": 796
+                },
+                {
+                    "name": "RESISTING ARREST",
+                    "size": 355
+                },
+                {
+                    "name": "PICKPOCKET",
+                    "size": 26
+                },
+                {
+                    "name": "THROWING OBJECT AT MOVING VEHICLE",
+                    "size": 127
+                },
+                {
+                    "name": "BURGLARY FROM VEHICLE",
+                    "size": 15883
+                },
+                {
+                    "name": "THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD0036",
+                    "size": 7469
+                },
+                {
+                    "name": "BUNCO, ATTEMPT",
+                    "size": 33
+                },
+                {
+                    "name": "LYNCHING",
+                    "size": 3
+                },
+                {
+                    "name": "KIDNAPPING",
+                    "size": 224
+                },
+                {
+                    "name": "OTHER MISCELLANEOUS CRIME",
+                    "size": 2464
+                },
+                {
+                    "name": "BRANDISH WEAPON",
+                    "size": 749
+                },
+                {
+                    "name": "SHOPLIFTING-GRAND THEFT ($950.01 & OVER)",
+                    "size": 201
+                },
+                {
+                    "name": "TRESPASSING",
+                    "size": 1390
+                },
+                {
+                    "name": "ROBBERY",
+                    "size": 8788
+                },
+                {
+                    "name": "EMBEZZLEMENT, GRAND THEFT ($950.01 & OVER)",
+                    "size": 711
+                },
+                {
+                    "name": "CREDIT CARDS, FRAUD USE ($950.01 & OVER)",
+                    "size": 78
+                },
+                {
+                    "name": "FALSE POLICE REPORT",
+                    "size": 39
+                },
+                {
+                    "name": "SEXUAL PENTRATION WITH A FOREIGN OBJECT",
+                    "size": 120
+                },
+                {
+                    "name": "INTIMATE PARTNER - SIMPLE ASSAULT",
+                    "size": 10057
+                },
+                {
+                    "name": "BIKE - ATTEMPTED STOLEN",
+                    "size": 1
+                },
+                {
+                    "name": "CONTEMPT OF COURT",
+                    "size": 13
+                },
+                {
+                    "name": "DRUGS, TO A MINOR",
+                    "size": 2
+                },
+                {
+                    "name": "VEHICLE - ATTEMPT STOLEN",
+                    "size": 315
+                },
+                {
+                    "name": "BEASTIALITY, CRIME AGAINST NATURE SEXUAL ASSLT WITH ANIM0065",
+                    "size": 1
+                },
+                {
+                    "name": "CHILD ABANDONMENT",
+                    "size": 7
+                },
+                {
+                    "name": "PURSE SNATCHING",
+                    "size": 126
+                },
+                {
+                    "name": "THREATENING PHONE CALLS/LETTERS",
+                    "size": 472
+                },
+                {
+                    "name": "LYNCHING - ATTEMPTED",
+                    "size": 4
+                },
+                {
+                    "name": "BIKE - STOLEN",
+                    "size": 263
+                },
+                {
+                    "name": "VANDALISM - MISDEAMEANOR ($399 OR UNDER)",
+                    "size": 10355
+                },
+                {
+                    "name": "BATTERY ON A FIREFIGHTER",
+                    "size": 16
+                },
+                {
+                    "name": "BUNCO, PETTY THEFT",
+                    "size": 167
+                },
+                {
+                    "name": "LEWD CONDUCT",
+                    "size": 124
+                },
+                {
+                    "name": "EMBEZZLEMENT, PETTY THEFT ($950 & UNDER)",
+                    "size": 51
+                },
+                {
+                    "name": "THEFT FROM MOTOR VEHICLE - ATTEMPT",
+                    "size": 91
+                },
+                {
+                    "name": "FAILURE TO YIELD",
+                    "size": 10
+                },
+                {
+                    "name": "STALKING",
+                    "size": 196
+                },
+                {
+                    "name": "BURGLARY FROM VEHICLE, ATTEMPTED",
+                    "size": 340
+                },
+                {
+                    "name": "RAPE, ATTEMPTED",
+                    "size": 95
+                },
+                {
+                    "name": "SHOTS FIRED AT INHABITED DWELLING",
+                    "size": 285
+                },
+                {
+                    "name": "VIOLATION OF TEMPORARY RESTRAINING ORDER",
+                    "size": 60
+                },
+                {
+                    "name": "DOCUMENT WORTHLESS ($200 & UNDER)",
+                    "size": 2
+                },
+                {
+                    "name": "ATTEMPTED ROBBERY",
+                    "size": 1267
+                },
+                {
+                    "name": "PROWLER",
+                    "size": 95
+                },
+                {
+                    "name": "SODOMY/SEXUAL CONTACT B/W PENIS OF ONE PERS TO ANUS OTH 0007=02",
+                    "size": 112
+                },
+                {
+                    "name": "PIMPING",
+                    "size": 44
+                },
+                {
+                    "name": "ILLEGAL DUMPING",
+                    "size": 49
+                },
+                {
+                    "name": "PEEPING TOM",
+                    "size": 104
+                },
+                {
+                    "name": "THEFT, COIN MACHINE - GRAND ($950.01 & OVER)",
+                    "size": 4
+                },
+                {
+                    "name": "TILL TAP - PETTY ($950 & UNDER)",
+                    "size": 3
+                },
+                {
+                    "name": "DRIVING WITHOUT OWNER CONSENT (DWOC)",
+                    "size": 32
+                },
+                {
+                    "name": "THEFT PLAIN - PETTY ($950 & UNDER)",
+                    "size": 14637
+                },
+                {
+                    "name": "OTHER ASSAULT",
+                    "size": 105
+                },
+                {
+                    "name": "THEFT FROM MOTOR VEHICLE - GRAND ($400 AND OVER)",
+                    "size": 2258
+                },
+                {
+                    "name": "DISHONEST EMPLOYEE - PETTY THEFT",
+                    "size": 10
+                },
+                {
+                    "name": "CONTRIBUTING",
+                    "size": 26
+                },
+                {
+                    "name": "BOMB SCARE",
+                    "size": 90
+                },
+                {
+                    "name": "SHOPLIFTING - ATTEMPT",
+                    "size": 10
+                },
+                {
+                    "name": "INTIMATE PARTNER - AGGRAVATED ASSAULT",
+                    "size": 220
+                },
+                {
+                    "name": "RECKLESS DRIVING",
+                    "size": 18
+                },
+                {
+                    "name": "DISRUPT SCHOOL",
+                    "size": 3
+                },
+                {
+                    "name": "UNAUTHORIZED COMPUTER ACCESS",
+                    "size": 119
+                },
+                {
+                    "name": "ARSON",
+                    "size": 335
+                },
+                {
+                    "name": "SHOPLIFTING - PETTY THEFT ($950 & UNDER)",
+                    "size": 3433
+                },
+                {
+                    "name": "ASSAULT WITH DEADLY WEAPON ON POLICE OFFICER",
+                    "size": 197
+                },
+                {
+                    "name": "THEFT FROM MOTOR VEHICLE - PETTY ($950 & UNDER)",
+                    "size": 6885
+                },
+                {
+                    "name": "PURSE SNATCHING - ATTEMPT",
+                    "size": 5
+                },
+                {
+                    "name": "FAILURE TO DISPERSE",
+                    "size": 5
+                },
+                {
+                    "name": "CHILD ANNOYING (17YRS & UNDER)",
+                    "size": 616
+                },
+                {
+                    "name": "DEFRAUDING INNKEEPER/THEFT OF SERVICES, OVER $400",
+                    "size": 20
+                },
+                {
+                    "name": "PETTY THEFT - AUTO REPAIR",
+                    "size": 6
+                },
+                {
+                    "name": "WEAPONS POSSESSION/BOMBING",
+                    "size": 17
+                },
+                {
+                    "name": "CHILD ABUSE (PHYSICAL) - AGGRAVATED ASSAULT",
+                    "size": 214
+                },
+                {
+                    "name": "DISHONEST EMPLOYEE - GRAND THEFT",
+                    "size": 6
+                },
+                {
+                    "name": "BATTERY - SIMPLE ASSAULT",
+                    "size": 19902
+                }
+            ]
+        },
+        {
+            "name": "2010",
+            "children": [
+                {
+                    "name": "",
+                    "size": 7
+                },
+                {
+                    "name": "THEFT OF IDENTITY",
+                    "size": 13130
+                },
+                {
+                    "name": "DISCHARGE FIREARMS/SHOTS FIRED",
+                    "size": 341
+                },
+                {
+                    "name": "DISTURBING THE PEACE",
+                    "size": 416
+                },
+                {
+                    "name": "BATTERY POLICE (SIMPLE)",
+                    "size": 460
+                },
+                {
+                    "name": "CHILD STEALING",
+                    "size": 133
+                },
+                {
+                    "name": "DEFRAUDING INNKEEPER/THEFT OF SERVICES, $400 & UNDER",
+                    "size": 190
+                },
+                {
+                    "name": "CHILD NEGLECT (SEE 300 W.I.C.)",
+                    "size": 915
+                },
+                {
+                    "name": "PANDERING",
+                    "size": 20
+                },
+                {
+                    "name": "BURGLARY, ATTEMPTED",
+                    "size": 1390
+                },
+                {
+                    "name": "GRAND THEFT / INSURANCE FRAUD",
+                    "size": 41
+                },
+                {
+                    "name": "BIGAMY",
+                    "size": 2
+                },
+                {
+                    "name": "EXTORTION",
+                    "size": 194
+                },
+                {
+                    "name": "TELEPHONE PROPERTY - DAMAGE",
+                    "size": 6
+                },
+                {
+                    "name": "BOAT - STOLEN",
+                    "size": 36
+                },
+                {
+                    "name": "GRAND THEFT / AUTO REPAIR",
+                    "size": 1
+                },
+                {
+                    "name": "THEFT, COIN MACHINE - PETTY ($950 & UNDER)",
+                    "size": 7
+                },
+                {
+                    "name": "BATTERY WITH SEXUAL CONTACT",
+                    "size": 1037
+                },
+                {
+                    "name": "CRUELTY TO ANIMALS",
+                    "size": 217
+                },
+                {
+                    "name": "PICKPOCKET, ATTEMPT",
+                    "size": 1
+                },
+                {
+                    "name": "DRUNK ROLL",
+                    "size": 4
+                },
+                {
+                    "name": "ASSAULT WITH DEADLY WEAPON, AGGRAVATED ASSAULT",
+                    "size": 8348
+                },
+                {
+                    "name": "CRIMINAL THREATS - NO WEAPON DISPLAYED",
+                    "size": 6643
+                },
+                {
+                    "name": "CRM AGNST CHLD (13 OR UNDER) (14-15 & SUSP 10 YRS OLDER)0060",
+                    "size": 1222
+                },
+                {
+                    "name": "VEHICLE - STOLEN",
+                    "size": 16654
+                },
+                {
+                    "name": "DOCUMENT FORGERY / STOLEN FELONY",
+                    "size": 2467
+                },
+                {
+                    "name": "COUNTERFEIT",
+                    "size": 129
+                },
+                {
+                    "name": "CRIMINAL HOMICIDE",
+                    "size": 295
+                },
+                {
+                    "name": "LETTERS, LEWD",
+                    "size": 2752
+                },
+                {
+                    "name": "VANDALISM - FELONY ($400 & OVER, ALL CHURCH VANDALISMS) 0114",
+                    "size": 10043
+                },
+                {
+                    "name": "VIOLATION OF COURT ORDER",
+                    "size": 2607
+                },
+                {
+                    "name": "BURGLARY",
+                    "size": 16064
+                },
+                {
+                    "name": "THEFT, COIN MACHINE - ATTEMPT",
+                    "size": 1
+                },
+                {
+                    "name": "ORAL COPULATION",
+                    "size": 136
+                },
+                {
+                    "name": "VIOLATION OF RESTRAINING ORDER",
+                    "size": 1414
+                },
+                {
+                    "name": "THEFT PLAIN - ATTEMPT",
+                    "size": 151
+                },
+                {
+                    "name": "SHOTS FIRED AT MOVING VEHICLE, TRAIN OR AIRCRAFT",
+                    "size": 21
+                },
+                {
+                    "name": "BRIBERY",
+                    "size": 10
+                },
+                {
+                    "name": "DOCUMENT WORTHLESS ($200.01 & OVER)",
+                    "size": 8
+                },
+                {
+                    "name": "INDECENT EXPOSURE",
+                    "size": 311
+                },
+                {
+                    "name": "CHILD ABUSE (PHYSICAL) - SIMPLE ASSAULT",
+                    "size": 1086
+                },
+                {
+                    "name": "SEX, UNLAWFUL",
+                    "size": 568
+                },
+                {
+                    "name": "CREDIT CARDS, FRAUD USE ($950 & UNDER",
+                    "size": 8
+                },
+                {
+                    "name": "BUNCO, GRAND THEFT",
+                    "size": 229
+                },
+                {
+                    "name": "THEFT, PERSON",
+                    "size": 1011
+                },
+                {
+                    "name": "THEFT FROM PERSON - ATTEMPT",
+                    "size": 42
+                },
+                {
+                    "name": "TILL TAP - GRAND THEFT ($950.01 & OVER)",
+                    "size": 3
+                },
+                {
+                    "name": "FALSE IMPRISONMENT",
+                    "size": 93
+                },
+                {
+                    "name": "CONSPIRACY",
+                    "size": 6
+                },
+                {
+                    "name": "KIDNAPPING - GRAND ATTEMPT",
+                    "size": 88
+                },
+                {
+                    "name": "MANSLAUGHTER, NEGLIGENT",
+                    "size": 1
+                },
+                {
+                    "name": "RAPE, FORCIBLE",
+                    "size": 884
+                },
+                {
+                    "name": "RESISTING ARREST",
+                    "size": 244
+                },
+                {
+                    "name": "PICKPOCKET",
+                    "size": 25
+                },
+                {
+                    "name": "THROWING OBJECT AT MOVING VEHICLE",
+                    "size": 190
+                },
+                {
+                    "name": "BURGLARY FROM VEHICLE",
+                    "size": 17683
+                },
+                {
+                    "name": "THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD0036",
+                    "size": 11096
+                },
+                {
+                    "name": "BUNCO, ATTEMPT",
+                    "size": 26
+                },
+                {
+                    "name": "LYNCHING",
+                    "size": 2
+                },
+                {
+                    "name": "KIDNAPPING",
+                    "size": 269
+                },
+                {
+                    "name": "OTHER MISCELLANEOUS CRIME",
+                    "size": 2986
+                },
+                {
+                    "name": "BRANDISH WEAPON",
+                    "size": 755
+                },
+                {
+                    "name": "SHOPLIFTING-GRAND THEFT ($950.01 & OVER)",
+                    "size": 474
+                },
+                {
+                    "name": "TRESPASSING",
+                    "size": 1410
+                },
+                {
+                    "name": "ROBBERY",
+                    "size": 9558
+                },
+                {
+                    "name": "EMBEZZLEMENT, GRAND THEFT ($950.01 & OVER)",
+                    "size": 718
+                },
+                {
+                    "name": "CREDIT CARDS, FRAUD USE ($950.01 & OVER)",
+                    "size": 119
+                },
+                {
+                    "name": "FALSE POLICE REPORT",
+                    "size": 21
+                },
+                {
+                    "name": "SEXUAL PENTRATION WITH A FOREIGN OBJECT",
+                    "size": 124
+                },
+                {
+                    "name": "SODOMY/SEXUAL CONTACT B/W PENIS OF ONE PERS TO ANUS OTH 0007=02",
+                    "size": 127
+                },
+                {
+                    "name": "CONTEMPT OF COURT",
+                    "size": 12
+                },
+                {
+                    "name": "DRUGS, TO A MINOR",
+                    "size": 1
+                },
+                {
+                    "name": "INCITING A RIOT",
+                    "size": 2
+                },
+                {
+                    "name": "VEHICLE - ATTEMPT STOLEN",
+                    "size": 346
+                },
+                {
+                    "name": "BEASTIALITY, CRIME AGAINST NATURE SEXUAL ASSLT WITH ANIM0065",
+                    "size": 2
+                },
+                {
+                    "name": "DRUNK ROLL - ATTEMPT",
+                    "size": 1
+                },
+                {
+                    "name": "CHILD ABANDONMENT",
+                    "size": 14
+                },
+                {
+                    "name": "PURSE SNATCHING",
+                    "size": 194
+                },
+                {
+                    "name": "THREATENING PHONE CALLS/LETTERS",
+                    "size": 426
+                },
+                {
+                    "name": "LYNCHING - ATTEMPTED",
+                    "size": 1
+                },
+                {
+                    "name": "BIKE - STOLEN",
+                    "size": 164
+                },
+                {
+                    "name": "VANDALISM - MISDEAMEANOR ($399 OR UNDER)",
+                    "size": 9934
+                },
+                {
+                    "name": "TILL TAP - ATTEMPT",
+                    "size": 2
+                },
+                {
+                    "name": "BATTERY ON A FIREFIGHTER",
+                    "size": 13
+                },
+                {
+                    "name": "BUNCO, PETTY THEFT",
+                    "size": 67
+                },
+                {
+                    "name": "LEWD CONDUCT",
+                    "size": 127
+                },
+                {
+                    "name": "EMBEZZLEMENT, PETTY THEFT ($950 & UNDER)",
+                    "size": 33
+                },
+                {
+                    "name": "THEFT FROM MOTOR VEHICLE - ATTEMPT",
+                    "size": 83
+                },
+                {
+                    "name": "FAILURE TO YIELD",
+                    "size": 9
+                },
+                {
+                    "name": "STALKING",
+                    "size": 215
+                },
+                {
+                    "name": "BURGLARY FROM VEHICLE, ATTEMPTED",
+                    "size": 343
+                },
+                {
+                    "name": "RAPE, ATTEMPTED",
+                    "size": 138
+                },
+                {
+                    "name": "SHOTS FIRED AT INHABITED DWELLING",
+                    "size": 283
+                },
+                {
+                    "name": "VIOLATION OF TEMPORARY RESTRAINING ORDER",
+                    "size": 61
+                },
+                {
+                    "name": "DOCUMENT WORTHLESS ($200 & UNDER)",
+                    "size": 2
+                },
+                {
+                    "name": "ATTEMPTED ROBBERY",
+                    "size": 1363
+                },
+                {
+                    "name": "PROWLER",
+                    "size": 116
+                },
+                {
+                    "name": "INTIMATE PARTNER - SIMPLE ASSAULT",
+                    "size": 10401
+                },
+                {
+                    "name": "PIMPING",
+                    "size": 45
+                },
+                {
+                    "name": "ILLEGAL DUMPING",
+                    "size": 58
+                },
+                {
+                    "name": "PEEPING TOM",
+                    "size": 102
+                },
+                {
+                    "name": "THEFT, COIN MACHINE - GRAND ($950.01 & OVER)",
+                    "size": 3
+                },
+                {
+                    "name": "TILL TAP - PETTY ($950 & UNDER)",
+                    "size": 4
+                },
+                {
+                    "name": "DRIVING WITHOUT OWNER CONSENT (DWOC)",
+                    "size": 48
+                },
+                {
+                    "name": "THEFT PLAIN - PETTY ($950 & UNDER)",
+                    "size": 11127
+                },
+                {
+                    "name": "OTHER ASSAULT",
+                    "size": 88
+                },
+                {
+                    "name": "THEFT FROM MOTOR VEHICLE - GRAND ($400 AND OVER)",
+                    "size": 3105
+                },
+                {
+                    "name": "DISHONEST EMPLOYEE - PETTY THEFT",
+                    "size": 13
+                },
+                {
+                    "name": "CONTRIBUTING",
+                    "size": 31
+                },
+                {
+                    "name": "BOMB SCARE",
+                    "size": 146
+                },
+                {
+                    "name": "SHOPLIFTING - ATTEMPT",
+                    "size": 11
+                },
+                {
+                    "name": "INTIMATE PARTNER - AGGRAVATED ASSAULT",
+                    "size": 227
+                },
+                {
+                    "name": "RECKLESS DRIVING",
+                    "size": 25
+                },
+                {
+                    "name": "DISRUPT SCHOOL",
+                    "size": 4
+                },
+                {
+                    "name": "UNAUTHORIZED COMPUTER ACCESS",
+                    "size": 92
+                },
+                {
+                    "name": "ARSON",
+                    "size": 331
+                },
+                {
+                    "name": "SHOPLIFTING - PETTY THEFT ($950 & UNDER)",
+                    "size": 3072
+                },
+                {
+                    "name": "ASSAULT WITH DEADLY WEAPON ON POLICE OFFICER",
+                    "size": 158
+                },
+                {
+                    "name": "THEFT FROM MOTOR VEHICLE - PETTY ($950 & UNDER)",
+                    "size": 6389
+                },
+                {
+                    "name": "PURSE SNATCHING - ATTEMPT",
+                    "size": 11
+                },
+                {
+                    "name": "CHILD ANNOYING (17YRS & UNDER)",
+                    "size": 608
+                },
+                {
+                    "name": "DEFRAUDING INNKEEPER/THEFT OF SERVICES, OVER $400",
+                    "size": 16
+                },
+                {
+                    "name": "PETTY THEFT - AUTO REPAIR",
+                    "size": 2
+                },
+                {
+                    "name": "WEAPONS POSSESSION/BOMBING",
+                    "size": 28
+                },
+                {
+                    "name": "CHILD ABUSE (PHYSICAL) - AGGRAVATED ASSAULT",
+                    "size": 291
+                },
+                {
+                    "name": "DISHONEST EMPLOYEE - GRAND THEFT",
+                    "size": 8
+                },
+                {
+                    "name": "BATTERY - SIMPLE ASSAULT",
+                    "size": 20519
+                }
+            ]
+        },
+        {
+            "name": "2013",
+            "children": [
+                {
+                    "name": "",
+                    "size": 7
+                },
+                {
+                    "name": "THEFT OF IDENTITY",
+                    "size": 13209
+                },
+                {
+                    "name": "REPLICA FIREARMS(SALE,DISPLAY,MANUFACTURE OR DISTRIBUTE)0132",
+                    "size": 1
+                },
+                {
+                    "name": "DISCHARGE FIREARMS/SHOTS FIRED",
+                    "size": 314
+                },
+                {
+                    "name": "DISTURBING THE PEACE",
+                    "size": 320
+                },
+                {
+                    "name": "BATTERY POLICE (SIMPLE)",
+                    "size": 355
+                },
+                {
+                    "name": "CHILD STEALING",
+                    "size": 104
+                },
+                {
+                    "name": "ABORTION/ILLEGAL",
+                    "size": 3
+                },
+                {
+                    "name": "DEFRAUDING INNKEEPER/THEFT OF SERVICES, $400 & UNDER",
+                    "size": 228
+                },
+                {
+                    "name": "CHILD NEGLECT (SEE 300 W.I.C.)",
+                    "size": 521
+                },
+                {
+                    "name": "PANDERING",
+                    "size": 21
+                },
+                {
+                    "name": "BURGLARY, ATTEMPTED",
+                    "size": 1211
+                },
+                {
+                    "name": "LYNCHING - ATTEMPTED",
+                    "size": 2
+                },
+                {
+                    "name": "BIGAMY",
+                    "size": 1
+                },
+                {
+                    "name": "EXTORTION",
+                    "size": 106
+                },
+                {
+                    "name": "TELEPHONE PROPERTY - DAMAGE",
+                    "size": 4
+                },
+                {
+                    "name": "BOAT - STOLEN",
+                    "size": 28
+                },
+                {
+                    "name": "GRAND THEFT / AUTO REPAIR",
+                    "size": 2
+                },
+                {
+                    "name": "THEFT, COIN MACHINE - PETTY ($950 & UNDER)",
+                    "size": 17
+                },
+                {
+                    "name": "BATTERY WITH SEXUAL CONTACT",
+                    "size": 948
+                },
+                {
+                    "name": "CRUELTY TO ANIMALS",
+                    "size": 113
+                },
+                {
+                    "name": "PICKPOCKET, ATTEMPT",
+                    "size": 2
+                },
+                {
+                    "name": "DRUNK ROLL",
+                    "size": 3
+                },
+                {
+                    "name": "ASSAULT WITH DEADLY WEAPON, AGGRAVATED ASSAULT",
+                    "size": 7010
+                },
+                {
+                    "name": "CRIMINAL THREATS - NO WEAPON DISPLAYED",
+                    "size": 5610
+                },
+                {
+                    "name": "CRM AGNST CHLD (13 OR UNDER) (14-15 & SUSP 10 YRS OLDER)0060",
+                    "size": 908
+                },
+                {
+                    "name": "VEHICLE - STOLEN",
+                    "size": 13938
+                },
+                {
+                    "name": "DOCUMENT FORGERY / STOLEN FELONY",
+                    "size": 2678
+                },
+                {
+                    "name": "COUNTERFEIT",
+                    "size": 100
+                },
+                {
+                    "name": "CRIMINAL HOMICIDE",
+                    "size": 250
+                },
+                {
+                    "name": "LETTERS, LEWD",
+                    "size": 2015
+                },
+                {
+                    "name": "BUNCO, PETTY THEFT",
+                    "size": 330
+                },
+                {
+                    "name": "VIOLATION OF COURT ORDER",
+                    "size": 1955
+                },
+                {
+                    "name": "BURGLARY",
+                    "size": 14461
+                },
+                {
+                    "name": "THEFT, COIN MACHINE - ATTEMPT",
+                    "size": 3
+                },
+                {
+                    "name": "ORAL COPULATION",
+                    "size": 137
+                },
+                {
+                    "name": "VIOLATION OF RESTRAINING ORDER",
+                    "size": 1760
+                },
+                {
+                    "name": "THEFT PLAIN - ATTEMPT",
+                    "size": 202
+                },
+                {
+                    "name": "SHOTS FIRED AT MOVING VEHICLE, TRAIN OR AIRCRAFT",
+                    "size": 6
+                },
+                {
+                    "name": "BRIBERY",
+                    "size": 3
+                },
+                {
+                    "name": "DOCUMENT WORTHLESS ($200.01 & OVER)",
+                    "size": 32
+                },
+                {
+                    "name": "INDECENT EXPOSURE",
+                    "size": 297
+                },
+                {
+                    "name": "CHILD ABUSE (PHYSICAL) - SIMPLE ASSAULT",
+                    "size": 831
+                },
+                {
+                    "name": "SEX, UNLAWFUL",
+                    "size": 440
+                },
+                {
+                    "name": "CREDIT CARDS, FRAUD USE ($950 & UNDER",
+                    "size": 12
+                },
+                {
+                    "name": "BUNCO, GRAND THEFT",
+                    "size": 428
+                },
+                {
+                    "name": "THEFT, PERSON",
+                    "size": 1429
+                },
+                {
+                    "name": "THEFT FROM PERSON - ATTEMPT",
+                    "size": 25
+                },
+                {
+                    "name": "FALSE IMPRISONMENT",
+                    "size": 81
+                },
+                {
+                    "name": "CONSPIRACY",
+                    "size": 3
+                },
+                {
+                    "name": "KIDNAPPING - GRAND ATTEMPT",
+                    "size": 79
+                },
+                {
+                    "name": "RAPE, FORCIBLE",
+                    "size": 809
+                },
+                {
+                    "name": "RESISTING ARREST",
+                    "size": 340
+                },
+                {
+                    "name": "PICKPOCKET",
+                    "size": 41
+                },
+                {
+                    "name": "THROWING OBJECT AT MOVING VEHICLE",
+                    "size": 109
+                },
+                {
+                    "name": "BURGLARY FROM VEHICLE",
+                    "size": 15500
+                },
+                {
+                    "name": "THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD0036",
+                    "size": 6845
+                },
+                {
+                    "name": "BUNCO, ATTEMPT",
+                    "size": 34
+                },
+                {
+                    "name": "LYNCHING",
+                    "size": 6
+                },
+                {
+                    "name": "KIDNAPPING",
+                    "size": 199
+                },
+                {
+                    "name": "OTHER MISCELLANEOUS CRIME",
+                    "size": 2039
+                },
+                {
+                    "name": "BRANDISH WEAPON",
+                    "size": 717
+                },
+                {
+                    "name": "SHOPLIFTING-GRAND THEFT ($950.01 & OVER)",
+                    "size": 164
+                },
+                {
+                    "name": "TRESPASSING",
+                    "size": 1682
+                },
+                {
+                    "name": "ROBBERY",
+                    "size": 6889
+                },
+                {
+                    "name": "EMBEZZLEMENT, GRAND THEFT ($950.01 & OVER)",
+                    "size": 828
+                },
+                {
+                    "name": "CREDIT CARDS, FRAUD USE ($950.01 & OVER)",
+                    "size": 65
+                },
+                {
+                    "name": "CHILD ANNOYING (17YRS & UNDER)",
+                    "size": 594
+                },
+                {
+                    "name": "SEXUAL PENTRATION WITH A FOREIGN OBJECT",
+                    "size": 149
+                },
+                {
+                    "name": "SODOMY/SEXUAL CONTACT B/W PENIS OF ONE PERS TO ANUS OTH 0007=02",
+                    "size": 102
+                },
+                {
+                    "name": "BIKE - ATTEMPTED STOLEN",
+                    "size": 1
+                },
+                {
+                    "name": "CONTEMPT OF COURT",
+                    "size": 11
+                },
+                {
+                    "name": "DRUGS, TO A MINOR",
+                    "size": 2
+                },
+                {
+                    "name": "INCITING A RIOT",
+                    "size": 4
+                },
+                {
+                    "name": "VEHICLE - ATTEMPT STOLEN",
+                    "size": 284
+                },
+                {
+                    "name": "BEASTIALITY, CRIME AGAINST NATURE SEXUAL ASSLT WITH ANIM0065",
+                    "size": 6
+                },
+                {
+                    "name": "CHILD ABANDONMENT",
+                    "size": 5
+                },
+                {
+                    "name": "PURSE SNATCHING",
+                    "size": 87
+                },
+                {
+                    "name": "BATTERY - SIMPLE ASSAULT",
+                    "size": 18924
+                },
+                {
+                    "name": "BIKE - STOLEN",
+                    "size": 808
+                },
+                {
+                    "name": "VANDALISM - MISDEAMEANOR ($399 OR UNDER)",
+                    "size": 9077
+                },
+                {
+                    "name": "BATTERY ON A FIREFIGHTER",
+                    "size": 17
+                },
+                {
+                    "name": "VANDALISM - FELONY ($400 & OVER, ALL CHURCH VANDALISMS) 0114",
+                    "size": 8955
+                },
+                {
+                    "name": "LEWD CONDUCT",
+                    "size": 98
+                },
+                {
+                    "name": "EMBEZZLEMENT, PETTY THEFT ($950 & UNDER)",
+                    "size": 59
+                },
+                {
+                    "name": "THEFT FROM MOTOR VEHICLE - ATTEMPT",
+                    "size": 80
+                },
+                {
+                    "name": "FAILURE TO YIELD",
+                    "size": 14
+                },
+                {
+                    "name": "STALKING",
+                    "size": 209
+                },
+                {
+                    "name": "BURGLARY FROM VEHICLE, ATTEMPTED",
+                    "size": 264
+                },
+                {
+                    "name": "RAPE, ATTEMPTED",
+                    "size": 88
+                },
+                {
+                    "name": "SHOTS FIRED AT INHABITED DWELLING",
+                    "size": 237
+                },
+                {
+                    "name": "VIOLATION OF TEMPORARY RESTRAINING ORDER",
+                    "size": 91
+                },
+                {
+                    "name": "ATTEMPTED ROBBERY",
+                    "size": 979
+                },
+                {
+                    "name": "PROWLER",
+                    "size": 97
+                },
+                {
+                    "name": "INTIMATE PARTNER - SIMPLE ASSAULT",
+                    "size": 9835
+                },
+                {
+                    "name": "PIMPING",
+                    "size": 54
+                },
+                {
+                    "name": "ILLEGAL DUMPING",
+                    "size": 30
+                },
+                {
+                    "name": "PEEPING TOM",
+                    "size": 98
+                },
+                {
+                    "name": "THEFT, COIN MACHINE - GRAND ($950.01 & OVER)",
+                    "size": 1
+                },
+                {
+                    "name": "TILL TAP - PETTY ($950 & UNDER)",
+                    "size": 8
+                },
+                {
+                    "name": "DRIVING WITHOUT OWNER CONSENT (DWOC)",
+                    "size": 45
+                },
+                {
+                    "name": "THEFT PLAIN - PETTY ($950 & UNDER)",
+                    "size": 16101
+                },
+                {
+                    "name": "OTHER ASSAULT",
+                    "size": 98
+                },
+                {
+                    "name": "THEFT FROM MOTOR VEHICLE - GRAND ($400 AND OVER)",
+                    "size": 2558
+                },
+                {
+                    "name": "DISHONEST EMPLOYEE - PETTY THEFT",
+                    "size": 9
+                },
+                {
+                    "name": "CONTRIBUTING",
+                    "size": 19
+                },
+                {
+                    "name": "BOMB SCARE",
+                    "size": 110
+                },
+                {
+                    "name": "SHOPLIFTING - ATTEMPT",
+                    "size": 10
+                },
+                {
+                    "name": "INTIMATE PARTNER - AGGRAVATED ASSAULT",
+                    "size": 391
+                },
+                {
+                    "name": "RECKLESS DRIVING",
+                    "size": 14
+                },
+                {
+                    "name": "DISRUPT SCHOOL",
+                    "size": 11
+                },
+                {
+                    "name": "UNAUTHORIZED COMPUTER ACCESS",
+                    "size": 98
+                },
+                {
+                    "name": "ARSON",
+                    "size": 316
+                },
+                {
+                    "name": "SHOPLIFTING - PETTY THEFT ($950 & UNDER)",
+                    "size": 3639
+                },
+                {
+                    "name": "ASSAULT WITH DEADLY WEAPON ON POLICE OFFICER",
+                    "size": 128
+                },
+                {
+                    "name": "THEFT FROM MOTOR VEHICLE - PETTY ($950 & UNDER)",
+                    "size": 7646
+                },
+                {
+                    "name": "PURSE SNATCHING - ATTEMPT",
+                    "size": 4
+                },
+                {
+                    "name": "FAILURE TO DISPERSE",
+                    "size": 3
+                },
+                {
+                    "name": "FALSE POLICE REPORT",
+                    "size": 44
+                },
+                {
+                    "name": "DEFRAUDING INNKEEPER/THEFT OF SERVICES, OVER $400",
+                    "size": 19
+                },
+                {
+                    "name": "PETTY THEFT - AUTO REPAIR",
+                    "size": 3
+                },
+                {
+                    "name": "WEAPONS POSSESSION/BOMBING",
+                    "size": 12
+                },
+                {
+                    "name": "CHILD ABUSE (PHYSICAL) - AGGRAVATED ASSAULT",
+                    "size": 132
+                },
+                {
+                    "name": "DISHONEST EMPLOYEE - GRAND THEFT",
+                    "size": 12
+                },
+                {
+                    "name": "THREATENING PHONE CALLS/LETTERS",
+                    "size": 292
+                }
+            ]
+        },
+        {
+            "name": "2012",
+            "children": [
+                {
+                    "name": "",
+                    "size": 5
+                },
+                {
+                    "name": "THEFT OF IDENTITY",
+                    "size": 14179
+                },
+                {
+                    "name": "DISCHARGE FIREARMS/SHOTS FIRED",
+                    "size": 411
+                },
+                {
+                    "name": "DISTURBING THE PEACE",
+                    "size": 369
+                },
+                {
+                    "name": "BATTERY POLICE (SIMPLE)",
+                    "size": 414
+                },
+                {
+                    "name": "CHILD STEALING",
+                    "size": 127
+                },
+                {
+                    "name": "DEFRAUDING INNKEEPER/THEFT OF SERVICES, $400 & UNDER",
+                    "size": 245
+                },
+                {
+                    "name": "CHILD NEGLECT (SEE 300 W.I.C.)",
+                    "size": 810
+                },
+                {
+                    "name": "DOCUMENT WORTHLESS ($200.01 & OVER)",
+                    "size": 12
+                },
+                {
+                    "name": "BURGLARY, ATTEMPTED",
+                    "size": 1283
+                },
+                {
+                    "name": "LYNCHING - ATTEMPTED",
+                    "size": 1
+                },
+                {
+                    "name": "BIGAMY",
+                    "size": 2
+                },
+                {
+                    "name": "EXTORTION",
+                    "size": 126
+                },
+                {
+                    "name": "TELEPHONE PROPERTY - DAMAGE",
+                    "size": 1
+                },
+                {
+                    "name": "BOAT - STOLEN",
+                    "size": 28
+                },
+                {
+                    "name": "GRAND THEFT / AUTO REPAIR",
+                    "size": 1
+                },
+                {
+                    "name": "THEFT, COIN MACHINE - PETTY ($950 & UNDER)",
+                    "size": 16
+                },
+                {
+                    "name": "BATTERY WITH SEXUAL CONTACT",
+                    "size": 1031
+                },
+                {
+                    "name": "CRUELTY TO ANIMALS",
+                    "size": 156
+                },
+                {
+                    "name": "DRUNK ROLL",
+                    "size": 1
+                },
+                {
+                    "name": "ASSAULT WITH DEADLY WEAPON, AGGRAVATED ASSAULT",
+                    "size": 7530
+                },
+                {
+                    "name": "CRIMINAL THREATS - NO WEAPON DISPLAYED",
+                    "size": 6171
+                },
+                {
+                    "name": "CRM AGNST CHLD (13 OR UNDER) (14-15 & SUSP 10 YRS OLDER)0060",
+                    "size": 1021
+                },
+                {
+                    "name": "VEHICLE - STOLEN",
+                    "size": 14821
+                },
+                {
+                    "name": "DOCUMENT FORGERY / STOLEN FELONY",
+                    "size": 2576
+                },
+                {
+                    "name": "CHILD ABUSE (PHYSICAL) - SIMPLE ASSAULT",
+                    "size": 930
+                },
+                {
+                    "name": "CRIMINAL HOMICIDE",
+                    "size": 298
+                },
+                {
+                    "name": "LETTERS, LEWD",
+                    "size": 2438
+                },
+                {
+                    "name": "BUNCO, PETTY THEFT",
+                    "size": 247
+                },
+                {
+                    "name": "VIOLATION OF COURT ORDER",
+                    "size": 2209
+                },
+                {
+                    "name": "BURGLARY",
+                    "size": 15108
+                },
+                {
+                    "name": "THEFT, COIN MACHINE - ATTEMPT",
+                    "size": 1
+                },
+                {
+                    "name": "ORAL COPULATION",
+                    "size": 146
+                },
+                {
+                    "name": "VIOLATION OF RESTRAINING ORDER",
+                    "size": 1525
+                },
+                {
+                    "name": "THEFT PLAIN - ATTEMPT",
+                    "size": 143
+                },
+                {
+                    "name": "SHOTS FIRED AT MOVING VEHICLE, TRAIN OR AIRCRAFT",
+                    "size": 18
+                },
+                {
+                    "name": "BRIBERY",
+                    "size": 5
+                },
+                {
+                    "name": "PANDERING",
+                    "size": 33
+                },
+                {
+                    "name": "INDECENT EXPOSURE",
+                    "size": 345
+                },
+                {
+                    "name": "COUNTERFEIT",
+                    "size": 104
+                },
+                {
+                    "name": "SEX, UNLAWFUL",
+                    "size": 450
+                },
+                {
+                    "name": "CREDIT CARDS, FRAUD USE ($950 & UNDER",
+                    "size": 15
+                },
+                {
+                    "name": "BUNCO, GRAND THEFT",
+                    "size": 398
+                },
+                {
+                    "name": "THEFT, PERSON",
+                    "size": 1365
+                },
+                {
+                    "name": "THEFT FROM PERSON - ATTEMPT",
+                    "size": 26
+                },
+                {
+                    "name": "FALSE IMPRISONMENT",
+                    "size": 89
+                },
+                {
+                    "name": "CONSPIRACY",
+                    "size": 5
+                },
+                {
+                    "name": "KIDNAPPING - GRAND ATTEMPT",
+                    "size": 89
+                },
+                {
+                    "name": "RAPE, FORCIBLE",
+                    "size": 867
+                },
+                {
+                    "name": "RESISTING ARREST",
+                    "size": 397
+                },
+                {
+                    "name": "PICKPOCKET",
+                    "size": 39
+                },
+                {
+                    "name": "THROWING OBJECT AT MOVING VEHICLE",
+                    "size": 134
+                },
+                {
+                    "name": "BURGLARY FROM VEHICLE",
+                    "size": 15911
+                },
+                {
+                    "name": "THEFT-GRAND ($950.01 & OVER)EXCPT,GUNS,FOWL,LIVESTK,PROD0036",
+                    "size": 7154
+                },
+                {
+                    "name": "BUNCO, ATTEMPT",
+                    "size": 22
+                },
+                {
+                    "name": "LYNCHING",
+                    "size": 11
+                },
+                {
+                    "name": "KIDNAPPING",
+                    "size": 235
+                },
+                {
+                    "name": "OTHER MISCELLANEOUS CRIME",
+                    "size": 2315
+                },
+                {
+                    "name": "BRANDISH WEAPON",
+                    "size": 753
+                },
+                {
+                    "name": "SHOPLIFTING-GRAND THEFT ($950.01 & OVER)",
+                    "size": 187
+                },
+                {
+                    "name": "TRESPASSING",
+                    "size": 1611
+                },
+                {
+                    "name": "ROBBERY",
+                    "size": 7834
+                },
+                {
+                    "name": "EMBEZZLEMENT, GRAND THEFT ($950.01 & OVER)",
+                    "size": 726
+                },
+                {
+                    "name": "CREDIT CARDS, FRAUD USE ($950.01 & OVER)",
+                    "size": 63
+                },
+                {
+                    "name": "CHILD ANNOYING (17YRS & UNDER)",
+                    "size": 681
+                },
+                {
+                    "name": "SEXUAL PENTRATION WITH A FOREIGN OBJECT",
+                    "size": 116
+                },
+                {
+                    "name": "INTIMATE PARTNER - SIMPLE ASSAULT",
+                    "size": 10274
+                },
+                {
+                    "name": "CONTEMPT OF COURT",
+                    "size": 12
+                },
+                {
+                    "name": "VEHICLE - ATTEMPT STOLEN",
+                    "size": 330
+                },
+                {
+                    "name": "BEASTIALITY, CRIME AGAINST NATURE SEXUAL ASSLT WITH ANIM0065",
+                    "size": 1
+                },
+                {
+                    "name": "CHILD ABANDONMENT",
+                    "size": 8
+                },
+                {
+                    "name": "PURSE SNATCHING",
+                    "size": 97
+                },
+                {
+                    "name": "THREATENING PHONE CALLS/LETTERS",
+                    "size": 358
+                },
+                {
+                    "name": "BIKE - STOLEN",
+                    "size": 632
+                },
+                {
+                    "name": "VANDALISM - MISDEAMEANOR ($399 OR UNDER)",
+                    "size": 9773
+                },
+                {
+                    "name": "BATTERY ON A FIREFIGHTER",
+                    "size": 22
+                },
+                {
+                    "name": "VANDALISM - FELONY ($400 & OVER, ALL CHURCH VANDALISMS) 0114",
+                    "size": 9031
+                },
+                {
+                    "name": "LEWD CONDUCT",
+                    "size": 139
+                },
+                {
+                    "name": "EMBEZZLEMENT, PETTY THEFT ($950 & UNDER)",
+                    "size": 60
+                },
+                {
+                    "name": "THEFT FROM MOTOR VEHICLE - ATTEMPT",
+                    "size": 110
+                },
+                {
+                    "name": "FAILURE TO YIELD",
+                    "size": 11
+                },
+                {
+                    "name": "STALKING",
+                    "size": 199
+                },
+                {
+                    "name": "BURGLARY FROM VEHICLE, ATTEMPTED",
+                    "size": 324
+                },
+                {
+                    "name": "RAPE, ATTEMPTED",
+                    "size": 128
+                },
+                {
+                    "name": "SHOTS FIRED AT INHABITED DWELLING",
+                    "size": 239
+                },
+                {
+                    "name": "VIOLATION OF TEMPORARY RESTRAINING ORDER",
+                    "size": 67
+                },
+                {
+                    "name": "DOCUMENT WORTHLESS ($200 & UNDER)",
+                    "size": 3
+                },
+                {
+                    "name": "ATTEMPTED ROBBERY",
+                    "size": 1132
+                },
+                {
+                    "name": "PROWLER",
+                    "size": 108
+                },
+                {
+                    "name": "SODOMY/SEXUAL CONTACT B/W PENIS OF ONE PERS TO ANUS OTH 0007=02",
+                    "size": 114
+                },
+                {
+                    "name": "PIMPING",
+                    "size": 63
+                },
+                {
+                    "name": "ILLEGAL DUMPING",
+                    "size": 55
+                },
+                {
+                    "name": "PEEPING TOM",
+                    "size": 110
+                },
+                {
+                    "name": "THEFT, COIN MACHINE - GRAND ($950.01 & OVER)",
+                    "size": 3
+                },
+                {
+                    "name": "TILL TAP - PETTY ($950 & UNDER)",
+                    "size": 8
+                },
+                {
+                    "name": "DRIVING WITHOUT OWNER CONSENT (DWOC)",
+                    "size": 43
+                },
+                {
+                    "name": "THEFT PLAIN - PETTY ($950 & UNDER)",
+                    "size": 16096
+                },
+                {
+                    "name": "OTHER ASSAULT",
+                    "size": 122
+                },
+                {
+                    "name": "THEFT FROM MOTOR VEHICLE - GRAND ($400 AND OVER)",
+                    "size": 2349
+                },
+                {
+                    "name": "DISHONEST EMPLOYEE - PETTY THEFT",
+                    "size": 4
+                },
+                {
+                    "name": "CONTRIBUTING",
+                    "size": 22
+                },
+                {
+                    "name": "BOMB SCARE",
+                    "size": 108
+                },
+                {
+                    "name": "SHOPLIFTING - ATTEMPT",
+                    "size": 17
+                },
+                {
+                    "name": "INTIMATE PARTNER - AGGRAVATED ASSAULT",
+                    "size": 258
+                },
+                {
+                    "name": "RECKLESS DRIVING",
+                    "size": 15
+                },
+                {
+                    "name": "DISRUPT SCHOOL",
+                    "size": 4
+                },
+                {
+                    "name": "UNAUTHORIZED COMPUTER ACCESS",
+                    "size": 98
+                },
+                {
+                    "name": "ARSON",
+                    "size": 303
+                },
+                {
+                    "name": "SHOPLIFTING - PETTY THEFT ($950 & UNDER)",
+                    "size": 3756
+                },
+                {
+                    "name": "ASSAULT WITH DEADLY WEAPON ON POLICE OFFICER",
+                    "size": 128
+                },
+                {
+                    "name": "THEFT FROM MOTOR VEHICLE - PETTY ($950 & UNDER)",
+                    "size": 7604
+                },
+                {
+                    "name": "PURSE SNATCHING - ATTEMPT",
+                    "size": 2
+                },
+                {
+                    "name": "FAILURE TO DISPERSE",
+                    "size": 2
+                },
+                {
+                    "name": "FALSE POLICE REPORT",
+                    "size": 52
+                },
+                {
+                    "name": "DEFRAUDING INNKEEPER/THEFT OF SERVICES, OVER $400",
+                    "size": 18
+                },
+                {
+                    "name": "WEAPONS POSSESSION/BOMBING",
+                    "size": 15
+                },
+                {
+                    "name": "CHILD ABUSE (PHYSICAL) - AGGRAVATED ASSAULT",
+                    "size": 184
+                },
+                {
+                    "name": "DISHONEST EMPLOYEE - GRAND THEFT",
+                    "size": 6
+                },
+                {
+                    "name": "BATTERY - SIMPLE ASSAULT",
+                    "size": 19815
+                }
+            ]
+        }
+    ]
+}
