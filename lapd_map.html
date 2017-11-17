@@ -26,6 +26,22 @@
         stroke: #000;
         stroke-width: 1px;
     }
+
+    .toolTip {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        position: absolute;
+        display: none;
+        width: auto;
+        height: auto;
+        background: none repeat scroll 0 0 white;
+        border: 0 none;
+        border-radius: 8px 8px 8px 8px;
+        box-shadow: -3px 3px 15px #888888;
+        color: black;
+        font: 12px sans-serif;
+        padding: 5px;
+        text-align: center;
+    }
 </style>
 
 <body>
@@ -43,19 +59,32 @@
         // //     .scale([5000]);
         // var path = d3.geoPath()
         //     .projection(projection);
-        // var svg = d3.select("body")
+        // var svg2 = d3.select("body")
         //     .append("svg")
         //     .attr("width", width)
         //     .attr("height", height);
         // d3.json("lapd-divisions.geojson", function (json) {
-        //     svg.selectAll("path")
+        //     svg2.selectAll("path")
         //         .data(json.features)
         //         .enter()
         //         .append("path")
         //         .attr("d", path);
+        //     var paths = svg2.selectAll("path");
+        //     paths.on("mousemove", function (d) {
+        //         tooltip.style("left", d3.event.pageX + 10 + "px");
+        //         tooltip.style("top", d3.event.pageY - 25 + "px");
+        //         tooltip.style("display", "inline-block");
+        //         tooltip.html("<br>" + (d.properties.count));
+        //     });
+        //     paths.on("mouseout", function (d) {
+        //         tooltip.style("display", "none");
+        //     });
         // });
 
 
+
+
+        var tooltip = d3.select("body").append("div").attr("class", "toolTip");
         var map = new L.Map("map", {
             center: [34.00, -118.385], zoom: 10,
             zoomControl: false, scrollWheelZoom: false,
@@ -73,11 +102,11 @@
             }));
         var svg = d3.select(map.getPanes().overlayPane).append("svg"),
             g = svg.append("g").attr("class", "leaflet-zoom-hide");
-        
+
         d3.json("lapd-divisions.geojson", function (error, json) {
             if (error) throw error;
             // crime count by area
-            json_features = json.features;
+            var json_features = json.features;
             d3.json("data processing/crimedataperarea.json", function (error, data) {
                 if (error) throw error;
                 var crime_count = d3.map();
@@ -131,10 +160,22 @@
                     var point = map.latLngToLayerPoint(new L.LatLng(y, x));
                     this.stream.point(point.x, point.y);
                 }
+
+                feature.on("mousemove", function (d) {
+                    tooltip.style("left", d3.event.pageX + 10 + "px");
+                    tooltip.style("top", d3.event.pageY - 25 + "px");
+                    tooltip.style("display", "inline-block");
+                    tooltip.html("<br>" + (d.properties.count));
+                });
+                feature.on("mouseout", function (d) {
+                    tooltip.style("display", "none");
+                });
             });
 
         });
     </script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
