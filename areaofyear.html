@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title> Be Safe LA </title>
+        <script src="http://d3js.org/d3.v4.min.js"></script>
+        <style type="text/css">
+            .axis path,
+            .axis line {
+                fill: none;
+                stroke: black;
+                shape-rendering: crispEdges;
+            }
+            .axis text {
+                font-family: sans-serif;
+                font-size: 11px;
+            }
+            .dot {
+                fill: #ffab00;
+                stroke: #fff;
+            }
+            </style>
+    </head>
+    <body>
+        <h1> Be Safe LA </h1>
+        <h3> Team hhh </h3>
+        <div class = 'area'>
+            <h2><br> Areachart: <br></h2>
+            <p><br>Number of criminal data from 2010 to 2017 presented in area chart.</br></p>
+        </div>
+        <script type="text/javascript">   
+           d3.json("crimedatayear.json", function(error, data) {
+                dataset = data
+                area(dataset)
+
+            });
+
+            function area(data)
+            {
+                var mind = d3.min(data, function(d){return d['case'];});
+                var maxd = d3.max(data, function(d){return d['case'];});
+                var w = 900, h = 550, padding = 100;
+                
+                var xscale = d3.scaleBand() 
+                              .domain(data.map(function (d) {
+                               return d['year'];
+                            }))
+                              .range([padding,w-padding])
+
+                var yscale = d3.scaleLinear()
+                               .domain([mind-40000,maxd])
+                               .range([h - padding,padding]);
+
+                var svg = d3.select('body')
+                    .select('div.area')
+                    .append('svg')
+                    .attr('width', w)
+                    .attr('height', h);
+                
+
+                var area = d3.area()
+                    .x(function(d) { return xscale(d['year'])+43;})
+                    .y0(h - padding)
+                    .y1(function(d) { return yscale(d['case']);});
+                    
+           
+                svg.append("path")
+                    .datum(data)
+                    .attr("fill", "#dbf5f9")
+                    .attr("d", area);
+                    
+
+                svg.selectAll(".dot")
+                    .data(dataset)
+                    .enter()
+                    .append("circle") // Uses the enter().append() method
+                    .attr("class", "dot") // Assign a class for styling
+                    .attr("cx", function(d) { return xscale(d['year'])+43;})
+                    .attr("cy", function(d) { return yscale(d['case']); })
+                    .attr("r", 4);
+                
+                svg.selectAll('text.cnumber')
+                    .data(dataset)
+                    .enter()
+                    .append('text')
+                        .attr('class', 'cnumber')
+                    .text(function (d) {return d['case'];})
+                    .attr('x', function(d,i) {return xscale(d['year'])+63;})
+                    .attr('y', function (d) {return yscale(d['case']+140);})
+                    .style('fill','black')
+                    .style('font-size','11px')
+                    .style('text-anchor','middle');
+
+                var xAxis = d3.axisBottom()
+                    .scale(xscale)
+                    .ticks(10);
+                svg.append('g')
+                   .attr('class','axis')
+                   .attr('transform', "translate(0," + (h - padding) + ")")
+                   .call(xAxis);
+                var btext = svg.append('text')
+                              .attr('x', w - 5*padding)
+                              .attr('y',h - padding/2);
+                btext.append('tspan').text('Years')
+
+                var yAxis = d3.axisLeft()
+                    .scale(yscale)
+                    .ticks(10);
+                svg.append('g')
+                   .attr('class','axis')
+                   .attr('transform','translate('+ padding +',0)')
+                   .call(yAxis);
+                var ltext = svg.append('text')
+                              .attr('x', w/2+80)
+                              .attr('y', padding/2-20)
+                              .attr('transform','rotate(-90,'+w/2 +',' +w/2+')');
+                ltext.append('tspan').text('The number of cases');
+            }
+
+        </script>
+    </body>
+    </html>
