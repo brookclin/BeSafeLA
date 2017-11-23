@@ -4,102 +4,11 @@
 <head>
     <script src="http://d3js.org/d3.v4.min.js"></script>
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
-        crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
-        crossorigin=""></script>
+    <link rel="stylesheet" type="text/css" href="css/d3_map.css"/>
 </head>
-<style type="text/css">
-    path {
-        fill-opacity: .7;
-        stroke: #fff;
-        stroke-width: 1px;
-    }
-
-    path:hover {
-        fill-opacity: 1;
-        stroke: #000;
-        stroke-width: 1px;
-    }
-
-    .toolTip {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        position: absolute;
-        display: none;
-        width: auto;
-        height: auto;
-        background: none repeat scroll 0 0 white;
-        border: 0 none;
-        border-radius: 8px 8px 8px 8px;
-        box-shadow: -3px 3px 15px #888888;
-        color: black;
-        font: 12px sans-serif;
-        padding: 5px;
-        text-align: center;
-    }
-</style>
 
 <body>
-    <script>
-        var width = 500;
-        var height = 600;
-        var projection = d3.geoMercator()
-            .scale(40000)
-            // Center the Map in LA
-            .center([-118.245, 34.05])
-            .translate([width / 2 + 100, height / 2]);
-        // var projection = d3.geoAlbersUsa()
-        //     .translate([width / 2, height / 2])
-        //     .scale([5000]);
-       
-        var tooltip = d3.select("body").append("div").attr("class", "toolTip");
-        var path = d3.geoPath()
-            .projection(projection);
-        var svg = d3.select("body")
-            .append("svg")
-            .attr("width", width)
-            .attr("height", height);
-        d3.json("lapd-divisions.geojson", function (json) {
-            var json_features = json.features;
-            d3.json("data processing/crimedataperarea.json", function (error, data) {
-                if (error) throw error;
-                var crime_count = d3.map();
-                for (i = 0; i < data.length; i++) {
-                    crime_count.set(data[i]._id, +data[i].count);
-                }
-                for (i = 0; i < json_features.length; i++) {
-                    var cur_id = json_features[i].properties.name;
-                    if (crime_count.has(cur_id)) {
-                        json_features[i].properties.count = crime_count.get(cur_id);
-                    }
-                }
-                var color = d3.scaleQuantize()
-                    .domain([Math.floor(d3.min(data, function (d) { return d.count; })),
-                    Math.ceil(d3.max(data, function (d) { return d.count; }))])
-                    .range(d3.schemeOranges[9]);
-                svg.selectAll("path")
-                    .data(json_features)
-                    .enter()
-                    .append("path")
-                    .attr("d", path);
-                var paths = svg.selectAll("path")
-                    .attr("fill", function(d) {
-                        return color(d.properties.count);
-                    });
-                paths.on("mousemove", function (d) {
-                    tooltip.style("left", d3.event.pageX + 10 + "px");
-                    tooltip.style("top", d3.event.pageY - 25 + "px");
-                    tooltip.style("display", "inline-block");
-                    tooltip.html("<b>"+(d.properties.name)+"</b><br>" + (d.properties.count));
-                });
-                paths.on("mouseout", function (d) {
-                    tooltip.style("display", "none");
-                });
-            });
-        });
-
-    </script>
-    <script src="js/popper.min.js"></script>
+    <script src="d3_map.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>
 
