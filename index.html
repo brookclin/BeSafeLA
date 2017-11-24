@@ -17,12 +17,10 @@
 
   <!-- Custom styles for this template -->
   <link href="css/bootstrap/jumbotron.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/d3_map.css"/>
+  <link rel="stylesheet" type="text/css" href="css/d3_map.css" />
 
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -45,7 +43,7 @@
           <a class="nav-link" href="#time">Time</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#area">Area</a>
+          <a class="nav-link" href="#area">Division</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#route">Route</a>
@@ -68,6 +66,8 @@
     <div id="intro" class="jumbotron">
       <div class="container">
         <h1 class="display-3">Be Safe LA</h1>
+        <h4>Team hhh</h4>
+        <p class="lead">Chun Lin / Hang Su / Haoyu Jiang</p>
         <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron
           and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
         <p>
@@ -76,7 +76,7 @@
       </div>
     </div>
 
-    <div id="time" class="container">
+    <div id="time" class="container light">
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-4">
@@ -113,17 +113,20 @@
     </div>
     <!-- /container -->
     <div id="area" class="jumbotron">
-      <div class="row">
-        <div class="col-md-6">
-          <div id="select-year">Year: </div>
-          <div id="map-left"></div>
+      <div class="container">
+        <h2>Crime Cases By LAPD Division</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <div id="select-year"><span class="lead">Year:</span> </div>
+            <div id="map-left"></div>
+          </div>
+          <div id="map-right" clas="col-md-6"></div>
         </div>
-        <div id="map-right" clas="col-md-6"></div>
       </div>
       <script src="d3_map.js"></script>
     </div>
 
-    <div id="route" class="container">
+    <div id="route" class="container light">
 
     </div>
   </main>
@@ -132,17 +135,18 @@
     <p>&copy; Company 2017</p>
   </footer>
   <script>
-    $('a').click(function(){
-      $('html, body').animate({
-          scrollTop: $( $(this).attr('href') ).offset().top
+    var $root = $('html, body');
+    $('a').click(function () {
+      $root.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
       }, 500);
-    return false;
-});
+      return false;
+    });
   </script>
   <!-- Bootstrap core JavaScript
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  
+
   <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
