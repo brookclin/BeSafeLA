@@ -13,6 +13,7 @@ var tooltip = d3.select("body").append("div").attr("class", "toolTip");
 var path = d3.geoPath()
     .projection(projection);
 var svg = d3.select("body")
+    .select("div#map-left")
     .append("svg")
     .attr("width", width)
     .attr("height", height);
@@ -24,9 +25,13 @@ queue.defer(d3.json, "data processing/dataByAreaV2.json")
 queue.await(ready);
 var select_years = ['All', '2017', '2016', '2015', '2014', '2013', '2012', '2011', '2010'];
 
+// current selection on year and area, all times and all areas by default
+var selected_year = 'All';
+var selected_area;
+
 // dispatch
-var dispatch = d3.dispatch("load", "statechange");
-dispatch.on("load.menu", function (select_years) {
+var dispatch = d3.dispatch("load", "statechange", "areachange");
+dispatch.on("load.menu", function () {
     var select = d3.select("body")
         .select("div#select-year")
         .append("select")
@@ -41,10 +46,11 @@ dispatch.on("load.menu", function (select_years) {
 
     dispatch.on("statechange.menu", function (d) {
         select.property("value", d);
+        selected_year = d;
     });
 });
 
-dispatch.on("load.map", function (select_years) {
+dispatch.on("load.map", function () {
     var paths = svg.selectAll("path");
     paths_data = paths.data();
     paths.on("mouseout", function (d) {
@@ -54,7 +60,7 @@ dispatch.on("load.map", function (select_years) {
     dispatch.on("statechange.map", function(y) {
         color.domain([Math.floor(d3.min(paths_data, function (d) { return d.properties.byYear[y][0]['count']; })),
             Math.ceil(d3.max(paths_data, function (d) { return d.properties.byYear[y][0]['count']; }))]);
-        paths.attr("fill", function (d) {
+        paths.transition().duration(800).attr("fill", function (d) {
             return color(d.properties.byYear[y][0]['count']);
         })
         paths.on("mousemove", function (d) {
@@ -65,6 +71,12 @@ dispatch.on("load.map", function (select_years) {
         });
     });
 });
+
+dispatch.on("areachange", function(data) {
+    d3.selectAll("path")
+        .classed("selected", false);
+    selected_area = data.properties.name;
+}); 
 
 
 function ready(error, geojson, areadata) {
@@ -77,9 +89,14 @@ function ready(error, geojson, areadata) {
         .data(json_features)
         .enter()
         .append("path")
-        .attr("d", path);
-    dispatch.call("load", this, select_years);
-    dispatch.call('statechange', this, 'All');
+        .attr("d", path)
+        .on("click", function (d) { 
+            dispatch.call("areachange", this, d); 
+            d3.select(this).classed("selected", true);
+        });
+
+    dispatch.call("load", this);
+    dispatch.call('statechange', this, selected_year);
 }
 
 function dataPrep(geojson, areadata) {

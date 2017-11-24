@@ -4,7 +4,7 @@ path {
     stroke-width: 1px;
 }
 
-path:hover {
+path:hover, path.selected{
     fill-opacity: 1;
     stroke: #000;
     stroke-width: 1px;

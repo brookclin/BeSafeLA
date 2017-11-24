@@ -1,63 +1,151 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <title>INF554 - HW8</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <script src="http://d3js.org/d3.v4.min.js"></script>
-    <script src="//d3js.org/d3-scale-chromatic.v0.3.min.js"></script>
+  <title>Be Safe LA</title>
+  <!-- d3 -->
+  <script src="http://d3js.org/d3.v4.min.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css"/>
-    <link href="css/bootstrap/grid.css" rel="stylesheet"/>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/bootstrap/jumbotron.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/d3_map.css"/>
+
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Be Safe LA</h1>
-        <p class="lead">Team hhh | Chun Lin / Hang Su / Haoyu Jiang</p>
-        <hr>
-        <div>
-            <h2>Crime Data From 2010 to Present</h2>
-            <h3>Number of Cases by Area</h3>
-            <div class="btn-group" data-toggle="buttons">
-                <button class="btn btn-primary active" type="button" id="all">All Data</button>
-                <button class="btn btn-primary" type="button" id="top5">Top 5</button>
-                <button class="btn btn-primary" type="button" id="bottom5">Bottom 5</button>
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-                    Sort By
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" id="alpha">A-Z</a>
-                    <a class="dropdown-item" id="asce">Value (low to high)</a>
-                    <a class="dropdown-item" id="desc">Value (high to low)</a>
-                </div>
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">Be Safe LA</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#intro">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#time">Time</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#area">Area</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#route">Route</a>
+        </li>
+        <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
             </div>
-        </div>
-        <div class="row" id="chart"></div>
-        <div class="description">
-            <p>Data source:
-                <a href="https://data.lacity.org/A-Safe-City/Crime-Data-from-2010-to-Present/y8tr-7khq">Crime Data from 2010 to Present | Los Angeles Open Data</a>
-            </p>
-        </div>
-        <div class="row" id="piechart"></div>
+          </li> -->
+      </ul>
     </div>
-    <script src="caseByArea.js"></script>
-    <script src="piechart.js"></script>
+  </nav>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
-        crossorigin="anonymous"></script>
+  <main role="main">
 
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div id="intro" class="jumbotron">
+      <div class="container">
+        <h1 class="display-3">Be Safe LA</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron
+          and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p>
+          <a class="btn btn-primary btn-lg" href="#time" role="button">Explore &raquo;</a>
+        </p>
+      </div>
+    </div>
+
+    <div id="time" class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+            nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio
+            dui. </p>
+          <p>
+            <a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+            nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio
+            dui. </p>
+          <p>
+            <a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis
+            euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
+            sit amet risus.</p>
+          <p>
+            <a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- <hr> split line -->
+
+    </div>
+    <!-- /container -->
+    <div id="area" class="jumbotron">
+      <div class="row">
+        <div class="col-md-6">
+          <div id="select-year">Year: </div>
+          <div id="map-left"></div>
+        </div>
+        <div id="map-right" clas="col-md-6"></div>
+      </div>
+      <script src="d3_map.js"></script>
+    </div>
+
+    <div id="route" class="container">
+
+    </div>
+  </main>
+
+  <footer class="container">
+    <p>&copy; Company 2017</p>
+  </footer>
+  <script>
+    $('a').click(function(){
+      $('html, body').animate({
+          scrollTop: $( $(this).attr('href') ).offset().top
+      }, 500);
+    return false;
+});
+  </script>
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  
+  <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
