@@ -1,10 +1,10 @@
-path {
+path.map {
     fill-opacity: .7;
     stroke: #fff;
     stroke-width: 1px;
 }
 
-path:hover, path.selected{
+path.map:hover, path.map.selected{
     fill-opacity: 1;
     stroke: #000;
     stroke-width: 1px;
