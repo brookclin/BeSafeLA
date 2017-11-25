@@ -186,6 +186,7 @@ dispatch.on("load.pie", function () {
     dispatch.on("areachange.pie", function (data) {
         var area = data.properties.name;
         var age_dataset;
+        svg.transition().duration(400).style("opacity", 1);
         if (selected_year == 'All') {
             age_dataset = area_data[area][0]['overall']['victimAge'];
         } else {
@@ -220,7 +221,13 @@ dispatch.on("load.pie", function () {
     }
 });
 
-
+dispatch.on("statechange.title", function (y) {
+    d3.select("body")
+        .select("div#area")
+        .select("span#current-area")
+        .text((selected_area == null ? "All Divisions" : selected_area)
+         + " - " + (y == "All" ? "All Times" : y));
+});
 dispatch.on("areachange.title", function (data) {
     d3.selectAll("path")
         .classed("selected", false);
@@ -229,8 +236,9 @@ dispatch.on("areachange.title", function (data) {
     d3.select("body")
         .select("div#area")
         .select("span#current-area")
-        .text(selected_area);
+        .text(selected_area + " - " + (selected_year == "All" ? "All Times" : selected_year));
 });
+
 
 
 function ready(error, geojson, areadata, overall) {
