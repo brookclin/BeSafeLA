@@ -76,6 +76,38 @@ dispatch.on("load.map", function () {
 });
 
 dispatch.on("load.line", function () {
+    var w = 500, h = 200, padding = 30;
+    var margin = { top: 20, right: 20, bottom: 30, left: 50 },
+        width = w - margin.left - margin.right,
+        height = h - margin.top - margin.bottom;
+    var svg = d3.select('body')
+        .select('div#map-right')
+        .select("div#map-line")
+        .append('svg')
+        .attr("width", w)
+        .attr("height", h);
+    g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    g.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .attr("class", "xaxis");
+
+    var yg = g.append("g")
+        .attr("class", "yaxis");
+    yg.append("text")
+        .attr("fill", "#000")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 6)
+        .attr("dy", "0.71em")
+        .attr("text-anchor", "end")
+        .text("#Cases");
+    g.append("path")
+        .attr("class", "path")
+        .attr("fill", "none")
+        .attr("stroke", "#18b0df")
+        .attr("stroke-linejoin", "round")
+        .attr("stroke-linecap", "round")
+        .attr("stroke-width", 1.5);
+
     var current_dataset;
     if (selected_area == null) {
         current_dataset = overall_data;
@@ -111,6 +143,66 @@ dispatch.on("load.line", function () {
             drawLine(time_subset);
         }
     });
+    function drawLine(data) {
+        // customized multi time formats
+        var formatMillisecond = d3.timeFormat(".%L"),
+            formatSecond = d3.timeFormat(":%S"),
+            formatMinute = d3.timeFormat("%I:%M"),
+            formatHour = d3.timeFormat("%I %p"),
+            formatDay = d3.timeFormat("%a %d"),
+            formatWeek = d3.timeFormat("%b %d"),
+            formatMonth = d3.timeFormat("%b"),
+            formatYear = d3.timeFormat("%Y");
+
+        function multiFormat(date) {
+            return (d3.timeSecond(date) < date ? formatMillisecond
+                : d3.timeMinute(date) < date ? formatSecond
+                    : d3.timeHour(date) < date ? formatMinute
+                        : d3.timeDay(date) < date ? formatHour
+                            : d3.timeMonth(date) < date ? (d3.timeWeek(date) < date ? formatDay : formatWeek)
+                                : d3.timeYear(date) < date ? formatMonth
+                                    : formatYear)(date);
+        }
+
+        if ("10/2017" in data) {
+            delete data["10/2017"];
+        }
+
+        var parseTime = d3.timeParse("%m/%Y");
+        var data = d3.entries(data); // [{key:.., value:..}]
+        data.forEach(function (entry) {
+            entry['key'] = parseTime(entry['key']);
+        });
+        data.sort(function (x, y) { // sort by date
+            return d3.ascending(x.key, y.key);
+        });
+
+        var x = d3.scaleTime()
+            .domain(d3.extent(data, function (d) { return d['key']; }))
+            .rangeRound([0, width]);
+        var y = d3.scaleLinear()
+            .domain(d3.extent(data, function (d) { return d['value']; }))
+            .rangeRound([height, 0]);
+        var line = d3.line()
+            .x(function (d) { return x(d['key']); })
+            .y(function (d) { return y(d['value']); });
+        g.select("g.xaxis")
+            .transition()
+            .duration(400)
+            .call(d3.axisBottom(x).tickFormat(multiFormat));
+        g.select("g.yaxis")
+            .transition()
+            .duration(400)
+            .call(d3.axisLeft(y));
+            
+
+        g.select("path.path")
+            .datum(data)
+            .transition()
+            .duration(400)
+            .attr("d", line);
+
+    }
 });
 
 // A pie chart to show population by age group; uses the "pie" namespace.
@@ -312,7 +404,7 @@ dispatch.on("load.bar", function () {
     };
 
     var margin = {
-        top: 15,
+        top: 30,
         right: 25,
         bottom: 15,
         left: 0
@@ -330,8 +422,8 @@ dispatch.on("load.bar", function () {
     svg.append("text")
         .attr("text-anchor", "middle")
         .attr("font-size", "1em")
-        .attr("x", width/2);
-        // .text("Top 7 Crime Types");
+        .attr("x", width / 2);
+    // .text("Top 7 Crime Types");
 
     var svg2 = d3.select("#bars").append("svg")
         .attr("class", "descent")
@@ -339,11 +431,11 @@ dispatch.on("load.bar", function () {
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-    
+
     svg2.append("text")
         .attr("text-anchor", "middle")
         .attr("font-size", "1em")
-        .attr("x", width/2)
+        .attr("x", width / 2)
 
     var x = d3.scaleLinear()
         .range([0, width]);
@@ -584,138 +676,13 @@ function ready(error, geojson, areadata, overall) {
 
     // right part
     // line chart
-    initLine();
+    // initLine();
 
     dispatch.call("load", this);
     dispatch.call('statechange', this, selected_year);
 }
-function initLine() {
 
-    var w = 500, h = 200, padding = 30;
-    // todo: text should not append again 
-    var svg = d3.select('body')
-        .select('div#map-right')
-        .select("div#map-line")
-        .append('svg')
-        .attr("width", w)
-        .attr("height", h);
-    // .attr("viewBox", "0 0 500 200");
-    var btext = svg.append('text')
-        .attr('x', w - 5 * padding)
-        .attr('y', h - padding / 10)
-        .style('font-size', '10px');
-    btext.append('tspan').text('Year/Month')
-    var ltext = svg.append('text')
-        .attr('x', w / 2 + 80)
-        .attr('y', padding / 2 - 20)
-        .attr('transform', 'rotate(-90,' + w / 2 + ',' + w / 2 + ')');
-    ltext.append('tspan').text('#Cases');
-}
-function drawLine(data) {
-    var isAllYears;
-    if (Object.keys(data).length > 12) {
-        isAllYears = true;
-    } else {
-        isAllYears = false;
-    }
 
-    if ("10/2017" in data) {
-        delete data["10/2017"];
-    }
-    var data = d3.entries(data); // [{key:.., value:..}]
-    data.forEach(function (entry) {
-        entry['key'] = entry['key'].split('/').reverse().join('/'); // 01/2010 -> 2010/01
-    });
-    data.sort(function (x, y) { // sort by date
-        return d3.ascending(x.key, y.key);
-    });
-
-    var mind = d3.min(data, function (d) { return d['value']; });
-    var maxd = d3.max(data, function (d) { return d['value']; });
-    var w = 500, h = 200, padding = 30;
-
-    var xscale = d3.scaleBand()
-        .domain(data.map(function (d) {
-            return d['key'];
-        }))
-        .range([padding, w - padding]);
-    // .range([0, w]);
-
-    var yscale = d3.scaleLinear()
-        .domain([mind - (maxd - mind) / 10, maxd])
-        .range([h - padding, padding]);
-
-    var svg = d3.select('body')
-        .select('div#map-right')
-        .select("div#map-line")
-        .select('svg');
-
-    var line = d3.line()
-        .x(function (d) { return xscale(d['key']); })
-        .y(function (d) { return yscale(d['value']); })
-        .curve(d3.curveMonotoneX);
-
-    var change = false;
-    var line_path = svg.selectAll("path.line").data([!change]);
-
-    line_path.exit().remove();
-    //update 
-    line_path.attr("d", line(data));
-    line_path.enter().append("path")
-        .attr("class", "line")
-        .attr("d", line(data));
-
-    var r = isAllYears ? 2 : 4;
-    var circles = svg.selectAll(".dot").data(data);
-    circles.exit().remove();
-    // update
-    circles.attr("class", "dot") // Assign a class for styling
-        .attr("cx", function (d) { return xscale(d['key']); })
-        .attr("cy", function (d) { return yscale(d['value']); })
-        .attr("r", r);
-    circles.enter()
-        .append("circle") // Uses the enter().append() method
-        .attr("class", "dot") // Assign a class for styling
-        .attr("cx", function (d) { return xscale(d['key']); })
-        .attr("cy", function (d) { return yscale(d['value']); })
-        .attr("r", r);
-
-    // avoid x-axis labels overlap
-    var ticks = data.map(function (d) { return d['key']; })
-        .filter(function (v, i) { return i % (isAllYears ? 12 : 2) == 0; });
-    var xAxis = d3.axisBottom()
-        .scale(xscale)
-        .ticks(10)
-        .tickValues(ticks);
-    var g_xaxis = svg.selectAll('g.xaxis').data([!change]);
-    // update
-    g_xaxis.attr('class', 'xaxis')
-        .attr('transform', "translate(0," + (h - padding) + ")")
-        .call(xAxis);
-    // svg.append('g')
-    g_xaxis.enter().append('g')
-        .attr('class', 'xaxis')
-        .attr('transform', "translate(0," + (h - padding) + ")")
-        .call(xAxis);
-
-    var yAxis = d3.axisLeft()
-        .scale(yscale)
-        .ticks(10);
-    var g_yaxis = svg.selectAll('g.yaxis').data([!change]);
-    // update
-    g_yaxis.attr('class', 'yaxis')
-        .attr('transform', 'translate(' + padding + ',0)')
-        .call(yAxis);
-    g_yaxis.enter().append('g')
-        .attr('class', 'yaxis')
-        .attr('transform', 'translate(' + padding + ',0)')
-        .call(yAxis);
-
-}
-
-function updateLine_axis() {
-
-}
 
 function dataPrep(geojson, areadata) {
     var json_features = geojson.features;
