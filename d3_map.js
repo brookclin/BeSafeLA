@@ -220,13 +220,133 @@ dispatch.on("load.pie", function () {
         });
     }
 });
+dispatch.on("load.bar", function () {
+    var margin = {
+        top: 15,
+        right: 25,
+        bottom: 15,
+        left: 0
+    };
+
+    var width = 500 - margin.left - margin.right,
+        height = 200 - margin.top - margin.bottom;
+
+    var svg = d3.select("#bars").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    var x = d3.scaleLinear()
+        .range([0, width]);
+    // .domain([0, d3.max(data, function (d) {
+    // return d.value;
+    // })]);
+
+    var y = d3.scaleBand()
+        .rangeRound([height, 0])
+        .padding(0.1);
+    // .domain(data.map(function (d) {
+    // return d.name;
+    // }));
+    var yAxis = d3.axisLeft(y)
+        //no tick marks
+        .ticks(0);
+
+    var gy = svg.append("g")
+        .attr("class", "y axis")
+    var bars = svg.selectAll(".bar");
+    
+    dispatch.on("statechange.bar", function (d) {
+        if (d == "All" && selected_area == null) {
+            svg.transition().duration(400).style("opacity", 0);
+            bars.on("mousemove", function (d) {
+                tooltip.style("display", "none");
+            });
+            return; // todo: reset pie
+        }
+        svg.transition().duration(400).style("opacity", 1);
+        var crimecode_dataset;
+        if (d != "All" && selected_area == null) {
+            crimecode_dataset = overall_data['byYear'][d]['crimeCodeCount'];
+        } else if (d != "All" && selected_area) {
+            crimecode_dataset = area_data[selected_area][0]['byYear'][d]['crimeCodeCount'];
+        } else {
+            crimecode_dataset = area_data[selected_area][0]['overall']['crimeCodeCount'];
+        }
+        updatebar(crimecode_dataset);
+    });
+    dispatch.on("areachange.bar", function (d) {
+        svg.transition().duration(400).style("opacity", 1);
+        var area = d.properties.name;
+        var crimecode_dataset;
+        if (selected_year == 'All') {
+            crimecode_dataset = area_data[area][0]['overall']['crimeCodeCount'];
+        } else {
+            crimecode_dataset = area_data[area][0]['byYear'][selected_year]['crimeCodeCount'];
+        }
+        updatebar(crimecode_dataset);
+    });
+    function updatebar(dataset) {
+        var data = Object.values(dataset);
+        data.sort(function (a, b) { return b.count - a.count; });
+        data = data.slice(0, 10);
+        data.reverse();
+
+
+        gy.call(yAxis)
+        x.domain([0, d3.max(data, function (d) {
+            return d.count;
+        })]);
+        y.domain(data.map(function (d) {
+            return d.description;
+        }));
+        bars = svg.selectAll(".bar")
+            .data(data);
+
+        bars.exit().remove();
+        bars.transition().duration(400).attr("y", function (d) {
+            return y(d.description);
+        })
+            .attr("height", y.bandwidth())
+            .attr("x", 0)
+            .style("opacity", function (d) { return (d.count / d3.max(data, function (p) { return p.count; })); })
+            .attr("width", function (d) {
+                return x(d.count);
+            });
+
+        bars.enter()
+            .append("rect")
+            .attr("class", "bar")
+            .attr("y", function (d) {
+                return y(d.description);
+            })
+            .transition().duration(400)
+            .attr("height", y.bandwidth())
+            .attr("x", 0)
+            .style("opacity", function (d) { return (d.count / d3.max(data, function (p) { return p.count; })); })
+            .attr("width", function (d) {
+                return x(d.count);
+            });
+        var bars = svg.selectAll(".bar");
+        bars.on("mousemove", function (d) {
+            tooltip.style("left", d3.event.pageX + 10 + "px");
+            tooltip.style("top", d3.event.pageY - 25 + "px");
+            tooltip.style("display", "inline-block");
+            tooltip.html("<b>" + (d.description) + "</b><br>#Cases: " + (d.count));
+        });
+        bars.on("mouseout", function (d) {
+            tooltip.style("display", "none");
+        });
+    }
+});
 
 dispatch.on("statechange.title", function (y) {
     d3.select("body")
         .select("div#area")
         .select("span#current-area")
         .text((selected_area == null ? "All Divisions" : selected_area)
-         + " - " + (y == "All" ? "All Times" : y));
+        + " - " + (y == "All" ? "All Times" : y));
 });
 dispatch.on("areachange.title", function (data) {
     d3.selectAll("path")
