@@ -52,7 +52,7 @@ function dashboard(id, fData){
     // function to handle histogram.
     function histoGram(fD){
         var hG={},    
-        hGDim = {t: 60, r: 0, b: 30, l: 50};
+        hGDim = {t: 60, r: 0, b: 30, l: 60};
         hGDim.w = 500 - hGDim.l - hGDim.r, 
         hGDim.h = 300 - hGDim.t - hGDim.b;
             
@@ -74,12 +74,23 @@ function dashboard(id, fData){
         // Create function for y-axis map.
         var y = d3.scale.linear().range([hGDim.h, 0])
                 .domain([0, d3.max(fD, function(d) { return d[1]; })]);
-        
+        var btext = hGsvg.append('text')
+                        .attr('x', hGDim.t+145)
+                        .attr('y', hGDim.h+30)
+                        .style('font-size','12px')
+                btext.append('tspan').text('Year');
+                
         // Add y-axis to the histogram svg.
         hGsvg.append("g").attr("class", "y axis")
             .attr('transform','translate('+ (hGDim.h-205) +',0)')
             .call(d3.svg.axis().scale(y).orient("left"));
-        
+        var ltext = hGsvg.append('text')
+                              .attr('x', hGDim.t-100)
+                              .attr('y', hGDim.h-260)
+                              .style('font-size','12px')
+                              .attr('transform','rotate(-90,'+hGDim.t +',' +hGDim.t+')');
+                ltext.append('tspan').text('The number of cases');
+                
         // Create bars for histogram to contain rectangles and freq labels.
         var bars = hGsvg.selectAll(".bar").data(fD).enter()
                 .append("g").attr("class", "bar");
