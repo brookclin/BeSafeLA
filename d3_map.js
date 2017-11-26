@@ -115,9 +115,10 @@ dispatch.on("load.line", function () {
 
 // A pie chart to show population by age group; uses the "pie" namespace.
 dispatch.on("load.pie", function () {
-    var width = 200,
-        height = 200,
+    var width = 240,
+        height = 240,
         radius = Math.min(width, height) / 2;
+    //age
     var groups = [
         "Under 5 Years",
         "5 to 13 Years",
@@ -127,6 +128,7 @@ dispatch.on("load.pie", function () {
         "45 to 64 Years",
         "65 Years and Over"
     ];
+
     var color = d3.scaleOrdinal()
         .domain(groups)
         .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
@@ -159,43 +161,89 @@ dispatch.on("load.pie", function () {
         .attr("text-anchor", "middle")
         .attr("font-size", "1em")
         .attr("y", 5)
-    // .text("Age Groups");
     path.on("mouseout", function (d) {
+        tooltip.style("display", "none");
+    });
+    // sex 
+    var color2 = d3.scaleOrdinal()
+        .domain(["M", "F"])
+        .range(["#98abc5", "#6b486b"]);
+
+    var arc2 = d3.arc()
+        .outerRadius(radius - 10)
+        .innerRadius(radius - 40);
+
+    var pie2 = d3.pie()
+        .sort(null)
+        .value(function (d) { return d.count; });
+
+    var svg2 = d3.select("body")
+        .select("div#map-right")
+        .select("div#donuts")
+        .append("svg")
+        .attr("class", "map-sex")
+        .attr("width", width)
+        .attr("height", height)
+    var g2 = svg2.append("g")
+        .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+    var path2 = g2.selectAll("path")
+        .data(["M", "F"])
+        .enter().append("path")
+        .style("fill", color2)
+        .each(function () { this._current = { startAngle: 0, endAngle: 0 }; });
+
+    g2.append("text")
+        .attr("text-anchor", "middle")
+        .attr("font-size", "1em")
+        .attr("y", 5)
+    path2.on("mouseout", function (d) {
         tooltip.style("display", "none");
     });
     dispatch.on("statechange.pie", function (d) {
         if (d == "All" && selected_area == null) {
+            // age
             svg.transition().duration(400).style("opacity", 0);
             path.on("mousemove", function (d) {
+                tooltip.style("display", "none");
+            });
+            // sex
+            svg2.transition().duration(400).style("opacity", 0);
+            path2.on("mousemove", function (d) {
                 tooltip.style("display", "none");
             });
             return; // todo: reset pie
         }
         svg.transition().duration(400).style("opacity", 1);
-        var age_dataset;
+        svg2.transition().duration(400).style("opacity", 1);
+        var dataset;
         if (d != "All" && selected_area == null) {
-            age_dataset = overall_data['byYear'][d]['victimAge'];
+            dataset = overall_data['byYear'][d];
         } else if (d != "All" && selected_area) {
-            age_dataset = area_data[selected_area][0]['byYear'][d]['victimAge'];
+            dataset = area_data[selected_area][0]['byYear'][d];
         } else {
-            age_dataset = area_data[selected_area][0]['overall']['victimAge'];
+            dataset = area_data[selected_area][0]['overall'];
         }
-        updatepie(age_dataset)
+        updatepie(dataset)
     });
 
     dispatch.on("areachange.pie", function (data) {
         var area = data.properties.name;
-        var age_dataset;
+        var dataset;
         svg.transition().duration(400).style("opacity", 1);
+        svg2.transition().duration(400).style("opacity", 1);
         if (selected_year == 'All') {
-            age_dataset = area_data[area][0]['overall']['victimAge'];
+            dataset = area_data[area][0]['overall'];
         } else {
-            age_dataset = area_data[area][0]['byYear'][selected_year]['victimAge'];
+            dataset = area_data[area][0]['byYear'][selected_year];
         }
-        updatepie(age_dataset);
+        updatepie(dataset);
     })
-    function updatepie(age_dataset) {
-        g.select("text").text("Age Groups");
+    function updatepie(dataset) {
+        var age_dataset = dataset['victimAge'];
+        var sex_dataset = dataset['victimSex'];
+        g.select("text").text("Victim's Age");
+        g2.select("text").text("Victim's Sex");
         var age_object = [];
         for (var i = 1; i < age_dataset.length; i++) {
             // ignore entries with no age
@@ -204,6 +252,11 @@ dispatch.on("load.pie", function () {
                 count: age_dataset[i]
             });
         }
+        var sex_object = [
+            { group: "Male", count: sex_dataset["M"] },
+            { group: "Female", count: sex_dataset["F"] }
+        ];
+        //age
         path.data(pie.value(function (a) { return a.count; })(age_object)).transition()
             .attrTween("d", function (d) {
                 var interpolate = d3.interpolate(this._current, d);
@@ -218,9 +271,46 @@ dispatch.on("load.pie", function () {
             tooltip.style("display", "inline-block");
             tooltip.html("<b>" + (d.data.group) + "</b><br>#Cases: " + (d.data.count));
         });
+        //sex
+        path2.data(pie2.value(function (a) { return a.count; })(sex_object)).transition()
+            .attrTween("d", function (d) {
+                var interpolate = d3.interpolate(this._current, d);
+                this._current = interpolate(0);
+                return function (t) {
+                    return arc(interpolate(t));
+                };
+            });
+        path2.on("mousemove", function (d) {
+            tooltip.style("left", d3.event.pageX + 10 + "px");
+            tooltip.style("top", d3.event.pageY - 25 + "px");
+            tooltip.style("display", "inline-block");
+            tooltip.html("<b>" + (d.data.group) + "</b><br>#Cases: " + (d.data.count));
+        });
     }
 });
 dispatch.on("load.bar", function () {
+    var descents = {
+        "A": "Other Asian",
+        "C": "Chinese",
+        "B": "Black",
+        "D": "Cambodian",
+        "G": "Guamanian",
+        "F": "Filipino",
+        "I": "American Indian/Alaskan Native",
+        "H": "Hispanic/Latin/Mexican",
+        "K": "Korean",
+        "J": "Japanese",
+        "L": "Laotian",
+        "O": "Other",
+        "P": "Pacific Islander",
+        "S": "Samoan",
+        "U": "Hawaiian",
+        "W": "White",
+        "V": "Vietnamese",
+        "X": "Unknown",
+        "Z": "Asian Indian"
+    };
+
     var margin = {
         top: 15,
         right: 25,
@@ -228,72 +318,126 @@ dispatch.on("load.bar", function () {
         left: 0
     };
 
-    var width = 500 - margin.left - margin.right,
+    var width = 250 - margin.left - margin.right,
         height = 200 - margin.top - margin.bottom;
 
     var svg = d3.select("#bars").append("svg")
+        .attr("class", "crimetype")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    svg.append("text")
+        .attr("text-anchor", "middle")
+        .attr("font-size", "1em")
+        .attr("x", width/2);
+        // .text("Top 7 Crime Types");
+
+    var svg2 = d3.select("#bars").append("svg")
+        .attr("class", "descent")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    
+    svg2.append("text")
+        .attr("text-anchor", "middle")
+        .attr("font-size", "1em")
+        .attr("x", width/2)
 
     var x = d3.scaleLinear()
         .range([0, width]);
-    // .domain([0, d3.max(data, function (d) {
-    // return d.value;
-    // })]);
 
     var y = d3.scaleBand()
         .rangeRound([height, 0])
         .padding(0.1);
-    // .domain(data.map(function (d) {
-    // return d.name;
-    // }));
+
     var yAxis = d3.axisLeft(y)
+        //no tick marks
+        .ticks(0);
+
+    // descent
+    var x2 = d3.scaleLinear()
+        .range([0, width]);
+
+    var y2 = d3.scaleBand()
+        .rangeRound([height, 0])
+        .padding(0.1);
+
+    var yAxis2 = d3.axisLeft(y2)
         //no tick marks
         .ticks(0);
 
     var gy = svg.append("g")
         .attr("class", "y axis")
+    var gy2 = svg2.append("g")
+        .attr("class", "y axis")
     var bars = svg.selectAll(".bar");
-    
+    var bars2 = svg2.selectAll(".bar2");
+
     dispatch.on("statechange.bar", function (d) {
         if (d == "All" && selected_area == null) {
             svg.transition().duration(400).style("opacity", 0);
+            svg2.transition().duration(400).style("opacity", 0);
             bars.on("mousemove", function (d) {
+                tooltip.style("display", "none");
+            });
+            bars2.on("mousemove", function (d) {
                 tooltip.style("display", "none");
             });
             return; // todo: reset pie
         }
         svg.transition().duration(400).style("opacity", 1);
-        var crimecode_dataset;
+        svg2.transition().duration(400).style("opacity", 1);
+        var dataset;
         if (d != "All" && selected_area == null) {
-            crimecode_dataset = overall_data['byYear'][d]['crimeCodeCount'];
+            // crimecode_dataset = overall_data['byYear'][d]['crimeCodeCount'];
+            dataset = overall_data['byYear'][d];
         } else if (d != "All" && selected_area) {
-            crimecode_dataset = area_data[selected_area][0]['byYear'][d]['crimeCodeCount'];
+            // crimecode_dataset = area_data[selected_area][0]['byYear'][d]['crimeCodeCount'];
+            dataset = area_data[selected_area][0]['byYear'][d];
         } else {
-            crimecode_dataset = area_data[selected_area][0]['overall']['crimeCodeCount'];
+            // crimecode_dataset = area_data[selected_area][0]['overall']['crimeCodeCount'];
+            dataset = area_data[selected_area][0]['overall'];
         }
-        updatebar(crimecode_dataset);
+        updatebar(dataset);
     });
     dispatch.on("areachange.bar", function (d) {
         svg.transition().duration(400).style("opacity", 1);
+        svg2.transition().duration(400).style("opacity", 1);
         var area = d.properties.name;
-        var crimecode_dataset;
+        var dataset;
         if (selected_year == 'All') {
-            crimecode_dataset = area_data[area][0]['overall']['crimeCodeCount'];
+            dataset = area_data[area][0]['overall'];
         } else {
-            crimecode_dataset = area_data[area][0]['byYear'][selected_year]['crimeCodeCount'];
+            dataset = area_data[area][0]['byYear'][selected_year];
         }
-        updatebar(crimecode_dataset);
+        updatebar(dataset);
     });
     function updatebar(dataset) {
-        var data = Object.values(dataset);
+        svg.select("text").text("Top 7 Crime Types");
+        svg2.select("text").text("Top 7 Victim's Descent")
+        // crime code
+        var data = Object.values(dataset['crimeCodeCount']);
         data.sort(function (a, b) { return b.count - a.count; });
-        data = data.slice(0, 10);
+        data = data.slice(0, 7);
         data.reverse();
 
+        // descent
+        descent_keys = Object.keys(dataset['victimDescent']);
+        descent_data = [];
+        for (var i = 0; i < descent_keys.length; i++) {
+            if (descent_keys[i] == "") continue;
+            descent_data.push({
+                type: descents[descent_keys[i]],
+                count: dataset['victimDescent'][descent_keys[i]]
+            });
+        }
+        descent_data.sort(function (a, b) { return b.count - a.count; });
+        descent_data = descent_data.slice(0, 7);
+        descent_data.reverse();
 
+        // crime code
         gy.call(yAxis)
         x.domain([0, d3.max(data, function (d) {
             return d.count;
@@ -328,6 +472,17 @@ dispatch.on("load.bar", function () {
             .attr("width", function (d) {
                 return x(d.count);
             });
+        // bars.append("text")
+        //     .attr("class", "label")
+        //     //y position of the label is halfway down the bar
+        //     .attr("y", function (d) {
+        //         return y(d.desciption) + y.rangeBand() / 2 + 4;
+        //     })
+        //     //x position is 3 pixels to the right of the bar
+        //     .attr("x", 0)
+        //     .text(function (d) {
+        //         return d.desciption;
+        //     });
         var bars = svg.selectAll(".bar");
         bars.on("mousemove", function (d) {
             tooltip.style("left", d3.event.pageX + 10 + "px");
@@ -336,6 +491,50 @@ dispatch.on("load.bar", function () {
             tooltip.html("<b>" + (d.description) + "</b><br>#Cases: " + (d.count));
         });
         bars.on("mouseout", function (d) {
+            tooltip.style("display", "none");
+        });
+
+        // descent
+        gy2.call(yAxis2)
+        x2.domain([0, d3.max(descent_data, function (d) {
+            return d.count;
+        })]);
+        y2.domain(descent_data.map(function (d) {
+            return d.type;
+        }));
+        bars2 = svg2.selectAll(".bar2")
+            .data(descent_data);
+
+        bars2.exit().remove();
+        bars2.transition().duration(400).attr("y", function (d) {
+            return y2(d.type);
+        })
+            .attr("height", y2.bandwidth())
+            .attr("x", 0)
+            .attr("width", function (d) {
+                return x2(d.count);
+            });
+
+        bars2.enter()
+            .append("rect")
+            .attr("class", "bar2")
+            .attr("y", function (d) {
+                return y2(d.type);
+            })
+            .transition().duration(400)
+            .attr("height", y2.bandwidth())
+            .attr("x", 0)
+            .attr("width", function (d) {
+                return x2(d.count);
+            });
+        var bars2 = svg2.selectAll(".bar2");
+        bars2.on("mousemove", function (d) {
+            tooltip.style("left", d3.event.pageX + 10 + "px");
+            tooltip.style("top", d3.event.pageY - 25 + "px");
+            tooltip.style("display", "inline-block");
+            tooltip.html("<b>" + (d.type) + "</b><br>#Cases: " + (d.count));
+        });
+        bars2.on("mouseout", function (d) {
             tooltip.style("display", "none");
         });
     }
