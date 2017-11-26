@@ -76,8 +76,8 @@ dispatch.on("load.map", function () {
 });
 
 dispatch.on("load.line", function () {
-    var w = 500, h = 200, padding = 30;
-    var margin = { top: 20, right: 20, bottom: 30, left: 50 },
+    var w = 500, h = 200;
+    var margin = { top: 10, right: 20, bottom: 30, left: 50 },
         width = w - margin.left - margin.right,
         height = h - margin.top - margin.bottom;
     var svg = d3.select('body')
@@ -194,7 +194,7 @@ dispatch.on("load.line", function () {
             .transition()
             .duration(400)
             .call(d3.axisLeft(y));
-            
+
 
         g.select("path.path")
             .datum(data)
@@ -410,7 +410,7 @@ dispatch.on("load.bar", function () {
         left: 0
     };
 
-    var width = 250 - margin.left - margin.right,
+    var width = 245 - margin.left - margin.right,
         height = 200 - margin.top - margin.bottom;
 
     var svg = d3.select("#bars").append("svg")
@@ -430,7 +430,7 @@ dispatch.on("load.bar", function () {
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        .attr("transform", "translate(" + 20 + "," + margin.top + ")");
 
     svg2.append("text")
         .attr("text-anchor", "middle")
@@ -456,18 +456,19 @@ dispatch.on("load.bar", function () {
         .rangeRound([height, 0])
         .padding(0.1);
 
-    var yAxis2 = d3.axisLeft(y2)
-        //no tick marks
-        .ticks(0);
+    var yAxis2 = d3.axisLeft(y2);
+    //no tick marks
+    // .ticks(0);
 
     var gy = svg.append("g")
-        .attr("class", "y axis")
+        .attr("class", "yaxis");
     var gy2 = svg2.append("g")
-        .attr("class", "y axis")
-    var bars = svg.selectAll(".bar");
-    var bars2 = svg2.selectAll(".bar2");
+        .attr("class", "yaxis");
+    
 
     dispatch.on("statechange.bar", function (d) {
+        var bars = svg.selectAll(".bar");
+        var bars2 = svg2.selectAll(".bar2");
         if (d == "All" && selected_area == null) {
             svg.transition().duration(400).style("opacity", 0);
             svg2.transition().duration(400).style("opacity", 0);
@@ -522,6 +523,7 @@ dispatch.on("load.bar", function () {
             if (descent_keys[i] == "") continue;
             descent_data.push({
                 type: descents[descent_keys[i]],
+                initial: descent_keys[i],
                 count: dataset['victimDescent'][descent_keys[i]]
             });
         }
@@ -537,6 +539,7 @@ dispatch.on("load.bar", function () {
         y.domain(data.map(function (d) {
             return d.description;
         }));
+
         bars = svg.selectAll(".bar")
             .data(data);
 
@@ -551,6 +554,13 @@ dispatch.on("load.bar", function () {
                 return x(d.count);
             });
 
+        var texts = svg.selectAll(".label")
+            .data(data);
+        texts.exit().remove();
+        texts.text(function (d) {
+            return d.description.split(" ")[0];;
+        });
+
         bars.enter()
             .append("rect")
             .attr("class", "bar")
@@ -564,18 +574,21 @@ dispatch.on("load.bar", function () {
             .attr("width", function (d) {
                 return x(d.count);
             });
-        // bars.append("text")
-        //     .attr("class", "label")
-        //     //y position of the label is halfway down the bar
-        //     .attr("y", function (d) {
-        //         return y(d.desciption) + y.rangeBand() / 2 + 4;
-        //     })
-        //     //x position is 3 pixels to the right of the bar
-        //     .attr("x", 0)
-        //     .text(function (d) {
-        //         return d.desciption;
-        //     });
-        var bars = svg.selectAll(".bar");
+        texts.enter()
+            .append("text")
+            .attr("class", "label")
+            .attr("y", function (d) {
+                return y(d.description) + y.bandwidth() / 2 + 5;
+            })
+            .style("font-size", "0.7em")
+            .style("fill", "#FFFFFF")
+            //x position is 3 pixels to the right of the bar
+            .attr("x", 3)
+            .text(function (d) {
+                return d.description.split(" ")[0];
+            });
+
+        var bars = svg.selectAll(".bar"); // include bars and texts
         bars.on("mousemove", function (d) {
             tooltip.style("left", d3.event.pageX + 10 + "px");
             tooltip.style("top", d3.event.pageY - 25 + "px");
@@ -587,19 +600,18 @@ dispatch.on("load.bar", function () {
         });
 
         // descent
-        gy2.call(yAxis2)
         x2.domain([0, d3.max(descent_data, function (d) {
             return d.count;
         })]);
         y2.domain(descent_data.map(function (d) {
-            return d.type;
+            return d.initial;
         }));
         bars2 = svg2.selectAll(".bar2")
             .data(descent_data);
 
         bars2.exit().remove();
         bars2.transition().duration(400).attr("y", function (d) {
-            return y2(d.type);
+            return y2(d.initial);
         })
             .attr("height", y2.bandwidth())
             .attr("x", 0)
@@ -607,11 +619,18 @@ dispatch.on("load.bar", function () {
                 return x2(d.count);
             });
 
+        // var texts2 = svg2.selectAll(".label")
+        //     .data(descent_data);
+        // texts2.exit().remove();
+        // texts2.text(function (d) {
+        //     return d.initial;
+        // });
+
         bars2.enter()
             .append("rect")
             .attr("class", "bar2")
             .attr("y", function (d) {
-                return y2(d.type);
+                return y2(d.initial);
             })
             .transition().duration(400)
             .attr("height", y2.bandwidth())
@@ -619,7 +638,23 @@ dispatch.on("load.bar", function () {
             .attr("width", function (d) {
                 return x2(d.count);
             });
-        var bars2 = svg2.selectAll(".bar2");
+        // texts2.enter()
+        //     .append("text")
+        //     .attr("class", "label")
+        //     .attr("y", function (d) {
+        //         return y2(d.initial) + y2.bandwidth() / 2 + 5;
+        //     })
+        //     .style("font-size", "0.7em")
+        //     .style("fill", "#FFFFFF")
+        //     //x position is 3 pixels to the right of the bar
+        //     .attr("x", 3)
+        //     .text(function (d) {
+        //         return d.initial;
+        //     });
+
+        gy2.call(yAxis2);
+
+        var bars2 = svg2.selectAll(".bar2"); // include bars and texts
         bars2.on("mousemove", function (d) {
             tooltip.style("left", d3.event.pageX + 10 + "px");
             tooltip.style("top", d3.event.pageY - 25 + "px");
