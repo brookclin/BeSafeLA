@@ -9,10 +9,10 @@ function initMap() {
     var endListener;
     var crimeMarkerArray = [];
     var map = new google.maps.Map(document.getElementById('routemap'), {
-        zoom: 10,
+        zoom: 15,
         center: { lat: 34.02255525, lng: -118.28189665 }
     });
-
+// https://maps.google.com/maps/api/staticmap?center=34.02255525%2C-118.28189665&zoom=15&size=256x256&language=en&sensor=false&client=google-maps-frontend&signature=reL4qZBZ1BTUXSsvk7E0X8k1y4Q
     map.data.loadGeoJson('lapd-bureaus.geojson');
     map.data.setStyle({ fillColor: '#007bff', fillOpacity: 0.01, strokeWeight: 1.2, strokeColor: '#007bff', strokeOpacity: 0.5 });
 
@@ -147,7 +147,7 @@ function initMap() {
                                         a = a.replace(')', '');
                                         clat = +a.split(',')[0];
                                         clng = +a.split(',')[1];
-                                        if (Math.abs(clat - lat) < 0.003 && Math.abs(clng - lng) < 0.003) {
+                                        if (Math.abs(clat - lat) < 0.002 && Math.abs(clng - lng) < 0.002) {
 
                                             if (crimeLocations['' + clat +' '+ clng]) {
                                                 crimeLocations['' + clat +' '+ clng] += 1
@@ -202,12 +202,12 @@ function initMap() {
                                 strokeColor: '#007bff',
                                 strokeOpacity: 0,
                                 strokeWeight: 1,
-                                fillOpacity: 0.02*crimeLocations[key]
+                                fillOpacity: 0.02*crimeLocations[key]>0.8?0.8:0.02*crimeLocations[key]
 
                             }
                         });
 
-                        // setCrimeMarker(crimeMarker, data[crimeidx]);
+                        setCrimeMarker(crimeMarker, crimeLocations[key]);
                         crimeMarkerArray.push(crimeMarker);
 
                     }
@@ -243,11 +243,16 @@ function initMap() {
     });
 }
 
-function setCrimeMarker(marker, data) {
-    var crimeInfoWindow = new google.maps.InfoWindow({ content: data['Date Occurred'] });
-    marker.addListener('click', function() {
+function setCrimeMarker(marker, count) {
+    var crimeInfoWindow = new google.maps.InfoWindow({ content: 'Crime Count:'+count });
+    marker.addListener('mouseover', function() {
         // console.log(data[crimeidx]);
 
         crimeInfoWindow.open(marker.get('map'), marker);
+    });
+    marker.addListener('mouseout', function() {
+        // console.log(data[crimeidx]);
+
+        crimeInfoWindow.close();
     });
 }
