@@ -20,6 +20,14 @@ function initMap() {
 
 
     map.addListener('mouseout', function() {
+        if (document.getElementById('startButton')['disabled']){
+            document.getElementById('startButton')['disabled']=null;    
+        }
+
+        if (document.getElementById('endButton')['disabled']){
+            document.getElementById('endButton')['disabled']=null;    
+        }
+         
         if (startListener) {
             google.maps.event.removeListener(startListener);
         }
@@ -41,6 +49,7 @@ function initMap() {
             crimeMarkerArray[i].setMap(null);
         }
         crimeMarkerArray = [];
+        document.getElementById('startButton')["disabled"]="disabled";        
         // document.getElementById('startAddress').innerHTML = "start point address";
         // document.getElementById('endAddress').innerHTML = "end point address";
 
@@ -83,6 +92,7 @@ function initMap() {
             crimeMarkerArray[i].setMap(null);
         }
         crimeMarkerArray = [];
+        document.getElementById('endButton')["disabled"]="disabled";  
         // document.getElementById('startAddress').innerHTML = "start point address";
         // document.getElementById('endAddress').innerHTML = "end point address";
         endListener = map.data.addListener('click', function(e) {
@@ -118,7 +128,8 @@ function initMap() {
     });
 
     google.maps.event.addDomListener(document.getElementById('find'), 'click', function() {
-
+        document.getElementById('endButton')["disabled"]="disabled";  
+                    document.getElementById('startButton')["disabled"]="disabled";  
         directionsService.route({
             origin: startMarker.position,
             destination: endMarker.position,
@@ -211,7 +222,7 @@ function initMap() {
                         crimeMarkerArray.push(crimeMarker);
 
                     }
-
+                    
                     console.log(Object.values(crimeStatics));
                 });
 
@@ -240,6 +251,12 @@ function initMap() {
         crimeMarkerArray = [];
         document.getElementById('startAddress').innerHTML = "Select start point";
         document.getElementById('endAddress').innerHTML = "Select end point";
+        // startMarker.setMap(null);
+        // endMarker.setMap(null);
+        startMarker = null;
+        endMarker = null;
+        document.getElementById('endButton')["disabled"]=null;  
+                    document.getElementById('startButton')["disabled"]=null;  
     });
 }
 
