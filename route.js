@@ -20,13 +20,16 @@ function initMap() {
 
 
     map.addListener('mouseout', function() {
-        if (document.getElementById('startButton')['disabled']){
+        if (directionsDisplay.map==null){
+            if (document.getElementById('startButton')['disabled']){
             document.getElementById('startButton')['disabled']=null;    
         }
 
         if (document.getElementById('endButton')['disabled']){
             document.getElementById('endButton')['disabled']=null;    
         }
+        }
+        
          
         if (startListener) {
             google.maps.event.removeListener(startListener);
@@ -230,6 +233,7 @@ function initMap() {
 
                 directionsDisplay.setDirections(response);
                 directionsDisplay.setMap(map);
+                console.log(directionsDisplay);
 
 
 
