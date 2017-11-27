@@ -53,6 +53,29 @@ dispatch.on("load.menu", function () {
     });
 });
 
+dispatch.on("load.reset", function () {
+    var button = d3.select("body")
+        .select("div#select-year")
+        .append("button")
+        .attr("class", "btn btn-secondary")
+        .attr("type", "button")
+        .attr("disabled", "disabled")
+        .on("click", function () {
+            dispatch.call("areachange", this, null);
+        });
+    button.text("All Divisions");
+
+    dispatch.on("areachange.reset", function(d) {
+        if (!d) {
+            button.attr("disabled", "disabled");
+            button.text("All Divisions");
+        } else {
+            button.attr("disabled", null);
+            button.text("Reset Division");
+        }
+    });
+});
+
 dispatch.on("load.map", function () {
     var paths = svg.selectAll("path");
     paths_data = paths.data();
@@ -129,18 +152,35 @@ dispatch.on("load.line", function () {
 
     });
     dispatch.on("areachange.line", function (data) {
-        var area = data.properties.name;
-        current_dataset = area_data[area][0];
-        if (selected_year == 'All') {
-            drawLine(current_dataset['CountByMonth']);
-        } else {
-            var month_filtered = Object.keys(current_dataset['CountByMonth'])
-                .filter(function (key) { return key.includes(selected_year); });
-            var time_subset = {}
-            for (var i = 0; i < month_filtered.length; i++) {
-                time_subset[month_filtered[i]] = current_dataset['CountByMonth'][month_filtered[i]];
+        var area;
+
+        if (!data) {
+            current_dataset = overall_data;
+            if (selected_year == 'All') {
+                drawLine(current_dataset['CountByMonth']);
+            } else {
+                var month_filtered = Object.keys(current_dataset['CountByMonth'])
+                    .filter(function (key) { return key.includes(selected_year); });
+                var time_subset = {}
+                for (var i = 0; i < month_filtered.length; i++) {
+                    time_subset[month_filtered[i]] = current_dataset['CountByMonth'][month_filtered[i]];
+                }
+                drawLine(time_subset);
             }
-            drawLine(time_subset);
+        } else {
+            area = data.properties.name;
+            current_dataset = area_data[area][0];
+            if (selected_year == 'All') {
+                drawLine(current_dataset['CountByMonth']);
+            } else {
+                var month_filtered = Object.keys(current_dataset['CountByMonth'])
+                    .filter(function (key) { return key.includes(selected_year); });
+                var time_subset = {}
+                for (var i = 0; i < month_filtered.length; i++) {
+                    time_subset[month_filtered[i]] = current_dataset['CountByMonth'][month_filtered[i]];
+                }
+                drawLine(time_subset);
+            }
         }
     });
     function drawLine(data) {
@@ -320,16 +360,32 @@ dispatch.on("load.pie", function () {
     });
 
     dispatch.on("areachange.pie", function (data) {
-        var area = data.properties.name;
-        var dataset;
-        svg.transition().duration(400).style("opacity", 1);
-        svg2.transition().duration(400).style("opacity", 1);
-        if (selected_year == 'All') {
-            dataset = area_data[area][0]['overall'];
+        if (!data) {
+            if (selected_year == "All") {
+                svg.transition().duration(400).style("opacity", 0);
+                svg2.transition().duration(400).style("opacity", 0);
+                path.on("mousemove", function (d) {
+                    tooltip.style("display", "none");
+                });
+                path2.on("mousemove", function (d) {
+                    tooltip.style("display", "none");
+                });
+            } else {
+                var dataset = overall_data['byYear'][selected_year];
+                updatepie(dataset);
+            }
         } else {
-            dataset = area_data[area][0]['byYear'][selected_year];
+            var area = data.properties.name;
+            var dataset;
+            svg.transition().duration(400).style("opacity", 1);
+            svg2.transition().duration(400).style("opacity", 1);
+            if (selected_year == 'All') {
+                dataset = area_data[area][0]['overall'];
+            } else {
+                dataset = area_data[area][0]['byYear'][selected_year];
+            }
+            updatepie(dataset);
         }
-        updatepie(dataset);
     })
     function updatepie(dataset) {
         var age_dataset = dataset['victimAge'];
@@ -464,7 +520,7 @@ dispatch.on("load.bar", function () {
         .attr("class", "yaxis");
     var gy2 = svg2.append("g")
         .attr("class", "yaxis");
-    
+
 
     dispatch.on("statechange.bar", function (d) {
         var bars = svg.selectAll(".bar");
@@ -496,16 +552,36 @@ dispatch.on("load.bar", function () {
         updatebar(dataset);
     });
     dispatch.on("areachange.bar", function (d) {
-        svg.transition().duration(400).style("opacity", 1);
-        svg2.transition().duration(400).style("opacity", 1);
-        var area = d.properties.name;
-        var dataset;
-        if (selected_year == 'All') {
-            dataset = area_data[area][0]['overall'];
+        if (!d) {
+            if (selected_year == "All") {
+                var bars = svg.selectAll(".bar");
+                var bars2 = svg2.selectAll(".bar2");
+                svg.transition().duration(400).style("opacity", 0);
+                svg2.transition().duration(400).style("opacity", 0);
+
+                bars.on("mousemove", function (d) {
+                    tooltip.style("display", "none");
+                });
+                bars2.on("mousemove", function (d) {
+                    tooltip.style("display", "none");
+                });
+
+            } else {
+                var dataset = overall_data['byYear'][selected_year];
+                updatebar(dataset);
+            }
         } else {
-            dataset = area_data[area][0]['byYear'][selected_year];
+            svg.transition().duration(400).style("opacity", 1);
+            svg2.transition().duration(400).style("opacity", 1);
+            var area = d.properties.name;
+            var dataset;
+            if (selected_year == 'All') {
+                dataset = area_data[area][0]['overall'];
+            } else {
+                dataset = area_data[area][0]['byYear'][selected_year];
+            }
+            updatebar(dataset);
         }
-        updatebar(dataset);
     });
     function updatebar(dataset) {
         svg.select("text").text("Top 7 Crime Types");
@@ -677,12 +753,16 @@ dispatch.on("statechange.title", function (y) {
 dispatch.on("areachange.title", function (data) {
     d3.selectAll("path")
         .classed("selected", false);
-    selected_area = data.properties.name;
+    if (data) {
+        selected_area = data.properties.name;
+    } else {
+        selected_area = null;
+    }
     // title on selected area
     d3.select("body")
         .select("div#area")
         .select("span#current-area")
-        .text(selected_area + " - " + (selected_year == "All" ? "All Times" : selected_year));
+        .text((selected_area ? selected_area : "All Divisions") + " - " + (selected_year == "All" ? "All Times" : selected_year));
 });
 
 
