@@ -99,7 +99,7 @@
         <div class="col-10">
           <div class="tab-content" id="v-pills-tabContent">
               <div class="tab-pane fade show active" id="v-pills-time" role="tabpanel" aria-labelledby="v-pills-time-tab">
-                <svg width="900" height="500"></svg>
+                <svg width="900" height="400"></svg>
                 <script src="outlineofyear.js"></script>
               </div>
             <div class="tab-pane fad " id="v-pills-age" role="tabpanel" aria-labelledby="v-pills-age-tab">
@@ -181,14 +181,20 @@
       <p class="lead">Click on "Start" and "End" to start selecting your desired walking route on the map.</p>
       <div class="row" >
         <div id="routemap" style="height: 600px;" class="col-9"></div>
-        <div id="button" class="col-3 text-center" style="display: table;margin: 0px auto;">
+        <div id="button" class="col-3 text-center">
           <!-- <div class="row" style="height: 200px;"> -->
           <button id="startButton" class="btn btn-dark btn-lg btn-block">Start</button>
-          <div style=" margin:0px auto; " id="startAddress">Select start point</div>
+          <!-- <div style=" margin:0px auto; " id="startAddress">Select start point</div> -->
+          <div class="alert alert-secondary" id="startAddress" role="alert">
+              Select start point
+            </div>
           <!-- </div> -->
           <!-- <div class="row" style="height: 200px;"> -->
           <button id="endButton" class="btn btn-dark btn-lg btn-block">End</button>
-          <div style=" margin:0px auto; " id="endAddress">Select end point</div>
+          <!-- <div style=" margin:0px auto; " id="endAddress">Select end point</div> -->
+          <div class="alert alert-secondary" id="endAddress" role="alert">
+              Select end point
+            </div>
           <!-- </div> -->
           <!-- <div class="row" style="height: 100px;"> -->
           <button id="find" class="btn btn-primary btn-lg btn-block">Find</button>
