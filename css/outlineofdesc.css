@@ -1,0 +1,28 @@
+#v-pills-descent path {  stroke: #fff; }
+#v-pills-descent path:hover {  opacity:0.9; }
+#v-pills-descent rect:hover {  fill:#f1c876; }
+#v-pills-descent .axis {  font: 10px sans-serif; }
+#v-pills-descent .legend tr{    border-bottom:1px solid grey; }
+#v-pills-descent .legend tr:first-child{    border-top:1px solid grey; }
+
+#v-pills-descent .axis path,
+#v-pills-descent .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+#v-pills-descent .x.axis path {  display: none; }
+#v-pills-descent .legend{
+    margin-bottom:76px;
+    display:inline-block;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+#v-pills-descent .legend td{
+    padding:4px 5px;
+    vertical-align:bottom;
+}
+#v-pills-descent .legendFreq, .legendPerc{
+    width:50px;
+}

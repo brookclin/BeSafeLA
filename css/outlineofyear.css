@@ -1,0 +1,10 @@
+#v-pills-time .area {
+    fill:rgb(247, 202, 154);
+    clip-path: url(#clip);
+    }
+
+#v-pills-time .zoom {
+    cursor: move;
+    fill: none;
+    pointer-events: all;
+}

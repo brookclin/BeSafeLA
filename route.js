@@ -14,7 +14,7 @@ apikey = "AIzaSyB7UKHekldhwyNLDUopg6hIHT6ECX4gnng";
         });
 
         map.data.loadGeoJson('lapd-bureaus.geojson');
-        map.data.setStyle({ fillColor: 'red', fillOpacity: 0.01, strokeWeight: 1.2, strokeColor: 'red', strokeOpacity: 0.5 });
+        map.data.setStyle({ fillColor: '#007bff', fillOpacity: 0.01, strokeWeight: 1.2, strokeColor: '#007bff', strokeOpacity: 0.5 });
 
         // crimeIcon=new google.maps.Symbol({path:'CIRCLE'});
 
@@ -154,8 +154,8 @@ apikey = "AIzaSyB7UKHekldhwyNLDUopg6hIHT6ECX4gnng";
                                                     icon: {
                                                         path: google.maps.SymbolPath.CIRCLE,
                                                         scale: 20,
-                                                        fillColor: 'red',
-                                                        strokeColor: 'red',
+                                                        fillColor: '#007bff',
+                                                        strokeColor: '#007bff',
                                                         strokeOpacity: 0,
                                                         strokeWeight: 1,
                                                         fillOpacity: 0.02
@@ -206,8 +206,8 @@ apikey = "AIzaSyB7UKHekldhwyNLDUopg6hIHT6ECX4gnng";
                 crimeMarkerArray[i].setMap(null);
             }
             crimeMarkerArray = [];
-            document.getElementById('startAddress').innerHTML = "start point address";
-            document.getElementById('endAddress').innerHTML = "end point address";
+            document.getElementById('startAddress').innerHTML = "Select start point";
+            document.getElementById('endAddress').innerHTML = "Select end point";
         });
     }
 

@@ -1,0 +1,28 @@
+#v-pills-age path {  stroke: #fff; }
+#v-pills-age path:hover {  opacity:0.9; }
+#v-pills-age rect:hover {  fill:#f1c876; }
+#v-pills-age .axis {  font: 10px sans-serif; }
+#v-pills-age .legend tr{    border-bottom:1px solid grey; }
+#v-pills-age .legend tr:first-child{    border-top:1px solid grey; }
+
+#v-pills-age .axis path,
+#v-pills-age .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+#v-pills-age .x.axis path {  display: none; }
+#v-pills-age .legend{
+    margin-bottom:76px;
+    display:inline-block;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+#v-pills-age .legend td{
+    padding:4px 5px;
+    vertical-align:bottom;
+}
+#v-pills-age .legendFreq, .legendPerc{
+    width:50px;
+}

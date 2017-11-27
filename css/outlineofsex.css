@@ -1,0 +1,28 @@
+#v-pills-sex path {  stroke: #fff; }
+#v-pills-sex path:hover {  opacity:0.9; }
+#v-pills-sex rect:hover {  fill:#f1c876; }
+#v-pills-sex .axis {  font: 10px sans-serif; }
+#v-pills-sex .legend tr{    border-bottom:1px solid grey; }
+#v-pills-sex .legend tr:first-child{    border-top:1px solid grey; }
+
+#v-pills-sex .axis path,
+#v-pills-sex .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+#v-pills-sex .x.axis path {  display: none; }
+#v-pills-sex .legend{
+    margin-bottom:76px;
+    display:inline-block;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+#v-pills-sex .legend td{
+    padding:4px 5px;
+    vertical-align:bottom;
+}
+#v-pills-sex .legendFreq, .legendPerc{
+    width:50px;
+}
