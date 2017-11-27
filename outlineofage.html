@@ -33,6 +33,21 @@ rect:hover {  fill:#f1c876; }
 .legendFreq, .legendPerc{
     width:50px;
 }
+.toolTip {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: absolute;
+    display: none;
+    width: auto;
+    height: auto;
+    background: none repeat scroll 0 0 white;
+    border: 0 none;
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: -3px 3px 15px #888888;
+    color: black;
+    font: 12px sans-serif;
+    padding: 5px;
+    text-align: center;
+}
 
 </style>
 <body>
@@ -44,7 +59,7 @@ rect:hover {  fill:#f1c876; }
 function dashboard(id, fData){
    
     var barColor = '#f2b076';
-    function segColor(c){ return {'Unknown':'#edcb89','5-13':'#cc9424', '14-17':'#fcaa0a', '18-24': '#efa537', '25-44': '#edc487','45-64':'#e8900d','>65':'#fcad37'}[c]; }
+    function segColor(c){ return {'Unknown':"#98abc5",'5-13':"#8a89a6", '14-17':"#7b6888", '18-24': "#6b486b", '25-44': "#a05d56",'45-64': "#d0743c",'>65': "#ff8c00"}[c]; }
     
     // compute total for each state.
     fData.forEach(function(d){
@@ -124,12 +139,17 @@ function dashboard(id, fData){
             // call update functions of pie-chart and legend.    
             pC.update(nD);
             leg.update(nD);
+            div.style("left", d3.event.pageX+10+"px");
+            div.style("top", d3.event.pageY-25+"px");
+            div.style("display", "inline-block");
+            div.html((d.freq));
         }
         
         function mouseout(d){    // utility function to be called on mouseout.
             // reset the pie-chart and legend.    
             pC.update(tF);
             leg.update(tF);
+            div.style("display", "none");
         }
         
         // create function to update the bars. This will be used by pie-chart.
@@ -214,20 +234,20 @@ function dashboard(id, fData){
         var tr = legend.append("tbody").selectAll("tr").data(lD).enter().append("tr");
             
         // create the first column for each segment.
-        tr.append("td").append("svg").attr("width", '16').attr("height", '16').append("rect")
-            .attr("width", '16').attr("height", '16')
+        tr.append("td").append("svg").attr("width", '8').attr("height", '8').append("rect")
+            .attr("width", '8').attr("height", '8')
 			.attr("fill",function(d){ return segColor(d.type); });
             
         // create the second column for each segment.
-        tr.append("td").text(function(d){ return d.type;});
+        tr.append("td").text(function(d){ return d.type;}).style('font-size','11px');
 
         // create the third column for each segment.
         tr.append("td").attr("class",'legendFreq')
-            .text(function(d){ return d3.format(",")(d.freq);});
+            .text(function(d){ return d3.format(",")(d.freq);}).style('font-size','11px');
 
         // create the fourth column for each segment.
         tr.append("td").attr("class",'legendPerc')
-            .text(function(d){ return getLegend(d,lD);});
+            .text(function(d){ return getLegend(d,lD);}).style('font-size','11px');
 
         // Utility function to be used to update the legend.
         leg.update = function(nD){
@@ -235,10 +255,10 @@ function dashboard(id, fData){
             var l = legend.select("tbody").selectAll("tr").data(nD);
 
             // update the frequencies.
-            l.select(".legendFreq").text(function(d){ return d3.format(",")(d.freq);});
+            l.select(".legendFreq").text(function(d){ return d3.format(",")(d.freq);}).style('font-size','11px');
 
             // update the percentage column.
-            l.select(".legendPerc").text(function(d){ return getLegend(d,nD);});        
+            l.select(".legendPerc").text(function(d){ return getLegend(d,nD);}).style('font-size','11px');        
         }
         
         function getLegend(d,aD){ // Utility function to compute percentage.
@@ -252,7 +272,8 @@ function dashboard(id, fData){
     var tF = ['Unknown','5-13','14-17','18-24','25-44','45-64','>65'].map(function(d){ 
         return {type:d, freq: d3.sum(fData.map(function(t){ return t.freq[d];}))}; 
     });    
-    
+    //tooltip
+    var div = d3.select("body").append("div").attr("class", "toolTip");
     // calculate total frequency by state for all segment.
     var sF = fData.map(function(d){return [d.State,d.total];});
 

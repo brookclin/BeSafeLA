@@ -43,10 +43,10 @@ rect:hover {  fill:#f1c876; }
 <script>
 function dashboard(id, fData){
     var barColor = '#f2b076';
-    function segColor(c){ return {F:"#ef7204", M:"#D2691E",X:"#FFD700",H:"#FFDEAD",U:"#FFA500"}[c]; }
+    function segColor(c){ return {F:"#d0743c", M: "#8a89a6",Unknown: "#a05d56"}[c]; }
     
     // compute total for each state.
-    fData.forEach(function(d){d.total=d.freq.F+d.freq.M+d.freq.U+d.freq.X+d.freq.H;});
+    fData.forEach(function(d){d.total=d.freq.F+d.freq.M+d.freq.Unknown;});
     
     // function to handle histogram.
     function histoGram(fD){
@@ -210,20 +210,20 @@ function dashboard(id, fData){
         var tr = legend.append("tbody").selectAll("tr").data(lD).enter().append("tr");
             
         // create the first column for each segment.
-        tr.append("td").append("svg").attr("width", '16').attr("height", '16').append("rect")
-            .attr("width", '16').attr("height", '16')
+        tr.append("td").append("svg").attr("width", '8').attr("height", '8').append("rect")
+            .attr("width", '8').attr("height", '8')
 			.attr("fill",function(d){ return segColor(d.type); });
             
         // create the second column for each segment.
-        tr.append("td").text(function(d){ return d.type;});
+        tr.append("td").text(function(d){ return d.type;}).style('font-size','11px');
 
         // create the third column for each segment.
         tr.append("td").attr("class",'legendFreq')
-            .text(function(d){ return d3.format(",")(d.freq);});
+            .text(function(d){ return d3.format(",")(d.freq);}).style('font-size','11px');
 
         // create the fourth column for each segment.
         tr.append("td").attr("class",'legendPerc')
-            .text(function(d){ return getLegend(d,lD);});
+            .text(function(d){ return getLegend(d,lD);}).style('font-size','11px');
 
         // Utility function to be used to update the legend.
         leg.update = function(nD){
@@ -231,10 +231,10 @@ function dashboard(id, fData){
             var l = legend.select("tbody").selectAll("tr").data(nD);
 
             // update the frequencies.
-            l.select(".legendFreq").text(function(d){ return d3.format(",")(d.freq);});
+            l.select(".legendFreq").text(function(d){ return d3.format(",")(d.freq);}).style('font-size','11px');
 
             // update the percentage column.
-            l.select(".legendPerc").text(function(d){ return getLegend(d,nD);});        
+            l.select(".legendPerc").text(function(d){ return getLegend(d,nD);}).style('font-size','11px');        
         }
         
         function getLegend(d,aD){ // Utility function to compute percentage.
@@ -245,7 +245,7 @@ function dashboard(id, fData){
     }
     
     // calculate total frequency by segment for all state.
-    var tF = ['F','M','X','H','U'].map(function(d){ 
+    var tF = ['F','M','Unknown'].map(function(d){ 
         return {type:d, freq: d3.sum(fData.map(function(t){ return t.freq[d];}))}; 
     });    
     
@@ -260,14 +260,14 @@ function dashboard(id, fData){
 
 <script>
 var freqData=[
- {State:'2010',freq:{F: 89871, M: 98377, X: 377, H: 8.00, U: 19951}}
-,{State:'2011',freq:{F: 87531, M: 94232, X: 534, H: 4.00, U: 17890}}
-,{State:'2012',freq:{F: 87704, M: 94577, X: 995, H: 5.00, U: 17531}}
-,{State:'2013',freq:{F: 83530, M: 90206, X: 1440,H: 14.00,U: 16602}}
-,{State:'2014',freq:{F: 84450, M: 91194, X: 2489,H: 5.00, U: 16361}}
-,{State:'2015',freq:{F: 89817, M: 100276,X: 4710,H: 7.00, U: 19165}}
-,{State:'2016',freq:{F: 91759, M: 101829,X: 7406,H: 4.00, U: 22187}}
-,{State:'2017',freq:{F: 68389, M: 77254, X: 6922,H: 7.00, U: 17286}}
+ {State:'2010',freq:{F: 89871, M: 98377, Unknown: 19951}}
+,{State:'2011',freq:{F: 87531, M: 94232, Unknown: 17890}}
+,{State:'2012',freq:{F: 87704, M: 94577, Unknown: 17531}}
+,{State:'2013',freq:{F: 83530, M: 90206, Unknown: 16602}}
+,{State:'2014',freq:{F: 84450, M: 91194, Unknown: 16361}}
+,{State:'2015',freq:{F: 89817, M: 100276, Unknown: 19165}}
+,{State:'2016',freq:{F: 91759, M: 101829, Unknown: 22187}}
+,{State:'2017',freq:{F: 68389, M: 77254, Unknown: 17286}}
 ];
 
 dashboard('#dashboard',freqData);
