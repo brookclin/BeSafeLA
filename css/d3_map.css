@@ -1,13 +1,17 @@
-path {
+path.map {
     fill-opacity: .7;
     stroke: #fff;
     stroke-width: 1px;
 }
 
-path:hover {
+path.map:hover{
     fill-opacity: 1;
     stroke: #000;
     stroke-width: 1px;
+}
+path.map.selected {
+    fill-opacity: 0.5;
+    fill: #18b0df;
 }
 
 .toolTip {
