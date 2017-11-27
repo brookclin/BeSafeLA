@@ -1,6 +1,6 @@
 var svg_year = d3.select("#v-pills-time").select("svg"),
     margin = { top: 20, right: 20, bottom: 110, left: 40 },
-    margin2 = { top: 430, right: 20, bottom: 30, left: 40 },
+    margin2 = { top: 330, right: 20, bottom: 30, left: 40 },
     width = +svg_year.attr("width") - margin.left - margin.right,
     height = +svg_year.attr("height") - margin.top - margin.bottom,
     height2 = +svg_year.attr("height") - margin2.top - margin2.bottom;
