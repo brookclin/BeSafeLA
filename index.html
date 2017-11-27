@@ -136,7 +136,29 @@
     </div>
 
     <div id="route" class="container light">
-
+      <h2>Crime Cases By Route</h2>
+      <div class="row" style="height: 600px;">
+        <div id="routemap" class="col-10"></div>
+        <div id="button" class="col-2" style="display: table;margin: 0px auto;">
+            <!-- <div class="row" style="height: 200px;"> -->
+                <button id="startButton" class="btn btn-secondary btn-lg btn-block">start</button>
+                <div style=" margin:0px auto; " id="startAddress">Select start point</div>
+            <!-- </div> -->
+            <!-- <div class="row" style="height: 200px;"> -->
+                <button id="endButton" class="btn btn-secondary btn-lg btn-block">end</button>
+                <div style=" margin:0px auto; " id="endAddress">Select end point</div>
+            <!-- </div> -->
+            <!-- <div class="row" style="height: 100px;"> -->
+                <button id="find" class="btn btn-primary btn-lg btn-block">find</button>
+            <!-- </div> -->
+            <!-- <div class="row" style="height: 100px;"> -->
+                <button id="reset" class="btn btn-dark btn-lg btn-block">reset</button>
+            <!-- </div> -->
+        </div>
+        <script src="route.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbLXCXdBoRp26-2W_ZB1F4qrxMSdqQqYY&callback=initMap&language=en">
+        </script>
+    </div>
     </div>
   </main>
 
