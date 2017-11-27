@@ -52,7 +52,7 @@ function initMap() {
                 startMarker = new google.maps.Marker({
                     position: e.latLng,
                     map: map,
-                    draggable: true,
+                    // draggable: true,
                     title: "start",
                     label: "S"
                 });
@@ -92,7 +92,7 @@ function initMap() {
                 endMarker = new google.maps.Marker({
                     position: e.latLng,
                     map: map,
-                    draggable: true,
+                    // draggable: true,
                     title: "end",
                     label: "E"
                 });
