@@ -24,6 +24,9 @@ var queue = d3.queue();
 queue.defer(d3.json, "lapd-divisions.geojson")
 queue.defer(d3.json, "data processing/dataByAreaV2.json")
 queue.defer(d3.json, "data processing/dataOverall.json")
+queue.defer(d3.json, "data processing/timeOccurredTotal.json")
+queue.defer(d3.json, "data processing/timeOccurredTotalByYear.json")
+queue.defer(d3.json, "data processing/timeOccurredByArea.json")
 queue.await(ready);
 var select_years = ['All', '2017', '2016', '2015', '2014', '2013', '2012', '2011', '2010'];
 
@@ -32,6 +35,8 @@ var selected_year = 'All';
 var selected_area;
 var overall_data;
 var area_data;
+var time_year_data;
+var time_area_data;
 // dispatch
 var dispatch = d3.dispatch("load", "statechange", "areachange");
 dispatch.on("load.menu", function () {
@@ -65,7 +70,7 @@ dispatch.on("load.reset", function () {
         });
     button.text("All Divisions");
 
-    dispatch.on("areachange.reset", function(d) {
+    dispatch.on("areachange.reset", function (d) {
         if (!d) {
             button.attr("disabled", "disabled");
             button.text("All Divisions");
@@ -242,6 +247,104 @@ dispatch.on("load.line", function () {
             .duration(400)
             .attr("d", line);
 
+    }
+});
+
+dispatch.on("load.24bar", function () {
+    var margin = { top: 10, right: 20, bottom: 30, left: 50 };
+    var width = 500 - margin.left - margin.right;
+    var height = 200 - margin.top - margin.bottom;
+    // var dataset = [66206, 45961, 38693, 28366, 21289, 19349, 27188, 40561, 68318, 60339, 67940, 63966, 128902, 69347, 76857, 83679, 82337, 88845, 95739, 90813, 92676, 87066, 84240, 74220];
+    // for (var i = 0; i < dataset.length; i++) {
+    //     dataset[i] = {time: i, count: dataset[i]};
+    // }
+    var svg = d3.select("div#map-24bar").append("svg")
+        .attr('width', width + margin.left + margin.right)
+        .attr('height', height + margin.top + margin.bottom)
+        .append('g')
+        .attr('transform', 'translate(' + margin.left + ', ' + margin.top + ')');
+
+    var x = d3.scaleBand();  //x scale
+    var y = d3.scaleLinear();  //y scale
+    // x.domain(dataset.map(function (d) { return d['time']; })) //map keys
+    x.round(true)
+        .range([0, width])
+        .paddingInner(0.05);  //padding in range [0, 1]
+
+    // y.domain([0, d3.max(dataset, function (d) { return d['count']; })])
+    y.range([height, 0]);
+
+    var xAxis;
+    xAxis = d3.axisBottom()
+        .scale(x);
+
+    xg = svg.append("g")
+        .attr("class", "axis")
+        .attr("transform", "translate(0," + height + ")");
+
+
+    var yAxis = d3.axisLeft()
+        .scale(y)
+        .ticks(5);
+
+    var yg = svg.append("g")
+        .attr("class", "axis")
+    yg.append("text")
+        .attr("fill", "#000")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 6)
+        .attr("dy", "0.71em")
+        .attr("text-anchor", "end")
+        .text("#Cases");
+
+
+
+    dispatch.on("statechange.24bar", function (d) {
+        var dataset;
+        if (selected_area) {
+            dataset = time_area_data[selected_area][d];
+        } else {
+            dataset = time_year_data[d];
+        }
+        update24bar(dataset);
+    });
+    dispatch.on("areachange.24bar", function (d) {
+        var dataset;
+        if (!d) {
+            dataset = time_year_data[selected_year];
+        } else {
+            var area = d.properties.name;
+            dataset = time_area_data[area][selected_year];
+        }
+        update24bar(dataset);
+    });
+    function update24bar(dataset) {
+        x.domain(dataset.map(function (d) { return d['time']; })) //map keys
+        y.domain([0, d3.max(dataset, function (d) { return d['count']; })])
+
+
+        var bars = svg.selectAll(".bar")
+            .data(dataset, function (d) { return d['time']; });
+
+        bars.exit().remove();
+        bars.transition().duration(400)
+            .attr("x", function (d) { return x(d['time']); })
+            .attr("y", function (d) { return y(d['count']); })
+            .attr("height", function (d) { return height - y(d['count']); })
+
+        bars.enter().append("rect")
+            .attr("class", "bar")
+            .style("fill", "#1a9bc2")
+            .attr("x", function (d) { return x(d['time']); })
+            .attr("y", y(0))
+            .attr("width", x.bandwidth())
+            .attr("height", 0)
+            .transition().duration(400)
+            .attr("y", function (d) { return y(d['count']); })
+            .attr("height", function (d) { return height - y(d['count']); })
+            .attr("fill", "#343a40");
+        xg.transition().duration(400).call(xAxis);
+        yg.transition().duration(400).call(yAxis);
     }
 });
 
@@ -767,7 +870,7 @@ dispatch.on("areachange.title", function (data) {
 
 
 
-function ready(error, geojson, areadata, overall) {
+function ready(error, geojson, areadata, overall, timeTotal, timeYear, timeArea) {
 
     if (error) throw error;
     overall_data = overall;
@@ -788,7 +891,7 @@ function ready(error, geojson, areadata, overall) {
             dispatch.call("areachange", this, d);
             d3.select(this).classed("selected", true);
         });
-
+    time24Prep(timeTotal, timeYear, timeArea);
     // right part
     // line chart
     // initLine();
@@ -797,7 +900,40 @@ function ready(error, geojson, areadata, overall) {
     dispatch.call('statechange', this, selected_year);
 }
 
+function time24Prep(timeTotal, timeYear, timeArea) {
+    time_year_data = {};
+    time_area_data = {};
+    for (var i = 0; i < timeTotal.length; i++) {
+        timeTotal[i] = { time: i, count: timeTotal[i] };
+    }
+    time_year_data['All'] = timeTotal;
+    var year_labels = ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017'];
+    for (var i = 0; i < timeYear.length; i++) {
+        for (var j = 0; j < timeYear[i].length; j++) {
+            timeYear[i][j] = { time: j, count: timeYear[i][j] };
+        }
+        time_year_data[year_labels[i]] = timeYear[i];
+    }
 
+    //area
+    for (var i = 0; i < timeArea.length; i++) {
+        var area_name = timeArea[i]['Area Name'];
+        var byYear = timeArea[i]['byYear'];
+        var total = timeArea[i]['total'];
+        var key_value = {};
+        for (var j = 0; j < total.length; j++) {
+            total[j] = { time: j, count: total[j] };
+        }
+        key_value['All'] = total;
+        for (var j = 0; j < byYear.length; j++) {
+            for (var k = 0; k < byYear[j].length; k++) {
+                byYear[j][k] = { time: k, count: byYear[j][k] };
+            }
+            key_value[year_labels[j]] = byYear[j];
+        }
+        time_area_data[area_name] = key_value;
+    }
+}
 
 function dataPrep(geojson, areadata) {
     var json_features = geojson.features;
