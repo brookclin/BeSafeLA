@@ -11,7 +11,7 @@ path.map:hover{
 }
 path.map.selected {
     fill-opacity: 0.5;
-    fill: #18b0df;
+    fill: #1a9bc2;
 }
 
 .toolTip {
