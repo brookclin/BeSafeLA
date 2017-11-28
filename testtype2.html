@@ -10,7 +10,7 @@
     text {
         /* font-family: "Arial Black", Gadget, sans-serif; */
         fill: black;
-        font-weight: bold;
+        /* font-weight: bold; */
         font-size: 14px
     }
 
@@ -50,7 +50,7 @@
 </style>
 
 <body>
-    <svg width="960" height="1100"></svg>
+    <svg width="900" height="1000"></svg>
 </body>
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -134,14 +134,14 @@
                     .duration(800)
                     .attr("width", function (d) {return xScale(d.data.value);});
 
-        // leafNodeG.append("text")
-        //         .attr("dy", 19.5)
-        //         .attr("x", 8)
-        //         .style("text-anchor", "start")
-        //         .style("font-size", "11px")
-        //         .text(function (d) {
-        //             return d.data.id.substring(d.data.id.lastIndexOf(".") + 1);
-        //         });
+        leafNodeG.append("text")
+                .attr("dy", 14.5)
+                .attr("x", 5)
+                .style("text-anchor", "start")
+                .style("font-size", "11px")
+                .text(function (d) {
+                    return d.data.id.substring(d.data.id.lastIndexOf(".") + 1).split(" ")[0];
+                });
 
         // Write down text for every parent datum
         var internalNode = g.selectAll(".node--internal");
@@ -154,22 +154,22 @@
                 });
 
         // Attach axis on top of the first leaf datum.
-        var firstEndNode = g.select(".node--leaf");
-            firstEndNode.insert("g")
-                    .attr("class","xAxis")
-                    .attr("transform", "translate(" + 7 + "," + -14 + ")")
-                    .call(xAxis);
+        // var firstEndNode = g.select(".node--leaf");
+        //     firstEndNode.insert("g")
+        //             .attr("class","xAxis")
+        //             .attr("transform", "translate(" + 7 + "," + -14 + ")")
+        //             .call(xAxis);
 
-            // tick mark for x-axis
-            firstEndNode.insert("g")
-                    .attr("class", "grid")
-                    .attr("transform", "translate(7," + (height - 15) + ")")
-                    .call(d3.axisBottom()
-                            .scale(xScale)
-                            .ticks(5)
-                            .tickSize(-height, 0, 0)
-                            .tickFormat("")
-                    );
+        //     // tick mark for x-axis
+        //     firstEndNode.insert("g")
+        //             .attr("class", "grid")
+        //             .attr("transform", "translate(7," + (height - 15) + ")")
+        //             .call(d3.axisBottom()
+        //                     .scale(xScale)
+        //                     .ticks(5)
+        //                     .tickSize(-height, 0, 0)
+        //                     .tickFormat("")
+        //             );
 
         // Emphasize the y-axis baseline.
         svg.selectAll(".grid").select("line")
@@ -186,9 +186,8 @@
                 .attr("r", );
         ballG.insert("text")
                 .style("text-anchor", "middle")
-                .style("font-size", "12px")
-                .attr("dy",5)
-                .style("font-size", "8px");
+                .style("font-size", "10px")
+                .attr("dy",3);
 
         // Animation functions for mouse on and off events.
         d3.selectAll(".node--leaf-g")
