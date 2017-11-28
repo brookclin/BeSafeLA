@@ -225,7 +225,6 @@ var freqData=[
 ,{State:'2014',freq:{Unknown: 20830,  "Other Asian": 4675, "Black": 32802, "Hispanic/Latin/Mexican": 68193, "Other": 19069,  "White": 47481}}
 ,{State:'2015',freq:{Unknown: 25940,  "Other Asian": 5351, "Black": 33752, "Hispanic/Latin/Mexican": 73758, "Other": 20987, "White": 52580}}
 ,{State:'2016',freq:{Unknown: 32073,  "Other Asian": 5585, "Black": 33858, "Hispanic/Latin/Mexican": 76401, "Other": 21660,  "White": 52102}}
-,{State:'2017',freq:{Unknown: 26000,  "Other Asian": 4342, "Black": 25508, "Hispanic/Latin/Mexican": 57387, "Other": 17185,  "White": 38437}}
 ];
 
 dashboard('#v-pills-descent',freqData);
