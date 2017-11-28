@@ -93,7 +93,7 @@ d3.csv("dforYear.csv", type, function (error, data) {
     svg_year.append("rect")
         .attr("class", "zoom")
         .attr("width", width1)
-        .attr("height", height)
+        .attr("height", height1)
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
         .call(zoom);
 });
