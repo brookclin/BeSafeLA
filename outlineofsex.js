@@ -222,7 +222,6 @@ var freqData=[
 ,{State:'2014',freq:{Female: 84450, Male: 91194, Unknown: 16361}}
 ,{State:'2015',freq:{Female: 89817, Male: 100276, Unknown: 19165}}
 ,{State:'2016',freq:{Female: 91759, Male: 101829, Unknown: 22187}}
-,{State:'2017',freq:{Female: 68389, Male: 77254, Unknown: 17286}}
 ];
 
 dashboard('#v-pills-sex',freqData);
