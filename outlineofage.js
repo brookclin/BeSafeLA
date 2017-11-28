@@ -66,12 +66,12 @@ function dashboard(id, fData){
              .on("mouseout",mouseout);// mouseout is defined below.
              
          //Create the frequency labels above the rectangles.
-         bars.append("text").text(function(d){ return d3.format(",")(d[1])})
-             .attr("x", function(d) { return x(d[0])+x.bandwidth()/2; })
-             .attr("y", function(d) { return y(d[1])-5; })
-             .style('fill','black')
-             .style('font-size','11px')
-             .attr("text-anchor", "middle");
+        //  bars.append("text").text(function(d){ return d3.format(",")(d[1])})
+        //      .attr("x", function(d) { return x(d[0])+x.bandwidth()/2; })
+        //      .attr("y", function(d) { return y(d[1])-5; })
+        //      .style('fill','black')
+        //      .style('font-size','11px')
+        //      .attr("text-anchor", "middle");
          
          function mouseover(d){  // utility function to be called on mouseover.
              // filter for selected state.

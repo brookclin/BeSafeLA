@@ -131,7 +131,7 @@ dispatch.on("load.line", function () {
     g.append("path")
         .attr("class", "path")
         .attr("fill", "none")
-        .attr("stroke", "#18b0df")
+        .attr("stroke", "#1a9bc2")
         .attr("stroke-linejoin", "round")
         .attr("stroke-linecap", "round")
         .attr("stroke-width", 1.5);

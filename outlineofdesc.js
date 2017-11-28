@@ -32,7 +32,7 @@ function dashboard(id, fData){
         var y = d3.scaleLinear().range([hGDim.h, 0])
                 .domain([0, d3.max(fD, function(d) { return d[1]; })]);
         var btext = hGsvg.append('text')
-                        .attr('x', hGDim.t+145)
+                        .attr('x', hGDim.t+120)
                         .attr('y', hGDim.h+30)
                         .style('font-size','12px')
                 btext.append('tspan').text('Year');
@@ -63,12 +63,12 @@ function dashboard(id, fData){
             .on("mouseout",mouseout);// mouseout is defined below.
             
         //Create the frequency labels above the rectangles.
-        bars.append("text").text(function(d){ return d3.format(",")(d[1])})
-            .attr("x", function(d) { return x(d[0])+x.bandwidth()/2; })
-            .attr("y", function(d) { return y(d[1])-5; })
-            .style('fill','black')
-            .style('font-size','11px')
-            .attr("text-anchor", "middle");
+        // bars.append("text").text(function(d){ return d3.format(",")(d[1])})
+        //     .attr("x", function(d) { return x(d[0])+x.bandwidth()/2; })
+        //     .attr("y", function(d) { return y(d[1])-5; })
+        //     .style('fill','black')
+        //     .style('font-size','11px')
+        //     .attr("text-anchor", "middle");
         
         function mouseover(d){  // utility function to be called on mouseover.
             // filter for selected state.
@@ -196,7 +196,7 @@ function dashboard(id, fData){
         }
         
         function getLegend(d,aD){ // Utility function to compute percentage.
-            return d3.format("%")(d.freq/d3.sum(aD.map(function(v){ return v.freq; })));
+            return d3.format(".2%")(d.freq/d3.sum(aD.map(function(v){ return v.freq; })));
         }
 
         return leg;
