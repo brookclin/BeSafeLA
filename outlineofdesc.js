@@ -1,10 +1,13 @@
 function dashboard(id, fData){
     var barColor = '#f2b076';
-    function segColor(c){ return {"Unknown": "#98abc5","A":"#8a89a6","B":"#7b6888","H":"#6b486b","O":"#a05d56","W":"#d0743c","X":"#ff8c00"}[c]; }
+    function segColor(c){ return {"Unknown": "#98abc5"," Other Asian":"#8a89a6","Black":"#7b6888","Hispanic/Latin/Mexican":"#6b486b","Other":"#a05d56","White":"#d0743c"}[c]; }
     
     // compute total for each state.
 
-    fData.forEach(function(d){d.total=d.freq.Unknown+d.freq.A+d.freq.B+d.freq.H+d.freq.O+d.freq.W+d.freq.X;});
+    fData.forEach(function(d){
+        var values = Object.values(d.freq);
+        d.total = values.reduce(function(a, b) {return a + b;}, 0);
+    });
     
     // function to handle histogram.
     function histoGram(fD){
@@ -203,7 +206,7 @@ function dashboard(id, fData){
     }
     
     // calculate total frequency by segment for all state.
-    var tF = ["Unknown","A","B","H","O","W","X"].map(function(d){ 
+    var tF = ["Unknown"," Other Asian","Black","Hispanic/Latin/Mexican","Other","White"].map(function(d){ 
         return {type:d, freq: d3.sum(fData.map(function(t){ return t.freq[d];}))}; 
     });    
     
@@ -215,14 +218,14 @@ function dashboard(id, fData){
         leg= legend(tF);  // create the legend.
 }
 var freqData=[
- {State:'2010',freq:{Unknown: 19954, A: 4409, B: 33903, H: 73254, O: 18911, W: 53913,  X: 2617}}
-,{State:'2011',freq:{Unknown: 17895, A: 4390, B: 32565, H: 70552, O: 18960, W: 51296, X: 3206}}
-,{State:'2012',freq:{Unknown: 17535, A: 4443, B: 33496, H: 69957, O: 18969, W: 51842,  X: 3161}}
-,{State:'2013',freq:{Unknown: 16603, A: 4444, B: 31933, H: 66348, O: 18927, W: 48371,  X: 3766}}
-,{State:'2014',freq:{Unknown: 16367, A: 4675, B: 32802, H: 68193, O: 19069,  W: 47481, X: 4463}}
-,{State:'2015',freq:{Unknown: 19173, A: 5351, B: 33752, H: 73758, O: 20987, W: 52580,  X: 6767}}
-,{State:'2016',freq:{Unknown: 22191, A: 5585, B: 33858, H: 76401, O: 21660,  W: 52102,  X: 9882}}
-,{State:'2017',freq:{Unknown: 17288, A: 4342, B: 25508, H: 57387, O: 17185,  W: 38437,  X: 8712}}
+ {State:'2010',freq:{Unknown: 22571,  "Other Asian": 4409, "Black": 33903, "Hispanic/Latin/Mexican": 73254, "Other": 18911, "White": 53913}}
+,{State:'2011',freq:{Unknown: 21101,  "Other Asian": 4390, "Black": 32565, "Hispanic/Latin/Mexican": 70552, "Other": 18960, "White": 51296}}
+,{State:'2012',freq:{Unknown: 20696,  "Other Asian": 4443, "Black": 33496, "Hispanic/Latin/Mexican": 69957, "Other": 18969, "White": 51842}}
+,{State:'2013',freq:{Unknown: 20369,  "Other Asian": 4444, "Black": 31933, "Hispanic/Latin/Mexican": 66348, "Other": 18927, "White": 48371}}
+,{State:'2014',freq:{Unknown: 20830,  "Other Asian": 4675, "Black": 32802, "Hispanic/Latin/Mexican": 68193, "Other": 19069,  "White": 47481}}
+,{State:'2015',freq:{Unknown: 25940,  "Other Asian": 5351, "Black": 33752, "Hispanic/Latin/Mexican": 73758, "Other": 20987, "White": 52580}}
+,{State:'2016',freq:{Unknown: 32073,  "Other Asian": 5585, "Black": 33858, "Hispanic/Latin/Mexican": 76401, "Other": 21660,  "White": 52102}}
+,{State:'2017',freq:{Unknown: 26000,  "Other Asian": 4342, "Black": 25508, "Hispanic/Latin/Mexican": 57387, "Other": 17185,  "White": 38437}}
 ];
 
 dashboard('#v-pills-descent',freqData);
