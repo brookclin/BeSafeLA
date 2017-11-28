@@ -1,0 +1,21 @@
+Be safe LA de­liv­ers crime ana­lys­is of Los Angeles by diverse graphs and reports based on open data from three angles: year, LAPD Division and route. 
+
+Time line 
+* Area chart demonstrates the trend of the number of crimes during 2010 to 2016 period.
+* Moving brush to find refined trend of the number of crimes in specific months of specific years.
+
+Crime type
+* The Grouped Horizontal Bar Chart combined with Dendrogram shows the top 5 crime types during 2010 to 2016 period.
+* Hovering over a bar representing a specific crime type will find its completed name as well as quantity showed in rectangle and ball.
+
+Victim sex
+* Hovering over a bar representing specific year in histogram will find the distribution for the number of victims based on sex in this year showed in pie chart and legend.
+* Hovering over pie slice of specific sex of victim will find the distribution for the number of crimes based on this type of sex during 2010 to 2016 period in the histogram.
+
+Victim descent
+* Hovering over a bar representing specific year in histogram will find the distribution for the number of victims based on descent in this year showed in pie chart and legend.
+* Hovering over pie slice of specific sex of victim will find the distribution for the number of crimes based on this type of descent during 2010 to 2016 period in the histogram.
+
+Victim age
+* Hovering over a bar representing specific year in histogram will find the distribution for the number of victims based on age section in this year showed in pie chart and legend.
+* Hovering over pie slice of specific sex of victim will find the distribution for the number of crimes based on this age section during 2010 to 2016 period in the histogram.
