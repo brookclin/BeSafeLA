@@ -1,6 +1,6 @@
 function dashboard(id, fData){
     var barColor = '#f2b076';
-    function segColor(c){ return {"Unknown": "#98abc5"," Other Asian":"#8a89a6","Black":"#7b6888","Hispanic/Latin/Mexican":"#6b486b","Other":"#a05d56","White":"#d0743c"}[c]; }
+    function segColor(c){ return {"Unknown": "#98abc5","Other Asian":"#8a89a6","Black":"#7b6888","Hispanic/Latin/Mexican":"#6b486b","Other":"#a05d56","White":"#d0743c"}[c]; }
     
     // compute total for each state.
 
@@ -206,7 +206,7 @@ function dashboard(id, fData){
     }
     
     // calculate total frequency by segment for all state.
-    var tF = ["Unknown"," Other Asian","Black","Hispanic/Latin/Mexican","Other","White"].map(function(d){ 
+    var tF = ["Unknown","Other Asian","Black","Hispanic/Latin/Mexican","Other","White"].map(function(d){ 
         return {type:d, freq: d3.sum(fData.map(function(t){ return t.freq[d];}))}; 
     });    
     
