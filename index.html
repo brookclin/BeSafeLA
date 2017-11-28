@@ -45,7 +45,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#time">Time</a>
+          <a class="nav-link" href="#time">Year</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#area">Division</a>
@@ -73,8 +73,8 @@
         <h1 class="display-3">Be Safe LA</h1>
         <h4>Team hhh</h4>
         <p class="lead">Chun Lin / Hang Su / Haoyu Jiang</p>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron
-          and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p>We deliver crime ana­lys­is of Los Angeles from 2010 to 2017 by diverse graphs and reports based on open data from
+          three different angles: year, LAPD Division and route. </p>
         <p>
           <a class="btn btn-primary btn-lg" href="#time" role="button">Explore &raquo;</a>
         </p>
@@ -83,42 +83,69 @@
 
     <div id="time" class="container light">
       <h2>Crime Cases By Year</h2>
+      <p class="lead">We break down the crime data from 2010 to 2016 into the following aspects to look into the crime trend in different
+        ways.
+        <br/>Select from the menu to explore.</p>
       <div class="row">
         <div class="col-2">
           <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
             <a class="nav-link active" id="v-pills-time-tab" data-toggle="pill" href="#v-pills-time" role="tab" aria-controls="v-pills-time"
               aria-selected="true">Timeline</a>
-              <a class="nav-link" id="v-pills-sex-tab" data-toggle="pill" href="#v-pills-sex" role="tab" aria-controls="v-pills-sex"
-              aria-selected="false">Victim's Sex</a>
-              <a class="nav-link" id="v-pills-age-tab" data-toggle="pill" href="#v-pills-age" role="tab" aria-controls="v-pills-age"
-              aria-selected="false">Victim's Age</a>
+            <a class="nav-link" id="v-pills-sex-tab" data-toggle="pill" href="#v-pills-sex" role="tab" aria-controls="v-pills-sex" aria-selected="false">Victim's Sex</a>
+            <a class="nav-link" id="v-pills-age-tab" data-toggle="pill" href="#v-pills-age" role="tab" aria-controls="v-pills-age" aria-selected="false">Victim's Age</a>
             <a class="nav-link" id="v-pills-descent-tab" data-toggle="pill" href="#v-pills-descent" role="tab" aria-controls="v-pills-descent"
               aria-selected="false">Victim's Descent</a>
-              <a class="nav-link" id="v-pills-type-tab" data-toggle="pill" href="#v-pills-type" role="tab" aria-controls="v-pills-type"
+            <a class="nav-link" id="v-pills-type-tab" data-toggle="pill" href="#v-pills-type" role="tab" aria-controls="v-pills-type"
               aria-selected="false">Top 5 Crime Types</a>
           </div>
         </div>
         <div class="col-10">
           <div class="tab-content" id="v-pills-tabContent">
-              <div class="tab-pane fade show active" id="v-pills-time" role="tabpanel" aria-labelledby="v-pills-time-tab">
-                <svg width="900" height="400"></svg>
-                <script src="outlineofyear.js"></script>
-              </div>
-              <div class="tab-pane fade" id="v-pills-sex" role="tabpanel" aria-labelledby="v-pills-sex-tab">
-                  <script src="outlineofsex.js"></script>
-                </div>
+            <div class="tab-pane fade show active" id="v-pills-time" role="tabpanel" aria-labelledby="v-pills-time-tab">
+
+              <svg width="800" height="400"></svg>
+              <hr>
+              <ul>
+                <li>Area chart demonstrates the trend of the number of crimes during 2010 to 2016 period.</li>
+                <li>Move and brush with mouse to find refined trend of the number of crimes in specific months of specific years.</li>
+              </ul>
+              <script src="outlineofyear.js"></script>
+            </div>
+            <div class="tab-pane fade" id="v-pills-sex" role="tabpanel" aria-labelledby="v-pills-sex-tab">
+              <script src="outlineofsex.js"></script>
+              <hr>
+              <ul>
+                <li>Hovering over a bar representing specific year in histogram will find the distribution for the number of victims based on sex in this year showed in pie chart and legend.</li>
+                <li>Hovering over pie slice of specific sex of victim will find the distribution for the number of crimes based on this type of sex during 2010 to 2016 period in the histogram.</li>
+              </ul>
+            </div>
             <div class="tab-pane fade" id="v-pills-age" role="tabpanel" aria-labelledby="v-pills-age-tab">
               <script src="outlineofage.js"></script>
+              <hr>
+              <ul>
+                <li>Hovering over a bar representing specific year in histogram will find the distribution for the number of victims based on age section in this year showed in pie chart and legend.</li>
+                <li>Hovering over pie slice of specific sex of victim will find the distribution for the number of crimes based on this age section during 2010 to 2016 period in the histogram.</li>
+              </ul>
             </div>
-            
+
             <div class="tab-pane fade" id="v-pills-descent" role="tabpanel" aria-labelledby="v-pills-descent-tab">
               <script src="outlineofdesc.js"></script>
+              <hr>
+              <ul>
+                <li>Hovering over a bar representing specific year in histogram will find the distribution for the number of victims based on descent in this year showed in pie chart and legend.</li>
+                <li>Hovering over pie slice of specific sex of victim will find the distribution for the number of crimes based on this type of descent during 2010 to 2016 period in the histogram.</li>
+              </ul>
             </div>
             <div class="tab-pane fade" id="v-pills-type" role="tabpanel" aria-labelledby="v-pills-type-tab">
-              <svg width="900" height="900"></svg>
-                <script src="outlineoftype.js"></script>
-              </div>
-            
+              <ul>
+                <li>The Grouped Horizontal Bar Chart combined with Dendrogram shows the top 5 crime types during 2010 to 2016 period.</li>  
+                <li>Hovering over a bar representing a specific crime type will find its completed name as well as quantity showed in rectangle and ball.</li>                  
+              </ul>
+              <hr>
+              <svg width="800" height="900"></svg>
+              <script src="outlineoftype.js"></script>
+            </div>
+
           </div>
         </div>
       </div>
@@ -156,22 +183,22 @@
     <div id="route" class="container light">
       <h2>Crime Cases By Route</h2>
       <p class="lead">Click on "Start" and "End" to start selecting your desired walking route on the map.</p>
-      <div class="row" >
+      <div class="row">
         <div id="routemap" style="height: 600px;" class="col-9"></div>
         <div id="button" class="col-3 text-center">
           <!-- <div class="row" style="height: 200px;"> -->
           <button id="startButton" class="btn btn-dark btn-lg btn-block">Start</button>
           <!-- <div style=" margin:0px auto; " id="startAddress">Select start point</div> -->
           <div class="alert alert-secondary" id="startAddress" role="alert">
-              Select start point
-            </div>
+            Select start point
+          </div>
           <!-- </div> -->
           <!-- <div class="row" style="height: 200px;"> -->
           <button id="endButton" class="btn btn-dark btn-lg btn-block">End</button>
           <!-- <div style=" margin:0px auto; " id="endAddress">Select end point</div> -->
           <div class="alert alert-secondary" id="endAddress" role="alert">
-              Select end point
-            </div>
+            Select end point
+          </div>
           <!-- </div> -->
           <!-- <div class="row" style="height: 100px;"> -->
           <button id="find" class="btn btn-primary btn-lg btn-block">Find</button>
@@ -190,9 +217,15 @@
   <footer class="container">
     <h2>Data Sources / References</h2>
     <ul>
-      <li><a href="https://data.lacity.org/A-Safe-City/Crime-Data-from-2010-to-Present/y8tr-7khq">Crime Data from 2010 to Present | Los Angeles - Open Data Portal</a></li>
-      <li><a href="http://boundaries.latimes.com/set/lapd-divisions/">LAPD Divisions - Mapping L.A. Boundaries API - Data Desk - Los Angeles Times</a></li>
-      <li><a href="http://boundaries.latimes.com/set/lapd-bureaus/">LAPD Bureaus - Mapping L.A. Boundaries API - Data Desk - Los Angeles Times</a></li>
+      <li>
+        <a href="https://data.lacity.org/A-Safe-City/Crime-Data-from-2010-to-Present/y8tr-7khq">Crime Data from 2010 to Present | Los Angeles - Open Data Portal</a>
+      </li>
+      <li>
+        <a href="http://boundaries.latimes.com/set/lapd-divisions/">LAPD Divisions - Mapping L.A. Boundaries API - Data Desk - Los Angeles Times</a>
+      </li>
+      <li>
+        <a href="http://boundaries.latimes.com/set/lapd-bureaus/">LAPD Bureaus - Mapping L.A. Boundaries API - Data Desk - Los Angeles Times</a>
+      </li>
     </ul>
     <p>&copy; Team hhh</p>
   </footer>
