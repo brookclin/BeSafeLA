@@ -96,24 +96,6 @@ function drawtree() {
                 return d.data.id.substring(d.data.id.lastIndexOf(".") + 1);
             });
 
-        // Attach axis on top of the first leaf datum.
-        // var firstEndNode = g.select(".node--leaf");
-        //     firstEndNode.insert("g")
-        //             .attr("class","xAxis")
-        //             .attr("transform", "translate(" + 7 + "," + -14 + ")")
-        //             .call(xAxis);
-
-        //     // tick mark for x-axis
-        //     firstEndNode.insert("g")
-        //             .attr("class", "grid")
-        //             .attr("transform", "translate(7," + (height - 15) + ")")
-        //             .call(d3.axisBottom()
-        //                     .scale(xScale)
-        //                     .ticks(5)
-        //                     .tickSize(-height, 0, 0)
-        //                     .tickFormat("")
-        //             );
-
         // Emphasize the y-axis baseline.
         svg.selectAll(".grid").select("line")
             .style("stroke-dasharray", "20,1")
@@ -138,12 +120,16 @@ function drawtree() {
             .on("mouseout", handleMouseOut);
 
         function handleMouseOver(d) {
+            tooltip.style("left", d3.event.pageX + 10 + "px");
+            tooltip.style("top", d3.event.pageY - 25 + "px");
+            tooltip.style("display", "inline-block");
+            tooltip.html(d.data.id.substring(d.data.id.lastIndexOf(".") + 1));
+            
             var leafG = d3.select(this);
 
             leafG.select("rect")
                 .attr("stroke", "#4D4D4D")
                 .attr("stroke-width", "2");
-
 
             var ballGMovement = ballG.transition()
                 .duration(400)
@@ -158,12 +144,16 @@ function drawtree() {
             ballGMovement.select("text")
                 .delay(300)
                 .text(Number(d.data.value).toFixed(0));
+
+            
         }
         function handleMouseOut() {
             var leafG = d3.select(this);
 
             leafG.select("rect")
                 .attr("stroke-width", "0");
+
+            tooltip.style("display", "none");
         }
 
     });
