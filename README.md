@@ -1,6 +1,9 @@
 # INF 554 project
-
 By Chun Lin, Hang Su and Haoyu Jiang
+
+![](./assets/intro-page-squashed.jpg)
+
+
 
 ## Working Demo Link
 http://www-scf.usc.edu/~lin819/project-hhh/
