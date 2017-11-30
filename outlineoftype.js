@@ -143,7 +143,7 @@ function drawtree() {
 
             ballGMovement.select("text")
                 .delay(300)
-                .text(Number(d.data.value).toFixed(0));
+                .text(d3.format(",")(d.data.value));
 
             
         }

@@ -688,7 +688,7 @@ dispatch.on("load.bar", function () {
     });
     function updatebar(dataset) {
         svg.select("text").text("Top 7 Crime Types");
-        svg2.select("text").text("Top 7 Victim's Descent")
+        svg2.select("text").text("Top 7 Victim's Ethnicity")
         // crime code
         var data = Object.values(dataset['crimeCodeCount']);
         data.sort(function (a, b) { return b.count - a.count; });
