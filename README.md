@@ -6,7 +6,7 @@ By Chun Lin, Hang Su and Haoyu Jiang
 
 
 ## Working Demo Link
-http://www-scf.usc.edu/~lin819/project-hhh/
+https://jasonlin94.github.io/BeSafeLA/
 
 ## Video Demo
 [Be Safe LA - INF 554 Team hhh final project demo](https://youtu.be/zINk8drxKYY)
